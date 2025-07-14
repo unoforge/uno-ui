@@ -1,6 +1,6 @@
 ---
 title: Meter
-description: something
+description: A gauge component to display fractional values or measurements within a known range.
 ---
 
 
@@ -9,8 +9,8 @@ description: something
 <PreviewBox name="meter/Default">
 ```html
 <div class="flex flex-col gap-8 wfull">
-    <meter max="9" value="4" class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-high"></meter>
-    <meter max="9" value="4" class="ui-meter ui-meter-h-md ui-meter-rounded-md text-secondary bg-bg-high"></meter>
+    <meter max="9" value="4" class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-muted"></meter>
+    <meter max="9" value="4" class="ui-meter ui-meter-h-md ui-meter-rounded-md text-secondary bg-bg-muted"></meter>
 </div>
 ```
 </PreviewBox>
@@ -23,19 +23,19 @@ description: something
 <div class="flex flex-col gap-8 wfull">
     <div class="">
         <div class="flex justify-end" style="width: 40%">
-        <span class="text-sm text-fg-text">40%</span>
+        <span class="text-sm text-fg">40%</span>
         </div>
         <meter
         max="10"
         value="4"
-        class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-muted"
         ></meter>
     </div>
     <div class="relative hmax">
         <meter
         max="100"
         value="70"
-        class="ui-meter ui-meter-h-2xl ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-2xl ui-meter-rounded-md text-primary bg-bg-muted"
         ></meter>
         <div
         class="flex justify-end absolute z-5 top-0 left-0 h6 items-center"
@@ -57,32 +57,32 @@ description: something
     <meter
         max="9"
         value="4"
-        class="ui-meter ui-meter-h-xs ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-xs ui-meter-rounded-md text-primary bg-bg-muted"
     ></meter>
     <meter
         max="9"
         value="4"
-        class="ui-meter ui-meter-h-sm ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-sm ui-meter-rounded-md text-primary bg-bg-muted"
     ></meter>
     <meter
         max="9"
         value="4"
-        class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-muted"
     ></meter>
     <meter
         max="9"
         value="4"
-        class="ui-meter ui-meter-h-lg ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-lg ui-meter-rounded-md text-primary bg-bg-muted"
     ></meter>
     <meter
         max="9"
         value="4"
-        class="ui-meter ui-meter-h-xl ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-xl ui-meter-rounded-md text-primary bg-bg-muted"
     ></meter>
     <meter
         max="9"
         value="4"
-        class="ui-meter ui-meter-h-2xl ui-meter-rounded-md text-primary bg-bg-high"
+        class="ui-meter ui-meter-h-2xl ui-meter-rounded-md text-primary bg-bg-muted"
     ></meter>
 </div>
 ```

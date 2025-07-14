@@ -4,28 +4,32 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "dev-host": "astro dev --host",
+    "build:astro":"astro build",
+    "pagefind:copy": "cp -r dist/_pagefind public/",
+    "build": "npm run build:astro && npx pagefind --site dist && npm run pagefind:copy && npm run build:astro",
+    "build:pagefind": "npx pagefind --site public",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.8",
-    "@astrojs/vue": "^5.0.6",
-    "@flexilla/flexilla": "^2.0.9",
-    "@flexilla/utilities": "^2.0.71",
-    "astro": "^5.2.3",
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/vercel": "^8.2.1",
+    "@astrojs/vue": "^5.1.0",
+    "@flexilla/flexilla": "^2.2.2",
+    "@flexilla/utilities": "^2.2.0",
+    "astro": "^5.10.1",
     "astro-dynamic-import": "^2.0.3",
-    "astro-font": "^1.0.0",
+    "astro-font": "^1.1.0",
     "overlayscrollbars": "^2.10.1",
-    "unocss": "^65.4.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@iconify-json/ph": "^1.2.2",
-    "@julr/unocss-preset-forms": "^1.0.0",
-    "@unifydev/flexilla": "^0.0.0",
-    "@unifydev/preset-ui": "^0.1.1",
-    "shiki-transformers": "^1.0.1",
-    "shikiji-transformers": "^0.10.2"
+    "@shikijs/transformers": "^3.7.0",
+    "@unifydev/flexilla": "^0.1.2",
+    "@unifydev/preset-ui": "^1.2.9",
+    "pagefind": "^1.3.0",
+    "unocss": "^66.2.3"
   }
 }

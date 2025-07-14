@@ -1,0 +1,34 @@
+---
+import type { HTMLAttributes } from "astro/types";
+type Props = {
+    id: string;
+    position: "top" | "bottom" | "left" | "right";
+    withChildren?: boolean;
+} & HTMLAttributes<"div">;
+
+const positions = {
+    top: "-top-full left-0 fx-open:top-0 w-screen h-64",
+    bottom: "-bottom-full left-0 fx-open:bottom-0 w-screen h-64",
+    left: "-left-full top-0 fx-open-left-0 h-dvh w-full max-w-sm",
+    right: "-right-full top-0 fx-open:right-0 h-dvh w-full max-w-sm",
+};
+
+const { id, position, withChildren, ...rest } = Astro.props;
+---
+
+<div
+    data-fx-offcanvas
+    data-slideover
+    aria-labelledby={id}
+    id={id}
+    class={`fixed ease-linear duration-200  flex p-4 bg-bg-muted z130 ${positions[position]}`}
+    {...rest}
+>
+    {
+        withChildren ? (
+            <slot />
+        ) : (
+            <div class="size-full border-dashed b bdr-high" />
+        )
+    }
+</div>

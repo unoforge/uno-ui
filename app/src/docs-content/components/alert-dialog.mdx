@@ -1,0 +1,38 @@
+---
+title: Alert Dialog/Modal
+description: A modal dialog that interrupts the user with important content and expects a response.
+links:
+    - 'PresetUI' : /preset/utilities/common
+    - 'Flexilla Modal' : https://flexilla-docs.vercel.app/docs/components/modal
+---
+
+
+<ComponentPreview name="alert-dialog/Default"/>
+
+## Usage
+
+<Callout type="note">
+Note that this component requires JS, by default we're using `@flexilla/modal` component, else you can skip this step if you've already `@flexilla/flexilla`.
+</Callout>
+
+<Steps>
+<Step>
+### Installation
+<BlockCode shellStyle>
+```bash
+npm i @flexilla/modal
+```
+</BlockCode>
+</Step>
+<Step>
+### Usage
+You can globaly init all Modal or init separately every modal Element
+<BlockCode>
+```js
+import { Modal } from "@flexilla/modal"
+// init modal for all Element with data-fx-modal attribute
+Modal.autoInit() 
+```
+</BlockCode>
+</Step>
+</Steps>

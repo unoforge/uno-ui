@@ -1,0 +1,19 @@
+---
+import Button from "../button/Button.astro";
+---
+
+<div class="flex flex-wrap items-center gap-3">
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-overlay" aria-controls="slide-over-overlay">
+        Overlay
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-overlay1" aria-controls="slide-over-overlay1">
+        Overlay with blur
+    </Button>
+</div>
+
+<div data-fx-offcanvas data-slideover data-offcanvas-backdrop="fixed inset-0 bg-gray800/80 z100" id="slide-over-overlay" aria-labelledby="slide-over-overlay" class="fixed h-dvh w-full max-w-sm -right-full top-0 fx-open:right-0 ease-linear duration-200 p-4 bg-bg-muted flex z110">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover data-offcanvas-backdrop="fixed inset-0 backdrop-filter backdrop-blur-xl bg-gray-800/50 z100" id="slide-over-overlay1" aria-labelledby="slide-over-overlay1" class="fixed h-dvh w-full max-w-sm -right-full top-0 fx-open:right-0 ease-linear duration-200 p-4 bg-bg-muted z110 flex">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>

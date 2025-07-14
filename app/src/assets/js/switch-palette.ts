@@ -1,4 +1,5 @@
-import { $, $$ } from "./selector";
+import { $, $$ } from "@flexilla/utilities"
+
 
 export const initSwitchPalette = () => {
     const paletteContainer = $('[data-palette-container]')
@@ -6,6 +7,7 @@ export const initSwitchPalette = () => {
     if (paletteContainer instanceof HTMLElement) {
         const palettes = $$("[data-palette-color]", paletteContainer)
 
+        
         const initPalette = () => {
             const activeItem = $('[aria-checked="true"]', paletteContainer)
             if (activeItem instanceof HTMLElement) {
@@ -21,8 +23,8 @@ export const initSwitchPalette = () => {
             }
         }
 
-        initPalette()
 
+        initPalette()
         for (const paletteBtn of palettes) {
             paletteBtn.addEventListener("click", e => {
                 e.preventDefault()
@@ -40,38 +42,5 @@ export const initSwitchPalette = () => {
             })
         }
 
-        palettes.forEach((paletteBtn, index) => {
-            paletteBtn.addEventListener('keydown', (event) => {
-                const key = event.key;
-                switch (key) {
-                    case 'ArrowDown':
-                    case 'ArrowRight':
-                        event.preventDefault();
-                        if (index < palettes.length - 1) {
-                            palettes[index + 1].focus();
-                        } else {
-                            palettes[0].focus();
-                        }
-                        break;
-                    case 'ArrowUp':
-                    case 'ArrowLeft':
-                        event.preventDefault();
-                        if (index > 0) {
-                            palettes[index - 1].focus();
-                        } else {
-                            palettes[palettes.length - 1].focus();
-                        }
-                        break;
-                    case 'Home':
-                        event.preventDefault();
-                        palettes[0].focus();
-                        break;
-                    case 'End':
-                        event.preventDefault();
-                        palettes[palettes.length - 1].focus();
-                        break;
-                }
-            });
-        });
     }
 }

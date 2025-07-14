@@ -70,20 +70,23 @@ Define a solid style like this
 </BlockCode>
 
 - The `btn-solid` class is defined by the preset
-- But for you need to define `btn-solid-primary` class like this :
+- But for full customization you need to use the [presetUIHelper](/preset/customization/preset-helper) or define `btn-solid-primary` class like this :
 
 <BlockCode>
 ```css
 .btn-solid-primary{
-    --btn-solid-bg: hsl(var(--primary-600));
-    --btn-solid-bg-hover: hsl(var(--primary-700));
-    --btn-solid-bg-active: hsl(var(--primary-800));
-    --btn-solid-shadow-a: hsl(var(--primary-700));
-    --btn-solid-shadow-b: hsl(var(--primary-500));
-    --btn-solid-shadow-c: hsl(var(--primary-400));
-    --btn-solid-shadow-active-a: hsl(var(--primary-900));
-    --btn-solid-shadow-active-b: hsl(var(--primary-700));
-    --btn-solid-shadow-active-c: hsl(var(--primary-600));
+    --btn-solid-top-shadow: hsl(var(--c-primary-500));
+    --btn-solid-bottom-shadow: hsl(var(--c-primary-700));
+    --btn-solid-top-shadow-hover: hsl(var(--c-primary-600));
+    --btn-solid-bottom-shadow-hover: hsl(var(--c-primary-800));
+    --btn-solid-color: hsl(var(--c-primary-600));
+    --btn-solid-color-hover: hsl(var(--c-primary-700));
+    --btn-solid-color-press: hsl(var(--c-primary-800));
+}
+
+/* if needed  */
+.dark .btn-solid-primary{
+    /* style here  */
 }
 ```
 </BlockCode>
@@ -103,15 +106,48 @@ Define a solid style like this
 <BlockCode>
 ```css
 .btn-outline-primary{
-    --btn-outline-color: hsl(var(--primary-500));
-    --btn-outline-color-hover: hsl(var(--primary-700));
-    --btn-outline-text-color: hsl(var(--primary-600));
-    --btn-outline-text-color-hover: hsl(var(--primary-800));
-    --btn-focus-outline-color: var(--btn-outline-text-color-hover)
+    --btn-outline-bg: hsl(var(--c-primary-50) / 1);
+    --btn-outline-color: hsl(var(--c-primary-200) / 1);
+    --btn-outline-text-color: hsl(var(--c-primary-800));
+    --outline-radial-opacity: 0.6;
+    --inner-border-color: 1;
+}
+
+.dark .btn-outline-primary {
+    background-image: none;
+    --inner-border-color: 0;
+    --outline-radial-opacity: 0.2;
+    --btn-outline-color: hsl(var(--c-primary-500) / 0.3);
+    --btn-outline-text-color: hsl(var(--c-primary-300));
+    --btn-outline-bg: hsl(var(--c-primary-500) / 0.05);
+    --btn-outline-bg-hover: hsl(var(--c-primary-500) / 0.1);
 }
 ```
 </BlockCode>
 
+
+### Soft
+
+<BlockCode>
+```html
+<button class="btn btn-md btn-soft btn-soft-primary">
+    Click Me
+</button>
+```
+</BlockCode>
+
+<BlockCode>
+```css
+.btn-soft-primary{
+    --btn-soft-bg-color: hsl(var(--c-primary-50) / 1);
+    --btn-soft-bg-color-hover: hsl(var(--c-primary-400) / 0.6);
+    --btn-soft-bg-color-press: hsl(var(--c-primary-400) / 0.4);
+    --btn-soft-text-color: hsl(var(--c-primary-600));
+    --btn-soft-text-color-hover: hsl(var(--c-primary-700));
+    --btn-focus-outline-color: var(--btn-soft-text-color);
+}
+```
+</BlockCode>
 
 ### Ghost
 
@@ -125,10 +161,12 @@ Define a solid style like this
 
 <BlockCode>
 ```css
-.btn-soft-primary{
-    --btn-ghost-bg-color-hover: hsl(var(--primary-200) / .7);
-    --btn-ghost-bg-color-press: hsl(var(--primary-200) / .4);
-    --btn-ghost-text-color: hsl(var(--primary-700));
+.btn-ghost-primary{
+    --btn-ghost-bg-color-hover: hsl(var(--c-primary-100) / 0.5);
+    --btn-ghost-bg-color-press: hsl(var(--c-primary-100) / 0.7);
+    --btn-ghost-text-color: hsl(var(--c-primary-600));
+    --btn-ghost-text-color-hover: hsl(var(--c-primary-700));
+    --btn-focus-outline-color: var(--btn-ghost-text-color);
 }
 ```
 </BlockCode>

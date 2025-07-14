@@ -7,32 +7,10 @@ You can override the default utility classes and their behavior, as well as chan
 
 ## Theming
 
-UnifyUI Preset uses semantic color names to make it easy to understand and configure the purpose of each color. This approach ensures a consistent and intuitive theming experience.
-
-## Configuring Colors
-
-To configure colors in your uno.config.(js|ts) file, follow this example. 
-
-It’s recommended to use **semantic names** for your colors:
-
-<BlockCode>
-```js
-
-export default defineConfig({
-  theme: { // [!code ++]
-    colors: { // [!code ++]
-      // for each colors define all shades from 50 to 950 
-    }, // [!code ++]
-  },
-  // other config
-});
-
-```
-</BlockCode>
+PresetUI uses semantic color names to make it easy to understand and configure the purpose of each color. This approach ensures a consistent and intuitive theming experience.
 
 Using semantic names like primary, success, danger, info, and warning helps maintain a clear and organized color system in your project.
 
-## CSS Variables
 
 <Steps>
 <Step>
@@ -54,51 +32,43 @@ Using semantic names like primary, success, danger, info, and warning helps main
 ```
 </BoxCode>
 
-To init all components 
+</Step>
 
-<BoxCode title={"uno.config.js"} icon={"unocss"}>
-```js
-...
+### Using a color 
 
-  theme: {
-    colors: {
-      // ... other config
-      primary: { // [!code ++]
-        DEFAULT: "hsl(var(--primary-600))", // [!code ++]
-        50: "hsl(var(--primary-50))", // [!code ++]
-        100: "hsl(var(--primary-100))", // [!code ++]
-        200: "hsl(var(--primary-200))", // [!code ++]
-        300: "hsl(var(--primary-300))", // [!code ++]
-        400: "hsl(var(--primary-400))", // [!code ++]
-        500: "hsl(var(--primary-500))", // [!code ++]
-        600: "hsl(var(--primary-600))", // [!code ++]
-        700: "hsl(var(--primary-700))", // [!code ++]
-        800: "hsl(var(--primary-800))", // [!code ++]
-        900: "hsl(var(--primary-900))", // [!code ++]
-        950: "hsl(var(--primary-950))", // [!code ++]
-      }, // [!code ++]
-    }
-  },
-...
+<BoxCode title={"index.html"} icon={"html"}>
+```html
+<div class="text-primary">
+  Hello, <span class="text-fg-muted"></span>
+</div>
 ```
 </BoxCode>
-</Step>
+
 </Steps>
 
 
-## Amazing Ready-to-Use Themes (Coming Soon)
+## Themes
 
 Want to speed up your development? We've got some nice premade themes for you! These themes come with all the necessary color configurations.
 
 ### Unify Default
 
+<CardPalette palette="default"/>
+
 ### Water
 
+<CardPalette palette="water"/>
 
 ### Earth
+
+<CardPalette palette="earth"/>
 
 
 ### Fire
 
+<CardPalette palette="fire"/>
+
 
 ### Air
+
+<CardPalette palette="air"/>

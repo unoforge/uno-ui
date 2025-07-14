@@ -1,53 +1,81 @@
 
 :root {
     --bg: var(--c-white);
-    --bg-lighter: var(--c-gray-50);
-    --bg-light: var(--c-gray-100);
-    --bg-high: var(--c-gray-200);
-    --bg-higher: var(--c-gray-300);
+    --bg-subtle: var(--c-gray-50);
+    --bg-surface: var(--c-gray-100);
+    --bg-muted: var(--c-gray-200);
+    --bg-surface-elevated: var(--c-gray-300);
 
     --fg: var(--c-gray-700);
-    --fg-subtext: var(--c-gray-600);
+    --fg-muted: var(--c-gray-600);
     --fg-title: var(--c-gray-900);
     --fg-subtitle: var(--c-gray-800);
+
     --border: var(--c-gray-200);
-
-    --border-lighter: var(--c-gray-50);
+    --border-subtle: var(--c-gray-50);
     --border-light: var(--c-gray-200);
-    --border-high: var(--c-gray-300);
-    --border-higher: var(--c-gray-400);
+    --border-strong: var(--c-gray-300);
+    --border-emphasis: var(--c-gray-400);
 
-    --ui-checkbox-bg: var(--bg);
-    --ui-checkbox-border: var(--border-high);
-    --ui-radio-bg: var(--bg);
-    --ui-radio-border: var(--border-high);
+    --c-primary-DEFAULT: var(--c-primary-600);
+    --c-secondary-DEFAULT: var(--c-secondary-600);
+    --c-warning-DEFAULT: var(--c-warning-600);
+    --c-accent-DEFAULT: var(--c-accent-600);
+    --c-success-DEFAULT: var(--c-success-600);
+    --c-danger-DEFAULT: var(--c-danger-600);
 
-    --switch-checked-thumb-primary: var(--primary-600)
 
+    --range-thumb-bg-gray: var(--bg);
+    --range-track-bg-gray: var(--c-gray-200);
+
+    --switch-checked-thumb-primary: var(--primary-600);
+
+    --switch-knob-white:var(--c-white);
+
+    --switch-knob-dark: var(--c-white);
+
+    --global-main-radius: 0.5rem;
+    --padding-1: 0.25rem;
+    --padding-2: 0.5rem;
+    --padding-3: 0.75rem;
+    --padding-4: 1rem;
 }
 
 .dark {
     /* Background colors */
     --bg:var(--c-gray-950);
-    --bg-lighter: var(--c-gray-900);
-    --bg-light: var(--c-gray-900);
-    --bg-high: var(--c-gray-800);
-    --bg-higher: var(--c-gray-700);
+    --bg-subtle: var(--c-gray-900);
+    --bg-surface: var(--c-gray-900);
+    --bg-muted: var(--c-gray-800);
+    --bg-surface-elevated: var(--c-gray-700);
 
     /* Foreground colors */
-    --fg-text: var(--c-gray-300);
+    --fg: var(--c-gray-300);
     --fg-title: var(--c-white);
     --fg-subtitle: var(--c-gray-200);
-    --fg-subtext: var(--c-gray-300);
+    --fg-muted: var(--c-gray-300);
     --fg-light: var(--c-gray-400);
 
     /* Border colors */
     --border: var(--c-gray-900);
     --border-light: var(--c-gray-800);
-    --border-lighter: var(--c-gray-900);
-    --border-high: var(--c-gray-700);
-    --border-higher: var(--c-gray-600);
+    --border-subtle: var(--c-gray-900);
+    --border-strong: var(--c-gray-700);
+    --border-emphasis: var(--c-gray-600);
+
+    --c-primary-DEFAULT: var(--c-primary-500);
+    --c-secondary-DEFAULT: var(--c-secondary-500);
+    --c-warning-DEFAULT: var(--c-warning-500);
+    --c-accent-DEFAULT: var(--c-accent-500);
+    --c-success-DEFAULT: var(--c-success-500);
+    --c-danger-DEFAULT: var(--c-danger-500);
+
+    --unify-grid-dotted-bg-gray: red;
+
 
     --ui-checkbox-border: var(--border-light);
+
+    --switch-knob-dark: var(--c-gray-950);
+
 
 }

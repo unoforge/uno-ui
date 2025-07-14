@@ -4,17 +4,16 @@ import "@assets/css/doc-styles.css";
 import Sidebar from "@components/docs/base/Sidebar.astro";
 import Base from "./Base.astro";
 import DocNavbar from "@components/docs/ui/DocsNavbar.astro";
-import type { MarkdownHeading } from "astro";
 import type { SeoType } from "../types";
 import { defaultOgImage, defaultOgAlt, keywordsDef } from "../const";
-import DocsFooter from "@components/docs/ui/DocsFooter.astro";
 import TopDocsNav from "@components/docs/base/TopDocsNav.astro";
+import PopPaletteTheme from "@components/blocks/PopPaletteTheme.astro";
+import DocsFooter from "@components/molecules/DocsFooter.astro";
 
 type Props = {
   activeGroup: string;
   activeItem: string;
   description?: string;
-  headings: MarkdownHeading[];
   keywords?: string;
   title: string;
   hideTableOfContent?: boolean;
@@ -43,19 +42,22 @@ const seo: SeoType = {
 ---
 
 <Base seo={seo}>
+  <span aria-hidden="true" class="flex absolute -top-10 left-1/2 -translate-x-1/2 h-50 w-20 rd-full flex bg-gradient-to-r from-primary op70 blur-3xl"></span>
   <DocNavbar />
   <div
-    class="max-w7xl grid mx-auto lg-grid-cols-[13rem_minmax(0,1fr)] lg-pl8 xl-pr8"
+    class="grid mxa lg-grid-cols-[15rem_minmax(0,1fr)] xl-grid-cols-[16rem_minmax(0,1fr)] 
+    lg-pl8 xl-pr8 lg-max-w84rem xl-max-w88rem"
   >
     <Sidebar activeGroup={activeGroup} activeItem={activeItem} />
-    <div class="grid relative ">
+    <div class="grid relative">
       <TopDocsNav hideTableOfContent={hideTableOfContent} />
-      <main class="grid xl-grid-cols-[1fr_11rem] mb20">
+      <main class="grid xl-grid-cols-[1fr_17rem] mb20">
         <slot />
       </main>
       <DocsFooter />
     </div>
   </div>
+  <PopPaletteTheme />
   <slot name="modalZone" />
   <script>
     import { initdDocsScript } from "@assets/js/doc-script";

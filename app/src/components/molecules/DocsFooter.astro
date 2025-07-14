@@ -1,0 +1,56 @@
+---
+import SocialLinks from "@components/atoms/SocialLinks.astro";
+import UiLink from "@components/atoms/UiLink.astro";
+
+
+
+const links = [
+  {
+    text: "Demo",
+    href: "https:",
+  },
+  {
+    text: "Demo",
+    href: "#",
+  },
+  {
+    text: "Templates",
+    href: "#",
+  },
+];
+---
+
+<footer data-pagefind-ignore class="wfull py3 relative px4 sm-px8 lg-pl16 lg-pr0 text-fg">
+  <div class="b-t b-border-strong/40 pt4 flex flex-col gap-5">
+    <div class="w-full flex flex-col md-flex-row gap-6 md-justify-between items-center text-sm">
+      <div class="text-sm">
+        Published under <UiLink
+          href="https://github.com/unoforge/unify-ui"
+          aria-label="MIT License" class={"text-fg-subtitle"}>MIT License</UiLink
+        >
+      </div>
+      <ul class="flex flex-wrap items-center gap-x4 gap-y2">
+        {
+          links.map((link) => (
+            <UiLink
+              aria-label={`Link to ${link.text}`}
+              href={link.href}
+              class={"hover-text-fg-title flex items-center gap-x0.5"}
+            >
+              {link.text}
+              {link.href.startsWith("/") || link.href.startsWith("#") ? null : (
+                <span aria-hidden="true" class="flex i-ph-arrow-up-right text-xs" />
+              )}
+            </UiLink>
+          ))
+        }
+      </ul>
+      <div class="flex">
+        <SocialLinks />
+      </div>
+    </div>
+    <div class="text-sm b b-border bg-bg-surface !bg-op50 px4 py2 rd-lg text-center">
+      &COPY; unoForge 2023 - Present. By <UiLink href="#linkUnifyDev" class={"underline underline-offset-2 text-fg-title"}>Unoforge Team</UiLink> in DRC.
+    </div>
+  </div>
+</footer>

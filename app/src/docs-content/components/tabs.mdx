@@ -1,0 +1,53 @@
+---
+title: Tabs
+description: A component for organizing content into separate, navigable sections, improving user navigation and content organization.
+links: 
+    - 'PresetUI' : '/preset'
+    - 'Flexilla Tabs' : 'https://flexilla-docs.vercel.app'
+---
+
+
+<ComponentPreview name="tabs/Default"/>
+
+## Initialisation
+
+<Callout type="note">
+Note that this component requires JS, by default we're using `@flexilla/tabs` component, else you can skip this step if you've already `@flexilla/flexilla`.
+</Callout>
+
+<Steps>
+<Step>
+### Installation
+<BlockCode shellStyle>
+```bash
+npm i @flexilla/tabs
+```
+</BlockCode>
+</Step>
+<Step>
+### Usage
+You can globaly init all Tabs or init separately every tabs Element
+<BlockCode>
+```js
+import { Tabs } from "@flexilla/tabs"
+// init Tabs for all Element with data-fx-tabs attribute
+Tabs.autoInit() 
+```
+</BlockCode>
+</Step>
+</Steps>
+
+
+## Vertical
+
+<ComponentPreview name="tabs/Vertical"/>
+
+
+## Trigger with Icon
+
+<ComponentPreview name="tabs/TriggerIcon"/>
+
+## Example
+
+### With Form
+<ComponentPreview name="tabs/TabsWithForm"/>

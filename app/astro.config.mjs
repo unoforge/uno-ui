@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import dynamicImport from "astro-dynamic-import";
-import { transformerNotationDiff } from "shiki-transformers";
+import { transformerNotationDiff } from "@shikijs/transformers";
 
 import unoCSS from "unocss/astro";
 
@@ -9,13 +9,16 @@ import mdx from "@astrojs/mdx";
 
 import vue from "@astrojs/vue";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [unoCSS({
     injectReset: true,
   }), dynamicImport(), mdx(), vue()],
+
   redirects: {
-    "/docs": {
+    "/docs/": {
       status: 302,
       destination: "/docs/introduction",
     },
@@ -27,12 +30,19 @@ export default defineConfig({
       status: 302,
       destination: "/components/accordion",
     },
+    '/blocks':{
+      status:302,
+      destination:"/blocks/hero-sections"
+    }
   },
+
   markdown: {
     shikiConfig: {
       theme: "css-variables",
       transformers: [transformerNotationDiff()],
     },
   },
+
   output: "static",
+  adapter: vercel(),
 });

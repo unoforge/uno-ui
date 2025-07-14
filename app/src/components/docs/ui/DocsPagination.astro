@@ -10,63 +10,61 @@ const { prevSlug, nextSlug } = Astro.props;
 ---
 
 <div class="grid">
-
-<div
-  data-pagefind-ignore
-  class="flex flex-col sm-flex-row w-full justify-between gap-4 bg-bg-light/70 rd-lg p1 ease-linear duration-300 overflow-hidden"
->
-  {
-    prevSlug ? (
+  <div
+    data-pagefind-ignore
+    class="flex w-full justify-between gap-4 bg-bg-surface/70 rd-lg p1 ease-linear duration-300 overflow-hidden"
+  >
+    {
+      prevSlug ? (
+        nextSlug ? (
+          <a
+            href={prevSlug.slug}
+            class="flex items-center px-5 h16 text-gray500 hover-text-fg-title"
+          >
+            <div class="flex items-center gap-x1 text-sm">
+              <span aria-hidden="true" class="flex i-ph-caret-left" />
+              <span>Prev</span>
+            </div>
+          </a>
+        ) : (
+          <a
+            href={prevSlug.slug}
+            class="group flex first:*:pr-4 last:*:pl-4 items-center px-4 h16 text-fg-subtitle hover-text-fg-title flex-1 rd-md bg-bg divide-x divide-border-strong/40 hover:ring-1 hover:ring-gray-200 dark:hover:ring-gray-800 ease-linear duration-300"
+          >
+            <div class="flex items-center gap-x1 text-sm pl-3 b-r border-border text-gray500 group-hover-text-fg-title ease-linear duration-300">
+              <span aria-hidden="true" class="flex i-ph-caret-left" />
+              <span>Prev</span>
+            </div>
+            <div class="flex flex-1 flex-col justify-center py3 text-sm">
+              <span class="line-clamp-1">{prevSlug.title}</span>
+              <p class="text-fg-muted font-light truncate line-clamp-1">
+                {prevSlug.description.length > 20
+                  ? prevSlug.description.slice(0, 20)
+                  : prevSlug.description}
+              </p>
+            </div>
+          </a>
+        )
+      ) : null
+    }
+    {
       nextSlug ? (
         <a
-          href={prevSlug.slug}
-          class="flex items-center px-5 h16 text-gray500 hover-text-fg-title"
+          href={nextSlug.slug}
+          class="group flex first:*:pr-4 last:*:pl-4 items-center px-4 h16 text-fg hover-text-fg-title flex-1 rd-md bg-bg divide-x divide-border-strong/40 hover:ring-1 hover:ring-gray-200 dark:hover:ring-gray-800 ease-linear duration-300"
         >
-          <div class="flex items-center gap-x1 text-sm">
-            <span aria-hidden="true" class="flex i-ph-caret-left" />
-            <span>Prev</span>
-          </div>
-        </a>
-      ) : (
-        <a
-          href={prevSlug.slug}
-          class="group flex first:*:pr-4 last:*:pl-4 items-center px-4 h16 text-fg-subtitle hover-text-fg-title flex-1 rd-md bg-bg divide-x divide-border-high/40 hover:ring-1 hover:ring-gray-200 dark:hover:ring-gray-800 ease-linear duration-300"
-        >
-          <div class="flex items-center gap-x1 text-sm pl-3 b-r border-border text-gray500 group-hover-text-fg-title ease-linear duration-300">
-            <span aria-hidden="true" class="flex i-ph-caret-left" />
-            <span>Prev</span>
-          </div>
-          <div class="flex flex-1 flex-col justify-center py3 text-sm">
-            <span class="">{prevSlug.title}</span>
-            <p class="text-fg-subtext font-light truncate line-clamp-1">
-              {prevSlug.description.length > 20
-                ? prevSlug.description.slice(0, 20)
-                : prevSlug.description}
+          <div class="flex flex-1 flex-col justify-center py3 text-sm text-right">
+            <span class="line-clamp-1">{nextSlug.title}</span>
+            <p class="text-fg-muted font-light truncate line-clamp-1 text-wrap text-right lg-pl-10">
+              {nextSlug.description}
             </p>
           </div>
+          <div class="flex items-center gap-x1 text-sm pl-3 b-r border-border text-gray500 group-hover-text-fg-title ease-linear duration-300">
+            <span>Next</span>
+            <span aria-hidden="true" class="flex i-ph-caret-right" />
+          </div>
         </a>
-      )
-    ) : null
-  }
-  {
-    nextSlug ? (
-      <a
-        href={nextSlug.slug}
-        class="group flex first:*:pr-4 last:*:pl-4 items-center px-4 h16 text-fg hover-text-fg-title flex-1 rd-md bg-bg divide-x divide-border-high/40 hover:ring-1 hover:ring-gray-200 dark:hover:ring-gray-800 ease-linear duration-300"
-      >
-        <div class="flex flex-1 flex-col justify-center py3 text-sm text-right">
-          <span class="">{nextSlug.title}</span>
-          <p class="text-fg-subtext text-wrap font-light truncate line-clamp-1 text-wrap text-right lg-pl-10">
-                {nextSlug.description}
-          </p>
-        </div>
-        <div class="flex items-center gap-x1 text-sm pl-3 b-r border-border text-gray500 group-hover-text-fg-title ease-linear duration-300">
-          <span>Next</span>
-          <span aria-hidden="true" class="flex i-ph-caret-right" />
-        </div>
-      </a>
-    ) : null
-  }
-</div>
-
+      ) : null
+    }
+  </div>
 </div>

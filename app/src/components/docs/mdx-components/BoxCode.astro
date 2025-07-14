@@ -1,5 +1,6 @@
 ---
 import CopyBtnCode from "@components/vuejs/CopyBtnCode.vue";
+import { getIconVal, isFile } from "@helper/index";
 
 type Props = {
   title: string;
@@ -8,33 +9,13 @@ type Props = {
 };
 const { title, icon, shellStyle } = Astro.props;
 
-export const isFile = (name: string) => name.includes(".");
 
-export const getIconVal = (name: string) => {
-  if (name === "react") return "react.svg";
-  if (name === "unocss") return "i-fx-unocss-ico";
-  if (name === "vite") return "vite.svg";
-  if (name === "nuxt") return "nuxt.svg";
-  if (name === "vue") return "vue.svg";
-  if (name === "svelte") return "svelte.svg";
-  if (name === "astro") return "astro.svg";
-  if (name === "html") return "html.svg";
-  if (name === "js") return "js.svg";
-  if (name === "ts") return "ts.svg";
-  else if (name === "html") return "html.svg";
-  else if (name === "css") return "css.svg";
-  else if (name === "laravel") return "laravel.svg";
-  else if (name === "shell") return "shell.svg";
-  else if (name === "yarn") return "yarn.svg";
-  else if (name === "npm") return "npm.svg";
-  return "";
-};
 ---
 
 <div
   data-pagefind-ignore
   data-code-block
-  class="b b-border-high/30 bg-[--astro-code-color-background] rd-lg grid mt2.5 first-mt0 text-gray300"
+  class="b b-border-strong/30 bg-[--astro-code-color-background] rd-lg grid mt2.5 first-mt0 text-gray300"
 >
   <div
     class="flex justify-between items-center pl6 pr4 py2 bg-gradient-to-b from-gray100/10 dark-from-gray950/20 !bg-op10 b-b b-b-gray800/40"

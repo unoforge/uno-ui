@@ -5,31 +5,17 @@
 @import url(./themes/water.css);
 
 :root {
-  --pagefind-ui-scale: .8;
   --ui-find-page-input-bt: hsl(var(--c-gray-200));
-  --page-find-message: hsl(var(--c-gray-600));
   --card-ui-find-page-bg-hover: hsl(var(--c-gray-100));
   --card-ui-find-page-bdr: hsl(var(--c-gray-100));
   --card-ui-find-page-bdr-hover: hsl(var(--c-gray-200));
-  --card-ui-find-page-title: var(--c-gray-900);
-  --card-ui-find-page-text-expert: hsl(var(--c-gray-600));
-
-  --card-ui-find-mark-bg: hsl(var(--c-primary-600));
-  --card-ui-find-mark-text: hsl(var(--c-white));
-  --ui-find-input-bg: hsl(var(--c-white));
   --ui-find-input-placeholder: hsl(var(--c-gray-600));
-  --pagefind-ui-text:hsl(var(--c-gray-600));
 }
 
-.dark {
+html.dark {
   --ui-find-page-input-bt: hsl(var(--c-gray-800));
-  --page-find-message: hsl(var(--c-gray-400));
-  --card-ui-find-page-bg-hover: hsl(var(--c-gray-900));
+  --card-ui-find-page-bg-hover: hsl(var(--c-gray-800));
   --card-ui-find-page-bdr: hsl(var(--c-gray-900));
   --card-ui-find-page-bdr-hover: hsl(var(--c-gray-800));
-  --card-ui-find-page-title: white;
-  --card-ui-find-page-text-expert: hsl(var(--c-gray-400));
-  --ui-find-input-bg: hsl(var(--c-gray-950));
   --ui-find-input-placeholder: hsl(var(--c-gray-400));
-  --pagefind-ui-text:hsl(var(--c-gray-400));
 }

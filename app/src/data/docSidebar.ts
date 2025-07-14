@@ -10,20 +10,20 @@ export const sidebarItems: SidebarGroupCat[] = [
                     {
                         title: "Introduction",
                         path: "/docs/introduction",
-                        description: "Hello",
-                        keywords: ""
+                        description: "Introduction to UnoUI component library",
+                        keywords: "introduction, getting started, overview, ui components, documentation, unoui, uno ui, unoforge, uno forge, unifyui, unify ui"
                     },
                     {
                         title: "Installation",
                         path: "/docs/installation",
-                        description: "hello",
-                        keywords: ""
+                        description: "Quick setup guide for UI components",
+                        keywords: "installation, setup, configuration, package, dependencies, unoui, uno ui, unoforge, uno forge, unifyui, unify ui"
                     },
                     {
                         title: "Framework Guide",
                         path: "/docs/framework-guide",
-                        description: "sldskldskdskld",
-                        keywords: "PresetUI QuickStarters, UnoCSS, uno css, presetUI, preset ui, unify, unify ui, astro starter, vite starter, vuejs starter, nuxtjs starter, react starter, laravel starter, unocss starter"
+                        description: "Framework integration guide for components",
+                        keywords: "PresetUI QuickStarters, UnoCSS, uno css, presetUI, preset ui, unify, unify ui, astro starter, vite starter, vuejs starter, nuxtjs starter, react starter, laravel starter, unocss starter, unoui, uno ui, unoforge, uno forge, unifyui"
                     }
                 ]
             },
@@ -33,331 +33,212 @@ export const sidebarItems: SidebarGroupCat[] = [
                     {
                         title: "AstroJS",
                         path: "/docs/framework-guide/astrojs",
-                        description: "hello",
-                        keywords: ""
+                        description: "AstroJS integration guide",
+                        keywords: "astrojs, framework integration, astro components, setup guide, unoui, uno ui, unoforge, uno forge, unifyui, unify ui"
                     },
                     {
                         title: "ViteJS",
                         path: "/docs/framework-guide/vitejs",
-                        description: "",
-                        keywords: ""
+                        description: "ViteJS integration guide",
+                        keywords: "vitejs, vite integration, build tool, setup guide, unoui, uno ui, unoforge, uno forge, unifyui, unify ui"
                     },
                     {
                         title: "Static site",
                         path: "/docs/framework-guide/static",
-                        description: "",
-                        keywords: "",
+                        description: "Static site integration guide",
+                        keywords: "static site, html, css, vanilla js, integration, unoui, uno ui, unoforge, uno forge, unifyui, unify ui",
                     },
                     {
                         title: "Laravel",
                         path: "/docs/framework-guide/laravel",
-                        description: "",
-                        keywords: "",
+                        description: "Laravel integration guide",
+                        keywords: "laravel, php, blade templates, framework integration, unoui, uno ui, unoforge, uno forge, unifyui, unify ui",
                         state:"draft"
                     },
                 ]
-            }
-        ]
-    },
-    {
-        name: "preset",
-        items: [
-            {
-                label: "Getting Started",
-                items: [
-                    {
-                        title: "Introduction",
-                        path: "/preset/introduction",
-                        description: "A versatile and powerful UI library built on UnoCSS",
-                        keywords: "UI Library, preset, presetui, preset ui, unocss, Uno CSS, unify, unifyui, unify ui"
-                    },
-                    {
-                        title: "Installation",
-                        path: "/preset/installation",
-                        description: "Step-by-step guide to quickly set up Preset-UI ",
-                        keywords: "Installation, unifyui, presetui, preset ui, unify, unify ui, unocss, uno css"
-                    },
-                ]
             },
-            {
-                label: "Customization",
-                items: [
-                    {
-                        title: "Configuration",
-                        path: "/preset/customization/configuration",
-                        description: "Customize UI Appearance with PresetUI - Light and Dark Modes",
-                        keywords: "configuration, configure presetui, unocss, presetui, unifyui"
-                    },
-                    {
-                        title: "Theme",
-                        path: "/preset/customization/theme",
-                        description: "",
-                        keywords: "theme, ui theme, presetui theme, unocss themes"
-                    }
-                ]
-            },
-            {
-                label: "Utilities",
-                items: [
-                    {
-                        title: "Button",
-                        path: "/preset/utilities/button",
-                        description: "Preset UI Button Variants - Customize Colors and Sizes",
-                        keywords: "Preset UI, UnoCSS, utilities, components, button, button variants",
-                    },
-                    {
-                        title: "Form Input",
-                        path: "/preset/utilities/form-input",
-                        description: "Enhance your form input components with customizable styles and sizes using Preset UI. Easily configure and apply various styles like bordered, bordered-light, bordered-high, and bordered-higher, along with multiple size options from 2xs to xl.",
-                        keywords: "preset ui, unocss, preset form, unify ui, form, form input, form input variants, form input sizes",
-                        state: "wip"
-                    },
-                    {
-                        title: "Common utilities",
-                        path: "/preset/utilities/common",
-                        description: "guide to shared component utilities in Preset UI",
-                        keywords: "PresetUI, UnifyUI, UnoCSS, Components, UI Library, PresetUI, Preset UI, Preset UI, Preset UI, Preset UI, Preset UI, Preset UI, Preset UI, Preset UI",
-                        state: "wip"
-                    },
-                    {
-                        title: "Display",
-                        path: "/preset/utilities/display",
-                        description: "",
-                        keywords: "",
-                        state: "draft",
-                    },
-                    {
-                        title: "Progressbar",
-                        path: "/preset/utilities/progressbar",
-                        description: "",
-                        keywords: "",
-                        state: "wip",
-                    },
-                    {
-                        title: "Switch",
-                        path: "/preset/utilities/switch",
-                        description: "",
-                        keywords: "",
-                        state: "draft",
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        name: "components",
-        items: [
-            {
-                label: "Getting Started",
-                items: [
-                    {
-                        title: "Introduction",
-                        path: "/docs/introduction",
-                        description: "",
-                        keywords: ""
-                    },
-                    {
-                        title: "Installation",
-                        path: "/docs/installation",
-                        description: "",
-                        keywords: ""
-                    },
-                    {
-                        title: "Framework Guide",
-                        path: "/docs/framework-guide",
-                        description: "",
-                        keywords: ""
-                    },
-                    {
-                        title: "Quick Starter",
-                        path: "/docs/quick-starter",
-                        description: "",
-                        keywords: ""
-                    }
-                ]
-            },
-            {
+                        {
                 label: "Components",
                 items: [
                     {
                         title: "Accordion",
                         path: "/components/accordion",
-                        description: "",
-                        keywords: ""
+                        description: "Expandable content container.",
+                        keywords: "accordion, collapse, expand, toggle"
                     },
                     {
                         title: "Alert",
                         path: "/components/alert",
-                        description: "",
-                        keywords: "",
+                        description: "Notification for user.",
+                        keywords: "alert, notification, warning, success, error"
                     },
                     {
                         title: "Alert Dialog",
                         path: "/components/alert-dialog",
-                        description: "",
-                        keywords: "",
+                        description: "Modal dialog for notification.",
+                        keywords: "alert dialog, modal dialog, notification"
                     },
                     {
                         title: "Aspect Ratio",
                         path: "/components/aspect-ratio",
-                        description: "",
-                        keywords: ""
+                        description: "Container for maintaining aspect ratio.",
+                        keywords: "aspect ratio, responsive"
                     },
                     {
                         title: "Avatar",
                         path: "/components/avatar",
-                        description: "",
-                        keywords: ""
+                        description: "Image or icon for user.",
+                        keywords: "avatar, image, icon, user"
                     },
                     {
                         title: "Badge",
                         path: "/components/badge",
-                        description: "",
-                        keywords: ""
+                        description: "Label or icon for notification.",
+                        keywords: "badge, label, icon, notification"
                     },
                     {
                         title: "Breadcrumbs",
                         path: "/components/breadcrumbs",
-                        description: "",
-                        keywords: ""
+                        description: "Navigation for user.",
+                        keywords: "breadcrumbs, navigation"
                     },
                     {
                         title: "Button",
                         path: "/components/button",
-                        description: "",
-                        keywords: ""
+                        description: "Click button for user.",
+                        keywords: "button, click"
                     },
                     {
                         title: "Card",
                         path: "/components/card",
-                        description: "",
-                        keywords: ""
+                        description: "Content container with background and border.",
+                        keywords: "card, container, background, border"
                     },
                     {
                         title: "Checkbox",
                         path: "/components/checkbox",
-                        description: "",
-                        keywords: ""
+                        description: "Select multiple options.",
+                        keywords: "checkbox, select, multiple"
                     },
                     {
                         title: "Chip",
                         path: "/components/chip",
-                        description: "",
-                        keywords: ""
+                        description: "Label or icon for information.",
+                        keywords: "chip, label, icon, information"
                     },
                     {
                         title: "Divider",
                         path: "/components/divider",
-                        description: "",
-                        keywords: ""
+                        description: "Separator for content.",
+                        keywords: "divider, separator, content"
                     },
                     {
                         title: "Dropdown",
                         path: "/components/dropdown",
-                        description: "",
-                        keywords: "",
+                        description: "Select one option from a list.",
+                        keywords: "dropdown, select, option, list"
                     },
                     {
                         title: "Input",
                         path: "/components/input",
-                        description: "",
-                        keywords: "",
+                        description: "Form input for user.",
+                        keywords: "input, form, user"
                     },
                     {
                         title: "Kbd",
                         path: "/components/kbd",
-                        description: "",
-                        keywords: "",
+                        description: "Keyboard input for user.",
+                        keywords: "kbd, keyboard, input"
                     },
                     {
                         title: "Link",
                         path: "/components/link",
-                        description: "",
-                        keywords: "",
+                        description: "Link to another page or website.",
+                        keywords: "link, page, website"
                     },
                     {
                         title: "Meter",
                         path: "/components/meter",
-                        description: "",
-                        keywords: "",
+                        description: "Progress bar for user.",
+                        keywords: "meter, progress, bar"
                     },
                     {
                         title: "Pagination",
                         path: "/components/pagination",
-                        description: "",
-                        keywords: "",
+                        description: "Navigation for multiple pages.",
+                        keywords: "pagination, navigation, pages"
                     },
                     {
                         title: "Popover",
                         path: "/components/popover",
-                        description: "",
-                        keywords: "",
+                        description: "Modal dialog for information.",
+                        keywords: "popover, modal, information"
                     },
                     {
                         title: "Progress",
                         path: "/components/progress",
-                        description: "",
-                        keywords: "",
+                        description: "Progress bar for user.",
+                        keywords: "progress, bar, user"
                     },
                     {
                         title: "Radio",
                         path: "/components/radio",
-                        description: "",
-                        keywords: "",
+                        description: "Select one option from a list.",
+                        keywords: "radio, select, option, list"
                     },
                     {
                         title: "Range",
                         path: "/components/range",
-                        description: "",
-                        keywords: "",
+                        description: "Input for selecting a range of values.",
+                        keywords: "range, input, values"
                     },
                     {
                         title: "Select",
                         path: "/components/select",
-                        description: "",
-                        keywords: "",
+                        description: "Select one option from a list.",
+                        keywords: "select, option, list"
                     },
                     {
                         title: "Skeleton",
                         path: "/components/skeleton",
-                        description: "",
-                        keywords: "",
+                        description: "Loading animation for content.",
+                        keywords: "skeleton, loading, animation, content"
                     },
                     {
                         title: "Slideover",
                         path: "/components/slideover",
-                        description: "",
-                        keywords: "",
+                        description: "Modal dialog for information.",
+                        keywords: "slideover, modal, information"
                     },
                     {
                         title: "Switch",
                         path: "/components/switch",
-                        description: "",
-                        keywords: "",
+                        description: "Toggle for on or off.",
+                        keywords: "switch, toggle, on, off"
                     },
                     {
                         title: "Table",
                         path: "/components/table",
-                        description: "",
-                        keywords: "",
+                        description: "Table for displaying data.",
+                        keywords: "table, data, display"
                     },
                     {
                         title: "Tabs",
                         path: "/components/tabs",
-                        description: "",
-                        keywords: "",
+                        description: "Navigation for multiple pages.",
+                        keywords: "tabs, navigation, pages"
                     },
                     {
                         title: "Text Area",
                         path: "/components/text-area",
-                        description: "",
-                        keywords: "",
+                        description: "Form input for user.",
+                        keywords: "text area, form, user"
                     },
                     {
                         title: "Tooltip",
                         path: "/components/tooltip",
-                        description: "",
-                        keywords: "",
+                        description: "Information for user on hover.",
+                        keywords: "tooltip, information, hover"
                     },
                 ]
             },
@@ -378,6 +259,94 @@ export const sidebarItems: SidebarGroupCat[] = [
                         keywords: "",
                         state: "draft"
                     },
+                ]
+            }
+        ]
+    },
+    {
+        name: "preset",
+        items: [
+            {
+                label: "Getting Started",
+                items: [
+                    {
+                        title: "Introduction",
+                        path: "/preset/introduction",
+                        description: "Versatile UI library built on UnoCSS",
+                        keywords: "UI Library, preset, presetui, preset ui, unocss, Uno CSS, unify, unifyui, unify ui, unoui, uno ui, unoforge, uno forge"
+                    },
+                    {
+                        title: "Installation",
+                        path: "/preset/installation",
+                        description: "Quick setup guide for Preset-UI",
+                        keywords: "Installation, unifyui, presetui, preset ui, unify, unify ui, unocss, uno css, unoui, uno ui, unoforge, uno forge"
+                    }
+                ]
+            },
+            {
+                label: "Customization",
+                items: [
+                    {
+                        title: "Configuration",
+                        path: "/preset/customization/configuration",
+                        description: "Customize UI appearance and themes",
+                        keywords: "configuration, configure presetui, unocss, presetui, unifyui, unoui, uno ui, unoforge, uno forge, unify ui"
+                    },
+                    {
+                        title: "Preset Helper",
+                        path: "/preset/customization/preset-helper",
+                        description: "Streamline UI development with helpers",
+                        keywords:"PresetHelper, PresetUI Helper, UNOCSS Preset Helper, unoui, uno ui, unoforge, uno forge, unifyui, unify ui"
+                    },
+                    {
+                        title: "Theme",
+                        path: "/preset/customization/theme",
+                        description: "A set of ready to use UI themes",
+                        keywords: "theme, ui theme, presetui theme, unocss themes"
+                    }
+                ]
+            },
+            {
+                label: "Utilities",
+                items: [
+                    {
+                        title: "Button",
+                        path: "/preset/utilities/button",
+                        description: "Button variants and customization",
+                        keywords: "Preset UI, UnoCSS, utilities, components, button, button variants, unoui, uno ui, unoforge, uno forge, unifyui, unify ui",
+                    },
+                    {
+                        title: "Form Input",
+                        path: "/preset/utilities/form-input",
+                        description: "Form input components with customizable styles",
+                        keywords: "preset ui, unocss, preset form, unify ui, form, form input, form input variants, form input sizes, unoui, uno ui, unoforge, uno forge, unifyui",
+                    },
+                    {
+                        title: "Common utilities",
+                        path: "/preset/utilities/common",
+                        description: "Shared component utilities guide",
+                        keywords: "PresetUI, UnifyUI, UnoCSS, Components, UI Library, unoui, uno ui, unoforge, uno forge, unifyui, unify ui",
+                        state: "wip"
+                    },
+                    {
+                        title: "Display",
+                        path: "/preset/utilities/display",
+                        description: "",
+                        keywords: "",
+                        state: "draft",
+                    },
+                    {
+                        title: "Progressbar",
+                        path: "/preset/utilities/progressbar",
+                        description: "",
+                        keywords: "Customizable and semantic progressbar and meter elements, unoui, uno ui, unoforge, uno forge, unifyui, unify ui",
+                    },
+                    {
+                        title: "Switch",
+                        path: "/preset/utilities/switch",
+                        description: "Customizable CSS-only switch component",
+                        keywords: "UnoCSS Switch, UnifyUI Switch, PresetUI Switch, switch component, switch variants, switch sizes, unoui, uno ui, unoforge, uno forge, unifyui, unify ui",
+                    }
                 ]
             }
         ]

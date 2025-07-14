@@ -1,0 +1,42 @@
+---
+title: Sliderover / Offcanvas
+description: INput
+links: 
+    - 'PresetUI' : '/preset'
+    - 'Flexilla Offcanvas': 'https://flexilla-docs.vercel.app/'
+---
+
+
+<ComponentPreview name="slideover/Default"/>
+
+## Initialisation
+
+<Callout type="note">
+Note that this component requires JS, by default we're using `@flexilla/offcanvas` component, else you can skip this step if you've already `@flexilla/flexilla`.
+</Callout>
+
+<Steps>
+<Step>
+### Installation
+<BlockCode shellStyle>
+```bash
+npm i @flexilla/offcanvas
+```
+</BlockCode>
+</Step>
+<Step>
+### Usage
+You can globaly init all OffCanvas or init separately every Offcanvas Element
+<BlockCode>
+```js
+import { OffCanvas } from "@flexilla/offcanvas"
+// init OffCanvas for all Element with data-fx-offcanvas attribute
+OffCanvas.autoInit() 
+```
+</BlockCode>
+</Step>
+</Steps>
+
+## Overlay
+
+<ComponentPreview name="slideover/Overlay"/>

@@ -1,40 +1,57 @@
 ---
-title: Progressbar utilities
-description: something
+title: PresetUI - Progress Bar and Meter
+description: Customizable and semantic progressbar and meter elements for easy styling and usage.
 ---
 
-## Progressbar
+## Progress Bar
 
-Easily customize the semantic `progressbar` element.
+The PresetUI Progress Bar component uses the native `<progress>` element, styled for easy customization.
 
+### Usage
 
-<BlockCode>
-```html
-<progress max="14" value="4" class="progress-bar progress-bar-bg-gray progress-bar-rounded-lg progress-bar-xs text-success600"></progress>
-```
-</BlockCode> 
+- **Base Class**: `ui-progress-bar`
+  - The base class for the progress bar component.
 
-- **Set base rules :** Simply add `progress-bar` 
-- **Progressebar background** : add `progress-bar-bg-*`
-    - `gray` : apply a background with gray color (light gray-200 and dark gray-900)
-    - `light` : apply a background with gray color (light gray-100 and dark gray-900)
-    - `high` : apply a background with gray color (light gray-200 and dark gray-800)
-    - `higher` : apply a background with gray color (light gray-300 and dark gray-700)
-- **Progressbar Height** :  add `progress-bar-sizeVariant`
-    - `xs`
-    - `sm`
-    - `md`
-    - `lg`
-    - `xl`
-    - `2xl`
-    - `3xl`
-- **Corner radius** : add `progress-bar-rounded-*`
-    - `sm`
-    - `md`
-    - `lg`
-    - `xl`
-    - `full`
+- **Sizes**:
+  - Customize the size with classes: `ui-progress-bar-sm`, `ui-progress-bar-md`, `ui-progress-bar-lg`.
 
+- **Rounded Corners**:
+  - Apply rounded corners with the class: `ui-progress-bar-rounded-md`.
+
+- **Background Color**:
+  - Set the background color using: `bg-colorName`.
+
+- **Indicator Color**:
+  - Define the indicator color by adding a text color class, such as `text-secondary`.
 
 ## Meter
+
+The Meter component uses the `<meter>` element, providing a way to display fractional values or measurements.
+
+### Usage
+
+- **Base Class**: `ui-meter`
+  - The base class for the meter component.
+
+- **Sizes**:
+  - Customize the size with classes: `ui-meter-h-md`.
+
+- **Rounded Corners**:
+  - Apply rounded corners with the class: `ui-meter-rounded-md`.
+
+- **Background Color**:
+  - Set the background color using: `bg-bg-muted`.
+
+- **Indicator Color**:
+  - Define the indicator color by adding a text color class, such as `text-emerald6`.
+
+### Differences Between `<progress>` and `<meter>`
+
+- **`<progress>`**:
+  - Represents the completion progress of a task.
+  - Typically used for loading bars or task completion indicators.
+
+- **`<meter>`**:
+  - Represents a fractional value or measurement within a known range.
+  - Suitable for displaying gauges or measurements, such as disk usage or temperature.
 

@@ -38,7 +38,7 @@ const {
   next: nextSlug,
   prev: prevSlug,
   current,
-} = getPagger({ slug: id, name: "components", baseUrl: "components" });
+} = getPagger({ slug: id, name: "getting-started", baseUrl: "components" });
 
 const words = splitSlugUrl(id);
 ---
@@ -46,8 +46,7 @@ const words = splitSlugUrl(id);
 <DocLayout
   activeGroup="components"
   activeItem={`/components/${id}`}
-  headings={headings}
-  title={`UnifyUI Component - ${current.title}`}
+  title={`UnoUI Component - ${current.title}`}
   description={`${current.description}`}
   keywords={current.keywords}
   hideTableOfContent={hideTableOfContent}
@@ -56,6 +55,7 @@ const words = splitSlugUrl(id);
     data-pagefind-body
     class="px4 sm-px8 xl-px16 grid text-fg hmax"
   >
+  <div class="w-full xl-max-w2xl mxa">
     <DocPageHeader
       title={title}
       subTitle={description}
@@ -79,7 +79,7 @@ const words = splitSlugUrl(id);
 
     <div class="flex wfull hpx my8 b-b b-border"></div>
     <DocsPagination nextSlug={nextSlug} prevSlug={prevSlug}/>
-    
+    </div>
   </article>
   {
     !hideTableOfContent ? (

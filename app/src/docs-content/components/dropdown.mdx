@@ -1,8 +1,40 @@
 ---
 title: Dropdown
 description: A customizable menu that allows users to select an option from a list.
+links:
+    - 'PresetUI' : /preset/utilities/common
+    - 'Flexilla Dropdown' : https://flexilla-docs.vercel.app/docs/components/dropdown
 ---
 
 ## Default
 
 <ComponentPreview name="dropdown/Default"/>
+
+
+## Usage
+
+<Callout type="note">
+Note that this component requires JS, by default we're using `@flexilla/dropdown` component, else you can skip this step if you've already `@flexilla/flexilla`.
+</Callout>
+
+<Steps>
+<Step>
+### Installation
+<BlockCode shellStyle>
+```bash
+npm i @flexilla/dropdown
+```
+</BlockCode>
+</Step>
+<Step>
+### Usage
+You can globaly init all Dropdown or init separately every Dropdown Element
+<BlockCode>
+```js
+import { Dropdown } from "@flexilla/dropdown"
+// init dropdown for all Element with data-fx-dropdown attribute
+Dropdown.autoInit() 
+```
+</BlockCode>
+</Step>
+</Steps>

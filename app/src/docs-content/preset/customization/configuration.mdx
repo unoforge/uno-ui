@@ -21,6 +21,13 @@ export default defineConfig({
 	    components?: Components,
 	    baseVariants?: BaseVariants,
 	    colorFormat?: "rgb" | "hex" | "hsl" | "oklch" | "none",
+      uiGen?: {
+        variablePrefix?: string;
+        colorFormat?: "rgb" | "hex" | "hsl" | "oklch" | "none";
+        components?: { ... };
+        exclude?: ThingsToExclude;
+        appearance?: Appearance;
+      }
     })
   ],
 });
@@ -73,3 +80,7 @@ presetUI({
 })
 ```
  </BlockCode>
+
+ ### UiGen
+
+No extra theme config needed, [Discover Preset helper](/preset/customization/preset-helper)

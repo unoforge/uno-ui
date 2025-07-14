@@ -4,17 +4,16 @@ type Props = {
   title: string;
   path: string;
   isActive: boolean;
-}
+};
 const { icon, title, path, isActive } = Astro.props;
 ---
 
 <li>
   <a
     href={path}
-
     aria-label={`Link to ${title}`}
-    data-state={isActive?"active":"inactive"}
-    class={`flex items-center gap-x2.5 fx-active-font-600 fx-active-text-fg-title text-fg hover-text-fg-title`}
+    data-state={isActive ? "active" : "inactive"}
+    class={`flex items-center gap-x2.5 fx-active-font-400 fx-active-text-fg-title text-fg hover-text-fg-title`}
   >
     <span
       aria-hidden="true"

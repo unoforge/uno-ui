@@ -4,29 +4,33 @@ type Props = {
   colors: string[];
   id: string;
   isDefault?: boolean;
-}
+};
 const { label, colors, id, isDefault } = Astro.props;
 ---
 
-<li class="wfull">
-  <button
-    data-palette-color
-    id={id}
-    aria-checked={isDefault ? "true" : "false"}
-    role="radio"
-    tabindex={isDefault ? "0" : "-1"}
-    style={`--palette-main-color:${colors[0]}`}
-    class="btn-palette group pb0.5"
+<button
+  data-palette={id}
+  data-palette-color
+  id={id}
+  aria-checked={isDefault ? "true" : "false"}
+  role="radio"
+  tabindex={isDefault ? "0" : "-1"}
+  style={`--palette-main-color:hsl(${colors[0]})`}
+  class="btn-palette group pb0.5 text-fg-muted"
+>
+  <div
+    class="grid grid-cols-3 h10 rd-md overflow-hidden bg-bg-surface p0.5 wfull"
   >
-    <div class="grid grid-cols-3 h10 rd-md overflow-hidden bg-bg-light p0.5 wfull">
-        {
-          colors.map(color => (
-              <span style={`--palette-token: ${color};`} class={`palette-token first-rd-l last-rd-r`}></span>
-          ))
-        }
-    </div>
-    <span data-text class="text-sm">
-      {label}
-    </span>
-  </button>
-</li>
+    {
+      colors.map((color) => (
+        <span
+          style={`--palette-token: hsl(${color});`}
+          class={`palette-token first-rd-l last-rd-r`}
+        />
+      ))
+    }
+  </div>
+  <span data-text class="text-sm">
+    {label}
+  </span>
+</button>

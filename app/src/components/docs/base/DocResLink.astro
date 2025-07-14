@@ -11,7 +11,7 @@ const isNotExternal = (href: string) =>
   href.startsWith("/") || href.startsWith("#");
 ---
 
-<UiLink href={href} class="btn btn-xs bg-gray100 dark-bg-gray900 b b-border-high/40 hover-b-border-higher text-fg gap-x1 rd-lg">
+<UiLink href={href} class="btn btn-xs btn-outline btn-outline-gray gap-x1 rd-lg">
   {text}
   {
     isNotExternal(href) ? null : (
