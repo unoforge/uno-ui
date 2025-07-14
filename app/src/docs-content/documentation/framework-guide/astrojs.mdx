@@ -1,7 +1,108 @@
 ---
-title: Install with ViteJS
-description: Use UnoCSS within your ViteJS project
+title: AstroJS Installation
+description: Use UnoCSS within your AstroJS project
 ---
 
-This guide will help you get started with UnifyUI, how to install and integrate it in your new or existing ViteJS project.
 
+Requires the following before installing:
+
+<LinksGrid links={[
+    { href: "https://tailwindcss.com/docs/installation/framework-guides/astro",title: "UnoCSS", description: "UnoCSS v0.64.0, v65.4.0 or later", icon: "i-fx-unocss-ico"},
+    { href: "https://docs.astro.build/en/getting-started/",title: "AstroJS", description: "V5 or later", icon: "/icons/astrojs.svg"}
+]}/>
+
+## Installation
+
+<Steps>
+<Step>
+### Create new Astro Project
+
+Create a new astroJS project if you don't have one 
+<BoxCode title="Shell" icon="shell" shellStyle>
+```shel
+npm create astro@latest myapp
+cd myapp
+npm i
+```
+</BoxCode>
+</Step>
+
+<Step>
+### Installation
+<BoxCode title={"Shell"} icon={"shell"} shellStyle>
+```bash
+npm i -D unocss @unifydev/preset-ui
+```
+</BoxCode>
+
+To learn more about installing UnoCSS and PresetUI, check [this guide](/preset/installation) 
+
+</Step>
+<Step>
+### Configuration
+
+- **Theme** : to configure your theme, [follow this](/preset/customization/theme) 
+
+- **Global** : global general colors for background, text-color and border.
+
+**CSS Variables**
+
+<BlockCode>
+```css
+:root{
+    --bg: var(--c-white);
+    --bg-subtle: var(--c-gray-50);
+    --bg-surface: var(--c-gray-100);
+    --bg-muted: var(--c-gray-200);
+    --bg-surface-elevated: var(--c-gray-300);
+
+    --fg: var(--c-gray-700);
+    --fg-muted: var(--c-gray-600);
+    --fg-title: var(--c-gray-900);
+    --fg-subtitle: var(--c-gray-800);
+    --border: var(--c-gray-200);
+
+    --border-subtle: var(--c-gray-50);
+    --border-light: var(--c-gray-200);
+    --border-strong: var(--c-gray-300);
+    --border-emphasis: var(--c-gray-400);
+}
+```
+</BlockCode>
+**Add Integration **
+<BlockCode>
+```js
+
+import unoCSS from "unocss/astro"; // [!code ++]
+
+export default defineConfig({
+  integrations: [ // [!code ++]
+    unoCSS({  injectReset: true }) // [!code ++]
+  ], // [!code ++]
+})
+```
+</BlockCode>
+</Step>
+<Step>
+
+### Add interactivity (Optional)
+
+If you're willing to use interactive component then make sure to have [Flexilla](https://flexiwind.vercel.app/docs/) installed or the corresponding Flexilla Package
+
+<BoxCode title={"Shell"} icon={"shell"} shellStyle>
+```bash
+npm i @flexilla/flexilla
+```
+</BoxCode>
+
+To init all components 
+
+<BoxCode title={"script.js"} icon={"js"}>
+```ts
+import {initFlexilla} from "@flexilla/flexilla"
+
+initFlexilla()
+```
+</BoxCode>
+</Step>
+</Steps>

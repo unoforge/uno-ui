@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { glob, file } from 'astro/loaders'; // Not available with legacy API
+import { glob } from 'astro/loaders'; // Not available with legacy API
 
 
 const linkSchema = z.array(z.record(z.string().trim()));

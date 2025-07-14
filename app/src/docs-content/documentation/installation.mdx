@@ -1,11 +1,11 @@
 ---
-title: UnifyUI - Installation
+title: UnoUI - Installation
 description: something
 ---
 
 ## Quick setup
 
-This guide will help you get started with UnifyUI
+This guide will help you get started with UnoUI
 
 ## Installation
 
@@ -23,9 +23,43 @@ npm i -D unocss @unifydev/preset-ui
 To learn more about installing UnoCSS and PresetUI, check [this guide](/preset/installation) 
 </Step>
 <Step>
+### Configuration
+
+- **Theme** : to configure your theme, [follow this](/preset/customization/theme) 
+
+- **Global** : global general colors for background, text-color and border.
+
+**CSSS Variables**
+
+<BlockCode>
+```css
+:root{
+    --bg: var(--c-white);
+    --bg-subtle: var(--c-gray-50);
+    --bg-surface: var(--c-gray-100);
+    --bg-muted: var(--c-gray-200);
+    --bg-surface-elevated: var(--c-gray-300);
+
+    --fg: var(--c-gray-700);
+    --fg-muted: var(--c-gray-600);
+    --fg-title: var(--c-gray-900);
+    --fg-subtitle: var(--c-gray-800);
+    --border: var(--c-gray-200);
+
+    --border-subtle: var(--c-gray-50);
+    --border-light: var(--c-gray-200);
+    --border-strong: var(--c-gray-300);
+    --border-emphasis: var(--c-gray-400);
+}
+```
+</BlockCode>
+
+
+</Step>
+<Step>
 ### Add interactivity
 
-If you're willing to use interactive component then make sure to have [Flexilla]() installed or the corresponding Flexilla Package
+If you're willing to use interactive component then make sure to have [Flexilla](https://flexiwind.vercel.app/docs/) installed or the corresponding Flexilla Package
 
 <BoxCode title={"Shell"} icon={"shell"} shellStyle>
 ```bash

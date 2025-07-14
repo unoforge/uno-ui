@@ -25,6 +25,32 @@ export type SidebarGroupCat = {
     items: SidebarGroupItems[];
 }
 
+
+export type BlockItem = {
+    key: string,
+    title: string,
+    preview: string,
+    code: {
+        html: string,
+        astro?:string,
+        laravel?: string
+    }
+}
+export type BlockComponent = {
+    name: string,
+    title: string,
+    description: string,
+    items: BlockItem[]
+}
+
+export type UiCardProps = {
+    href: string;
+    title: string;
+    description: string;
+    icon: string;
+    iconDark?:string
+}
+
 export type CornerRadius = "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full"
 export type BtnSizeVariant = "xs" | "sm" | "md" | "lg" | "xl" | "icon-xs" | "icon-sm" | "icon-md" | "icon-lg" | "icon-xl"
 export type UiSize = "2xs" | "xs" | "sm" | "md" | "lg" | "xl"

@@ -1,0 +1,64 @@
+---
+title: Popover
+description: INput
+---
+
+
+
+<ComponentPreview name="popover/Default"/>
+
+## Usage
+
+<Callout type="note">
+Note that this component requires JS, by default we're using `@flexilla/tooltip` component, else you can skip this step if you've already `@flexilla/flexilla`.
+</Callout>
+
+<Steps>
+<Step>
+### Installation
+<BlockCode shellStyle>
+```bash
+npm i @flexilla/popover
+```
+</BlockCode>
+</Step>
+<Step>
+### Usage
+You can globaly init all Popover/Tooltip or init separately every modal Element
+<BlockCode>
+```js
+import { Popover } from "@flexilla/popover"
+// init modal for all Element with data-popover attribute
+Popover.autoInit('[data-popover]') 
+```
+</BlockCode>
+</Step>
+</Steps>
+
+## Trigger on Hover
+
+<PreviewBox name="popover/WithContent">
+```html
+<button data-popover-trigger data-popover-id="popover-example2" aria-controls="popper"
+    class="flex items-center gap-x2 p2 rd-lg btn-white ui-btn-white text-fg-subtitle">
+    <img src="/defaultavatar.webp" alt="avatar" width="640" height="427"
+        class="size-9 rd-full object-cover">
+    <div class="flex items-start flex-col">
+        <h4 class="font-semibold text-fg-title">Johnkat MJ</h4>
+        <span class="text-sm  text-fg-muted">FrontEnd Designer</span>
+    </div>
+</button>
+<div aria-labelledby="popper" data-popover id="popover-example2" aria-hidden="true"
+    class="u-fx-popper w60 p5 bg-bg-surface rd-md invisible op0 fx-open-op100 fx-open-visible space-y-2 shadow shadowgray2/30 dark-shadow-transparent flex flex-col items-center text-center">
+    <img src="/defaultavatar.webp" alt="avatar" class="size-16 object-cover rd-full">
+    <div class="space-y-0.5">
+        <h4 class="text-fg-title font-semibold">John Doe</h4>
+        <p class="text-fg text-sm">12k followers</p>
+    </div>
+    <button
+        class="rd-full btn btn-md btn-solid btn-solid-primary text-white">
+        Follow
+    </button>
+</div>
+```
+</PreviewBox>

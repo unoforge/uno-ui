@@ -1,0 +1,144 @@
+---
+title: Preset Ui - Installation
+description: A customizable range slider for selecting values within a specified range.
+---
+
+
+
+<PreviewBox name="range/Default">
+```html
+<div class="relative wfull flex items-center h4">
+    <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary">
+</div>
+<div class="relative wfull flex items-center h4">
+    <input type="range" name="range_slide" min="0" max="80" value="20" class="
+    ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary
+        ">
+</div>
+```
+</PreviewBox>
+
+
+## Stepper
+
+<PreviewBox name="range/Stepper">
+```html
+<div class="relative w-full flex items-center h-4">
+    <input type="range" name="range_slide" step="4" min="0" max="40" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary">
+</div>
+```
+</PreviewBox>
+
+## Style
+
+<PreviewBox name="range/Styled">
+```html
+<div class="relative w-full flex items-center h-4">
+    <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray  text-primary600">
+</div>
+<div class="relative w-full flex items-center h-4">
+    <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray  text-secondary600">
+</div>
+<div class="relative w-full flex items-center h-4">
+    <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray  text-accent600">
+</div>
+<div class="relative w-full flex items-center h-4">
+    <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray  text-success600">
+</div>
+<div class="relative w-full flex items-center h-4">
+    <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray  text-info6">
+</div>
+```
+</PreviewBox>
+
+
+## Custom indicator
+
+<PreviewBox name="range/Custom">
+```html
+<div data-custom-range-wrapper
+    data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-success600 dark-bg-success500 h-2"
+    id="range_custom1" class="relative w-full flex items-center h-4">
+    <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-success">
+</div>
+<div data-custom-range-wrapper
+    data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary-600 dark-bg-primary-500 h-2"
+    id="range_custom3" class="relative w-full flex items-center h-4">
+    <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary">
+</div>
+```
+</PreviewBox>
+
+### Init
+
+<Callout type="note">
+Note that this component requires JS, by default we're using `@flexilla/custom-range` component, else you can skip this step if you've already `@flexilla/flexilla`.
+</Callout>
+
+<Steps>
+<Step>
+### Installation
+<BlockCode shellStyle>
+```bash
+npm i @flexilla/custom-range
+```
+</BlockCode>
+</Step>
+<Step>
+
+### Usage
+You can globaly init all Modal or init separately every modal Element
+<BlockCode>
+```js
+import { CustomRange } from "@flexilla/custom-range"
+// init CustomRange for all Element with data-custom-range-wrapper attribute
+CustomRange.autoInit("[data-custom-range-wrapper]")
+```
+</BlockCode>
+</Step>
+</Steps>
+
+
+## Size
+
+<PreviewBox name="range/RangeSize">
+```html
+  <div class="relative wfull flex items-center h2">
+    <label for="range_slide_xs" class="sr-only">rangexs</label>
+    <input type="range" name="range_slide_xs" id="range_slide_xs" min="0" max="100" class="ui-input-range ui-range-thumb-size-xs ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+    </div>
+  <div class="relative wfull flex items-center h3">
+    <label for="range_slide_sm" class="sr-only">rangesm</label>
+    <input type="range" name="range_slide_sm" id="range_slide_sm" min="0" max="100" class="ui-input-range ui-range-thumb-size-sm ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+    </div>
+  <div class="relative wfull flex items-center h4">
+    <label for="range_slide_md" class="sr-only">rangemd</label>
+    <input type="range" name="range_slide_md" id="range_slide_md" min="0" max="100" class="ui-input-range ui-range-thumb-size-sm ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+    </div>
+  <div class="relative wfull flex items-center h5">
+    <label for="range_slide_lg" class="sr-only">rangelg</label>
+    <input type="range" name="range_slide_lg" id="range_slide_lg" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+    </div>
+  <div class="relative wfull flex items-center h6">
+    <label for="range_slide_xl" class="sr-only">rangexl</label>
+    <input type="range" name="range_slide_xl" id="range_slide_xl" min="0" max="100" class="ui-input-range ui-range-thumb-size-lg ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" /><
+    /div>
+```
+</PreviewBox>
+
+<PreviewBox name="range/CustomSize">
+```html
+<div data-custom-range-wrapper data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h1" class="relative wfull flex items-center h2">
+    <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-xs ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+</div>
+<div data-custom-range-wrapper data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h1" class="relative wfull flex items-center h3">
+    <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-sm ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+</div>
+<div data-custom-range-wrapper data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h2" id="range_custom1" class="relative wfull flex items-center h4">
+    <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+</div>
+<div data-custom-range-wrapper data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h2.5" id="range_custom1" class="relative wfull flex items-center h4">
+    <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-lg ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" />
+</div>
+```
+</PreviewBox>

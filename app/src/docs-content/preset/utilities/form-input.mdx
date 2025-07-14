@@ -5,19 +5,19 @@ description: Utility classes to customize Form Input
 
 ## Form Input
 
-To use it just add `form-input` utility class to your input, this class contains base styles.
+To use it, simply add the `ui-form-input` utility class to your input elements. This class contains base styles.
 
 ### Sizes
 
-The Input component supports the following sizes : `2xs`, `xs`, `sm`, `md`, `lg`, `xl`
+The Input component supports the following sizes: `2xs`, `xs`, `sm`, `md`, `lg`, `xl`.
 
-### Customize  style
+### Customize Style
 
 <BlockCode>
 ```css
---ui-input-focus-outline: your color ; /** When input focus */
---ui-input-place-holder: your color; /** placeholder text-color */
---ui-input-invalid-outline: your color; /**  When input invalid and focus */
+--ui-input-focus-outline: your color; /** When input is focused */
+--ui-input-placeholder: your color; /** Placeholder text color */
+--ui-input-invalid-outline: your color; /** When input is invalid and focused */
 ```
 </BlockCode>
 
@@ -25,22 +25,18 @@ The Input component supports the following sizes : `2xs`, `xs`, `sm`, `md`, `lg`
 
 <BlockCode>
 ```html
-<input type="text" class="form-input form-input-md">
+<input type="text" class="ui-form-base ui-form-input ui-form-input-md">
 ```
 </BlockCode>
-
-<Callout type="note">
-  Using form input utilities require having [@julr/unocss-preset-forms](https://github.com/Julien-R44/unocss-preset-forms) Preset installed.
-</Callout>
 
 
 ## Input Checkbox
 
 <BlockCode>
 ```html
-<input type="checkbox" class="form-input-checkbox">
-<input type="checkbox" class="form-input-checkbox-secondary">
-<input type="checkbox" class="form-input-checkbox-accent">
+<input type="checkbox" class="ui-checkbox-radio-base ui-form-checkbox text-primary-600 size-5">
+<input type="checkbox" class="ui-checkbox-radio-base ui-form-checkbox text-secondary-500 size-5">
+<input type="checkbox" class="ui-checkbox-radio-base ui-form-checkbox text-danger-600 size-5">
 ```
 </BlockCode>
 
@@ -48,7 +44,7 @@ The Input component supports the following sizes : `2xs`, `xs`, `sm`, `md`, `lg`
 
 <BlockCode>
 ```css
---ui-checkbox-bg: your color ;
+--ui-checkbox-bg: your color;
 --ui-checkbox-border: your color;
 --ui-ring-bg: your color;
 ```
@@ -58,9 +54,18 @@ The Input component supports the following sizes : `2xs`, `xs`, `sm`, `md`, `lg`
 
 <BlockCode>
 ```html
-<input type="radio" class="form-input-radio">
-<input type="radio" class="form-input-radio-secondary">
-<input type="radio" class="form-input-radio-accent">
+<input type="radio" class="ui-checkbox-radio-base ui-form-radio">
+<input type="radio" class="ui-checkbox-radio-base ui-form-radio-secondary">
+<input type="radio" class="ui-checkbox-radio-base ui-form-radio-accent">
+```
+</BlockCode>
+
+
+## Input Range
+
+<BlockCode>
+```html
+<input type="range" class="ui-input-range range-thumb-size-md range-track-bg-surface range-thumb-bg-danger">
 ```
 </BlockCode>
 
@@ -68,15 +73,18 @@ The Input component supports the following sizes : `2xs`, `xs`, `sm`, `md`, `lg`
 
 <BlockCode>
 ```css
---ui-radio-bg: color here;
+    --range-thumb-bg-gray: your value;
+    --range-track-bg-gray: your value;
 ```
 </BlockCode>
 
-## Input Range
+## Setting Style
+
+### Define Focus Color for All Inputs
 
 <BlockCode>
-```html
-<input ttype="range" class="form-input-range range-thumb-size-md range-track-bg-light range-thumb-bg-danger">
+```css
+--ui-input-focus-outline: var(--c-primary-600);
 ```
 </BlockCode>
 

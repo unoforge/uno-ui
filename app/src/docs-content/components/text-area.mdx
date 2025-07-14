@@ -1,0 +1,80 @@
+---
+title: TextArea
+description: A multi-line input field designed for longer text entries, providing ample space for detailed input.
+links: 
+    - 'PresetUI Form' : '/preset/utilities/div-input'
+    - 'UnoCSS Preset Form' : ''
+---
+
+
+<PreviewBox name="text-area/Default">
+```html
+<div class="space-y-4 wfull">
+    <textarea placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg"></textarea>
+    <textarea placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md bg-bg bg-bg-surface rd-lg b-transparent text-fg"></textarea>
+</div>
+```
+</PreviewBox>
+
+## No Resize
+
+<PreviewBox name="text-area/NoResize">
+```html
+<div class="space-y-4 wfull">
+    <textarea placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg resize-none"></textarea>
+</div>
+```
+</PreviewBox>
+
+
+## Auto Resize
+
+<PreviewBox name="text-area/Autoresize">
+```html
+<div class="wfull">
+    <textarea data-fx-autoresize placeholder="Your message" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg"></textarea>
+</div>
+```
+</PreviewBox>
+
+<Callout type="note">
+AutoResize Text Area requires JS, by default we're using `@flexilla/auto-resize-area` component, else you can skip this step if you've already `@flexilla/flexilla`.
+</Callout>
+
+
+### Add JS
+
+<Steps>
+<Step>
+### Installation
+<BlockCode shellStyle>
+```bash
+npm i @flexilla/auto-resize-area
+```
+</BlockCode>
+</Step>
+<Step>
+
+### Usage
+You can globaly init all AutoResizeTextArea or init separately every Text Area Element
+<BlockCode>
+```js
+import { AutoResizeTextArea } from "@flexilla/auto-resize-area"
+// init AutoResizeTextArea for all Element with data-fx-autoresize attribute
+AutoResizeTextArea.autoInit()
+```
+</BlockCode>
+</Step>
+</Steps>
+
+## With Label
+
+<PreviewBox name="text-area/WithLabel">
+```html
+<div class="space-y-2">
+    <label for="message" class="w-max text-sm text-sub-body">Your Message</label>
+    <textarea id="message" name="message" placeholder="Tell us your ...." class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg"></textarea>
+</div>
+```
+</PreviewBox>
+

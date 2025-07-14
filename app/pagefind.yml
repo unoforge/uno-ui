@@ -1,0 +1,2 @@
+site: .vercel/output/static
+output_subdir: _pagefind

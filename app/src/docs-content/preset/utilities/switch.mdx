@@ -1,6 +1,47 @@
 ---
 title: Preset Ui - Variants
-description: something
+description: A customizable, accessible switch using only CSS and a checkbox input.
 ---
 
-## 
+## Description
+
+The PresetUI Switch component provides an accessible and styled switch that operates purely with CSS and a checkbox input, requiring no JavaScript.
+
+## Default Switch
+
+### Base Switch
+
+- **Class**: `switch`
+  - The base class for the switch component.
+
+### Background
+
+- **Default Background**:
+  - To define the background color of the switch, add the class `bg-your-color`, replacing `your-color` with the desired color class.
+
+- **Checked Background Color**:
+  - To apply a background color when the switch is checked, add the class `text-colorName`. The background will adopt the text color when the switch is checked.
+
+### Size
+
+- **Predefined Sizes**:
+  - The switch component supports various sizes: `xs`, `sm`, `md`, `lg`.
+  - Example: `switch-xs` for an extra-small switch.
+
+### Knob Color
+
+- **Custom Knob Color**:
+  - To define the knob color, add the class `switch-knob-colorName`.
+  - In your CSS, set the color using variables like: `--switch-knob-colorName: value;`.
+
+
+## Outline Switch
+
+### Base
+- **Class** : `switch-outline`
+
+### Size
+
+- **Predefined Sizes**:
+  - The switch component supports various sizes: `xs`, `sm`, `md`, `lg`.
+  - Example: `switch-outline-xs` for an extra-small switch.

@@ -1,0 +1,96 @@
+---
+title: Select
+description: A Select for choosing one option from a predefined set of choices.
+links: 
+    - 'PresetUI Form' : '/preset/utilities/form-input'
+---
+
+<PreviewBox name="select/Default">
+```html
+<select name="select-country" id="select-country"
+    class="ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+    <option value="DRC">DR Congo</option>
+    <option value="TZ">Tanzania</option>
+    <option value="MA">Morocco</option>
+    <option value="NG">Nigeria</option>
+</select>
+<select name="select-country" id="select-country"
+    class="ui-form-base ui-form-input ui-form-select bg-bg-surface  ui-form-input-md rd-lg text-fg bg-bg">
+    <option value="DRC">DR Congo</option>
+    <option value="TZ">Tanzania</option>
+    <option value="MA">Morocco</option>
+    <option value="NG">Nigeria</option>
+</select>
+```
+</PreviewBox>
+
+
+## With Label
+
+<PreviewBox name="select/WithLabel">
+```html
+<div class="space-y-2">
+    <label for="country-list" class="text-sm text-gray6 dark-text-gray4">Select Country</label>
+    <select name="country-list" id="country-list"
+        class="ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+        <option value="" disabled class="op60">Search Country</option>
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+</div>
+```
+</PreviewBox>
+
+## With Icon
+
+<PreviewBox name="select/WithIcon">
+```html
+<div class="relative">
+    <select name="select-country" id="select-country"
+        class="ps9 ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+    <span aria-hidden="true" class="absolute left-3 hfull flex items-center top-0 text-fg peer-invalid-text-red6 dark-invalid-text-red5">
+        <span aria-hidden="true" class="flex i-carbon-flag-filled"></span>
+    </span>
+</div>
+<div class="relative flex">
+    <span aria-hidden="true" class="p2.5 flex items-center bg-bg-surface b b-border-strong b-r-indigo-50 rd-l-md text-fg">
+        <span class="flex i-carbon-flag-filled"></span>
+    </span>
+    <select name="select-country" id="select-country"
+        class="ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-r-lg text-fg">
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+</div>
+```
+</PreviewBox>
+
+
+## Icon Indicator
+
+<PreviewBox name="select/CustomIndicator">
+```html
+<div class="relative wfull">
+    <select name="select-country" id="select-country"
+        class="pe9 ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+    <span aria-hidden="true"
+        class="absolute right-3 inset-y-px text-fg pointer-events-none flex items-center bg-bg">
+        <span class="flex i-ph-caret-up-down"></span>                             
+    </span>
+</div>
+```
+</PreviewBox>

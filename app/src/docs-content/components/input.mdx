@@ -1,0 +1,45 @@
+---
+title: Form Input
+description: An input field tailored for descriptive text, supporting longer entries with a clean design.
+links: 
+    - 'PresetUI Form' : '/preset/utilities/form-input'
+---
+
+
+
+<PreviewBox name="input/Default">
+```html
+<form class="space-y-4 wfull">
+    <input type="text" placeholder="Start typing..." class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-md text-fg">
+    <input type="text" placeholder="Start typing..." class="ui-form-base ui-form-input ui-form-input-md bg-bg bg-bg-surface rd-lg b-transparent text-fg">
+</form>
+```
+</PreviewBox>
+
+## With Label
+
+<PreviewBox name="input/WithLabel">
+```html
+<form class="flex flex-col wfull space-y-4">
+    <div class="flex flex-col space-y-2">
+        <label for="user_email_2" class="text-sm text-sub-body">Your Email</label>
+        <input type="email" name="user_email_2" id="user_email_2" placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-md text-fg">
+    </div>
+    <div class="flex items-center gap-2">
+        <label for="user_email" class="text-sm text-sub-body min-w-max">Your Email</label>
+        <input type="email" placeholder="Your email here" name="user_email" id="user_email" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-md text-fg">
+    </div>
+</form>
+```
+</PreviewBox>
+
+
+## With Icon/Text
+
+### Leading
+
+<ComponentPreview name="input/Leading"/>
+
+### Trailing
+
+<ComponentPreview name="input/Trailing"/>

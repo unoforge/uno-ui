@@ -1,0 +1,156 @@
+---
+title: Preset Ui - UiGen
+description: Streamline your UI development with PresetUI Helper. Predefined and configurable classes make styling fast and efficient. Customize colors, appearances, and components with ease.
+links:
+    - UnoCSS: https://unocss.dev/
+---
+
+
+## Ui Helper
+
+The preset inside PresetUi that makes your task easier with a ready-to-use configuration. By default, it uses classes like `btn-solid`, `btn-outline`, `ui-solid`, etc. To apply styles, you usually need to create a class like this:
+
+<BlockCode>
+```css
+.myStyleDanger {
+  --varName: value;
+}
+```
+</BlockCode>
+
+Then, in your HTML, you would use:
+
+<BlockCode>
+```html
+<div class="ui-solid myStyleDanger"></div>
+```
+</BlockCode>
+
+This process can be tedious, especially when you need to work quickly. The Preset Helper comes to the rescue by predefining all classes, making them configurable. All you need to do is set up the colors, and everything else falls into place.
+
+## Preset Options:
+
+- **colorFormat**: Choose from "hsl", "rgb", "hex", "ok...", or "none". This tells the preset the format for your color variables. For example, if you choose "none", you directly set your variable like this: `--my-color: hsl(value here)`. The default is HSL, so you only need to configure each color with its value, like `--myColor: v1 v2 v3`.
+
+- **Appearance**: Choose from "both", "light", or "dark". This indicates whether the preset should include configurations for both light and dark modes or just one of them, to avoid unused classes.
+
+- **prefix**: The prefix used for your colors. By default, it expects `--c-colorName`, but you can specify a different prefix if needed.
+
+- **components**: Customizable elements, such as changing shades.
+
+
+
+## Configuration
+
+Some variants share the same configuration. You can decide if you want your components to have their own configuration or a shared one.
+
+<Callout type="note">
+  **Info :**
+  The idea to add a configuration part is mainly inspired by the way NuxtUI makes it easier to customize each UI element. We've oriented this towards controlling the output CSS. Every change in the configuration will be reflected in the final CSS output.
+</Callout>
+
+<BlockCode>
+```js
+// uno.config.ts
+import { presetUIHelper } from "@unifydev/preset-ui"
+
+export default defineConfig({
+  // ...config
+  presets: [
+    //other presets
+    presetUI({
+      variablePrefix?: string;
+    colorFormat?: uiColorFormat;
+    components?: {
+        ...
+    };
+    exclude?: ThingsToExclude;
+    appearance?: Appearance;
+    }),
+  ],
+});
+```
+</BlockCode>
+
+<Callout type="note">
+  PresetUI is generated on demand. This configuration will work for all colors. 
+  We are planning to make it possible to configure each color independently in future updates.
+</Callout>
+
+## External Configuration
+
+You can separate things by creating a separate `ui.config.ts` file for your configuration
+
+<CodeGroupBox>
+<BlockCode>
+```js
+// ui.config.js
+export const myConfig = {
+    // your configuration here
+}
+
+```
+</BlockCode>
+<BlockCode>
+```js
+// uno.config.ts
+import { presetUI } from "@unifydev/preset-ui"
+import { myConfig } from "./ui.config.js"
+
+export default defineConfig({
+  // ...config
+  presets: [
+    presetUI({
+      uiGen:myConfig
+    })
+  ],
+});
+```
+</BlockCode>
+</CodeGroupBox>
+
+
+## Config With CSS
+
+If you prefere to have full control directly in CSS then do this :
+
+First Exclude what you want to control 
+
+### change Preset Configuration
+
+<BlockCode>
+```ts
+...
+  presetUI({
+    uiGen:{
+      exclude:{
+        // this will exclude all btn variants
+        btn:"all",
+        // or
+        btn:{
+          //this will exclude all `btn-solid-Name` variantes
+          solid:"all",
+          // or 
+          solid:["primary", "secondary"] // exclude btn-solid-primary, btn-solid-secondary, so you can create then in CSS and adapt to your need
+        }
+      }
+    }
+  })
+...
+```
+</BlockCode>
+
+
+
+
+### Create a custom CSS Class
+
+<BlockCode>
+```css
+.btn-solid-primary {
+  /* update variables here  */
+}
+```
+</BlockCode>
+
+

@@ -8,9 +8,10 @@ import ScriptTheme from "./ScriptTheme.astro";
 import { ClientRouter } from "astro:transitions";
 type Props = {
   seo: SeoType;
+  bodyClasses?: string;
 };
 
-const { seo } = Astro.props;
+const { seo, bodyClasses } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,7 +21,7 @@ const { seo } = Astro.props;
       <link rel="sitemap" href="/sitemap-index.xml" />
     </SEO>
 
-    <ClientRouter/>
+    <ClientRouter />
     <AstroFont
       config={[
         {
@@ -28,18 +29,23 @@ const { seo } = Astro.props;
           src: [
             {
               style: "normal",
+              weight: "300",
+              path: "/fonts/geist-300.woff2",
+            },
+            {
+              style: "normal",
               weight: "400",
-              path: "/fonts/geist-normal.woff",
+              path: "/fonts/geist-400.woff2",
             },
             {
               style: "normal",
               weight: "500",
-              path: "/fonts/geist-medium.woff",
+              path: "/fonts/geist-500.woff2",
             },
             {
               style: "normal",
               weight: "600",
-              path: "/fonts/geist-semibold.woff",
+              path: "/fonts/geist-600.woff2",
             },
           ],
           preload: true,
@@ -49,27 +55,60 @@ const { seo } = Astro.props;
         },
       ]}
     />
+    <script src="/_pagefind/pagefind-ui.js" is:inline></script>
 
     <ScriptTheme />
   </head>
   <body
-    class="overflow-hidden overflow-y-auto lg-overflow-y-auto bg-bg font-geist"
+    class={`overflow-hidden overflow-y-auto lg-overflow-y-auto  ${bodyClasses ? bodyClasses : "bg-bg"} font-geist`}
   >
     <slot />
+
+
+    <dialog
+      data-fx-modal
+      data-alert-dialog
+      aria-hidden="true"
+      data-modal-id="page-find-modal"
+      data-modal-overlay="ui-overlay bg-bg-surface/70 backdrop-filter backdrop-blur-sm"
+      class="items-start justify-center p-4 fixed hidden fx-open-flex size-screen top-0 left-0 z100 bg-transparent"
+    >
+      <div
+        data-modal-content
+        data-enter-animation="fadeInScale .4s linear truncate"
+        data-exit-animation="fadeOutScale .1s linear"
+        class="ui-animated-modal-content min-h40 b b-border-strong/80 relative bg-bg overflow-hidden wfull max-w-xl ui-card cp-2 [--card-radius:--global-main-radius] ease-linear transition-all"
+      >
+         <div id="search" data-doc-page-find></div>
+      </div>
+    </dialog>
+    <script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        document.addEventListener("astro:page-load", () => {
+          // @ts-ignore
+          new PagefindUI({
+            element: "#search[data-doc-page-find]",
+            showSubResults: false,
+            resultsCount: false,
+            showImages: false,
+          });
+        });
+      });
+    </script>
     <script>
       import { initScriptTheme } from "@assets/js/theme";
       import { initNavbar } from "@assets/js/navbar";
       import { initSwitchPalette } from "@assets/js/switch-palette";
-      import {initCommonScript } from "@assets/js/global"
+      import { initCommonScript } from "@assets/js/global";
 
       const initMainScript = () => {
+        initCommonScript();
         initScriptTheme();
         initNavbar();
         initSwitchPalette();
-        initCommonScript()
       };
 
-      initMainScript()
+      initMainScript();
       document.addEventListener("astro:after-swap", initMainScript);
     </script>
   </body>
