@@ -15,7 +15,7 @@ const { data } = Astro.props;
 ---
 
 <slot/>
-<div data-pagefind-ignore data-tab-fx-site data-fx-tabs class="b b-border-high/30 rd-lg bg-[--astro-code-color-background] mt6 first-mt0">
+<div data-pagefind-ignore data-tab-fx-site data-fx-tabs class="b b-border-strong/30 rd-lg bg-[--astro-code-color-background] mt6 first-mt0">
     <div data-tab-list-wrapper class=" b-b b-b-gray900/20 d-flex-between px5 items-center h10">
         <ul
             role="tablist"
@@ -26,7 +26,7 @@ const { data } = Astro.props;
                 data.map((item) => (
                     <li
                         role="presentation"
-                        class="d-flex-items-center pb2 b-b-2 b-b-transparent has-[aria-expanded=true]:b-b-current text-gray300 has-[aria-expanded=true]:text-gray50"
+                        class="d-flex-items-center pb2 b-b-2 b-b-transparent has-[[aria-expanded=true]]:b-b-current text-gray300 has-[[aria-expanded=true]]:text-gray50"
                     >
                         <a
                             data-tabs-trigger
@@ -35,7 +35,7 @@ const { data } = Astro.props;
                             role="tab"
                             aria-controls={item.name}
                             aria-label={`${item.name}`}
-                            class="flex hfull items-center aria-expanded-bg-gray800 dark-aria-expanded-bg-gray900 rd-md px3 hover-bg-light"
+                            class="flex hfull items-center aria-expanded-bg-gray800 dark-aria-expanded-bg-gray900 rd-md px3 hover-bg-surface"
                         >
                             {item.name}
                         </a>
@@ -49,7 +49,7 @@ const { data } = Astro.props;
     </div>
     <div
         data-panels-container
-        class={`pt3 wfull flex b b-border-high bg-white dark-bg-black/30 rd-lg`}
+        class={`pt3 wfull flex b b-border-strong bg-white dark-bg-black/30 rd-lg`}
     >
         {
             data.map((item, index) => (
@@ -63,7 +63,7 @@ const { data } = Astro.props;
                     data-state={`${index === 0 ? "active" : "inactive"}`}
                     class="hidden fx-active-flex active-outline-gray800/50 focus-outline-gray800/50 wfull"
                 >
-                    <CodeViewBox code={item.code} lang={item.lang} class="" unstilled/>
+                    <CodeViewBox code={item.code} lang={item.lang} class=""/>
                 </section>
             ))
         }

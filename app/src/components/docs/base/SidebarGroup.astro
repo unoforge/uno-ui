@@ -15,7 +15,7 @@ const { label, items, activeItem } = Astro.props;
 
 <div class="space-y-0.5 pt5">
   <SidebarItemBlock label={label}>
-    <ul class="space-y-2 text-fg-subtext b-l b-border-high/60 py3">
+    <ul class="space-y-2 text-fg-muted b-l b-border-strong/60 py3">
       {
         items.map((item) => (
           <li class="flex">
@@ -23,7 +23,7 @@ const { label, items, activeItem } = Astro.props;
               href={item.path}
               aria-label={`Link to ${item.title}`}
               data-state={item.path === activeItem ? "active":"inactive"}
-              class={`ease-linear pl-3 fx-active-text-fg-title b-l-2 b-transparent fx-active-b-gray8 dark-fx-active-b-white text-fg hover-text-fg-title`}
+              class={`ease-linear pl-3 fx-active-text-fg-title b-l-2 b-transparent fx-active-b-fg-title text-fg-muted hover-text-fg-title`}
             >
               {item.title}
               {item.state ? (

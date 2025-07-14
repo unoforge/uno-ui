@@ -1,7 +1,7 @@
 export const siteUrl = "import.meta.env.SITE"
-export const keywordsDef = "UnifyUI, Unify, Unify UI, Unify Components, UnoCSS, Uno CSS, Atomic UI, Atomic CSS, UnoCSS Components, Modern Components, Uno Components, UnoCSS Components"
+export const keywordsDef = "UnoUI, Uno UI, UnoCSS UI, UnifyUI, Unify, Unify UI, Unify Components, UnoCSS, Uno CSS, Atomic UI, Atomic CSS, UnoCSS Components, Modern Components, Uno Components, UnoCSS Components"
 export const defaultOgImage = "/ui.png"
-export const defaultOgAlt = "UnifyUI : "
+export const defaultOgAlt = "UnoUI : "
 
 export const site_domain = "siteUrl"
 
@@ -17,3 +17,4 @@ export const startDiscussion = "https://github.com/unoforge/unify-ui/discussions
 export const startDiscussionPreset = "https://github.com/unoforge/unify-preset/discussions"
 export const contribUrl = 'https://github.com/unoforge/unify-ui/blob/main/CONTRIBUTING.MD'
 export const contribUrlPreset = 'https://github.com/unoforge/unify-preset/blob/main/CONTRIBUTING.MD'
+export const PREVIEW_BASE_URL = 'http://localhost:5173/blocks'

@@ -1,0 +1,107 @@
+
+
+---
+import type { UiSize, UiVariant } from "@/types/index";
+
+type PlaceHolderStyle = {
+    type: "placeholder";
+    variant?: UiVariant;
+    intent?: "primary" | "gray" | "neutral";
+    size?: UiSize;
+    icon?: string;
+    text?: string;
+    withIcon?: boolean;
+};
+
+type NormalStyle = {
+    type: "image";
+    size?: UiSize;
+    src?: string;
+    placeholder?: string;
+};
+type Props = NormalStyle | PlaceHolderStyle;
+const defaultImageProps: NormalStyle = {
+    type: "image",
+    size: "md",
+    src: "/defaultavatar.webp",
+    placeholder: "",
+};
+
+const defaultPlaceHolder: PlaceHolderStyle = {
+    type: "placeholder",
+    variant: "solid",
+    size: "md",
+    intent: "gray",
+    icon: "i-ph-user",
+};
+
+const props = Astro.props || defaultImageProps || defaultPlaceHolder;
+
+const placeHolderVariant = {
+    solid: {
+        gray: "ui-solid ui-solid-gray",
+        primary: "ui-solid ui-solid-primary",
+        neutral: "ui-solid ui-solid-neutral",
+    },
+    outline: {
+        gray: "ui-outline ui-outline-gray",
+        primary: "ui-outline ui-outline-primary",
+        neutral: "ui-outline ui-outline-neutral",
+    },
+    soft: {
+        gray: "ui-soft ui-soft-gray",
+        primary: "ui-soft ui-soft-primary",
+        neutral: "ui-soft ui-soft-neutral",
+    },
+    subtle: {
+        gray: "ui-subtle ui-subtle-gray",
+        primary: "ui-subtle ui-subtle-primary",
+        neutral: "ui-subtle ui-subtle-neutral",
+    },
+};
+---
+
+{
+    props.type === "image" ? (
+        <img width="640" height="427"
+            class:list={[
+                "object-cover rd-full",
+                {
+                    "avatar-xs": props.size === "xs",
+                    "avatar-sm": props.size === "sm",
+                    "avatar-md": props.size === "md",
+                    "avatar-lg": props.size === "lg",
+                    "avatar-xl": props.size === "xl",
+                },
+            ]}
+            src={`${props.src}`}
+            alt={`Illustration ${props.placeholder}||""`}
+        />
+    ) : (
+        <div
+            class:list={[
+                "avatar-placeholder rd-full",
+                {
+                    "avatar-placeholder-xs": props.size === "xs",
+                    "avatar-placeholder-sm": props.size === "sm",
+                    "avatar-placeholder-md": props.size === "md",
+                    "avatar-placeholder-lg": props.size === "lg",
+                    "avatar-placeholder-xl": props.size === "xl",
+                },
+                placeHolderVariant[props.variant || "solid"][
+                    props.intent || "gray"
+                ],
+            ]}
+        >
+            {props.icon || props.withIcon ? (
+                <span
+                    aria-hidden="true"
+                    class={`flex ${props.icon || "i-ph-user"}`}
+                />
+            ) : (
+                <span>{props.text || "JK"}</span>
+            )}
+        </div>
+    )
+}
+

@@ -1,0 +1,43 @@
+---
+type Props={
+    palette:string
+}
+
+const {palette} = Astro.props
+---
+
+<div data-palette={palette} class="grid grid-cols-3 md-grid-cols-4 rd-lg overflow-hidden b b-border p4 sm-p6 wfull gap-4 bg-bg-surface mt4">
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-primary-600));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Primary</span>
+    </div>
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-secondary-600));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Secondary</span>
+    </div>
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-accent-600));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Accent</span>
+    </div>
+
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-success-600));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Success</span>
+    </div>
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-warning-600));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Warning</span>
+    </div>
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-info-600));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Info</span>
+    </div>
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-danger-600));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Danger</span>
+    </div>
+    <div class="b b-border-strong/40 bg-bg-muted/30 rd-md flex items-center flex-col gap1">
+        <span style="--palette-token: hsl(var(--c-gray-700));" class={`palette-token rd h10 wfull flex`}></span>
+        <span class="flex text-center text-sm text-fg-muted px-3 py0.5">Gray</span>
+    </div>
+</div>

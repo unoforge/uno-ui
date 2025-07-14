@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+type Props = {
+  src: string;
+  alt: string;
+  dark?: { src: string; alt: string };
+};
+
+const { src, alt, dark } = Astro.props;
+---
+
+<div
+  class="wfull ui-card [--card-padding:--padding-1] [--card-radius:var(--global-main-radius)] b b-gray200 dark-b-gray800/60 bg-gray50 dark-bg-gray900/50"
+>
+  {
+    dark ? (
+      <>
+        <Image
+          src={src}
+          alt={alt}
+          width={1728}
+          height={1117}
+          class={"wfull aspect-auto inner-radius dark-hidden"}
+        />
+        <Image
+          src={dark.src}
+          alt={dark.alt}
+          width={1728}
+          height={1117}
+          class={"wfull aspect-auto inner-radius hidden dark-block"}
+        />
+      </>
+    ) : (
+      <>
+        <Image
+          src={src}
+          alt={alt}
+          width={1728}
+          height={1117}
+          class={"wfull aspect-auto inner-radius"}
+        />
+      </>
+    )
+  }
+</div>

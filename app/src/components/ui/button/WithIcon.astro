@@ -1,0 +1,20 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="flex flex-wrap items-center gap-2">
+    <Button
+        aria-label="Default button"
+        class={"btn-solid-primary text-white gap-x2"}
+    >
+        <span aria-hidden="true" class="flex i-ph-atom"></span>
+        leading
+    </Button>
+    <Button
+        aria-label="Default button"
+        class={"btn-solid-primary text-white gap-x2"}
+    >
+        trailing
+        <span aria-hidden="true" class="flex i-ph-atom"></span>
+    </Button>
+</div>

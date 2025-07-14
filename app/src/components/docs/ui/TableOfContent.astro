@@ -26,7 +26,7 @@ const grouppedHeadings = headings.reduce((array, heading) => {
 <nav
   id="table-of-contents"
   aria-label="Table Of Contents"
-  class="pt3 text-fg-subtext w-full text-sm xl-pt0 b-l b-border-high b-dashed"
+  class="pt3 text-fg-muted w-full text-sm xl-pt0 b-l b-border-strong b-dashed"
 >
   <ol class="space-y-2">
     {grouppedHeadings.map((h) => <TableOfContentsHeading heading={h} />)}

@@ -1,32 +1,77 @@
 ---
+import type { UiCardProps } from "@/types/index";
 import UiLink from "@components/atoms/UiLink.astro";
+import { Image } from "astro:assets";
 
-
-type Props = {
-    href: string;
-    title: string;
-    padding: number;
-    type?: "soft" | "ghost" | "white";
-}
-const { href, padding, title, type = "white" } = Astro.props;
+type Props = UiCardProps;
+const { href, title, description, icon, iconDark } = Astro.props;
 ---
 
 <UiLink
-    href={href}
-    class:list={[
-        "flex flex-col w-full rd-lg [&>div]:text-fg ease-linear duration-200",
-        {
-            "p1 space-y-0.5": padding === 1,
-            "p2 space-y-1": padding === 2,
-            "p3 space-y-1": padding === 3,
-            "p4 space-y-1.5": padding === 4,
-            "p5 space-y-1.5": padding === 5,
-            "p6 space-y-2": padding === 6,
-            "btn-soft btn-soft-gray": type === "soft",
-            "btn-ghost btn-ghost-gray": type === "ghost",
-            "b b-border text-fg hover-b-border-light hover-bg-bg-light":type==="white"
-        },
-    ]}
-><span class="font-semibold text-lg">{title}</span>
-    <slot/>
+  href={href}
+  class:list={[
+    "flex flex-col wfull text-fg ease-linear duration-200 relative group",
+    "hover-border-primary border border-gray200 dark-border-gray800/60 bg-bg hover-bg-bg-surface",
+    "p5 rd-lg",
+  ]}
+>
+  <span
+    class={`size-10 d-flex-place-center rd-md p2 ui-soft ${icon.startsWith("/") || icon.startsWith("http") ? 'ui-soft-gray' :"ui-soft-primary"}`}
+  >
+    {
+      icon.startsWith("/") || icon.startsWith("http") ? (
+        <>
+          {iconDark ? (
+            <>
+              <Image
+                src={icon}
+                alt={`icon ${icon}`}
+                width={20}
+                height={20}
+                class="h5 wauto dark-hidden"
+              />
+              <Image
+                src={iconDark}
+                alt={`icon ${iconDark}`}
+                width={20}
+                height={20}
+                class="h5 wauto not-dark-hidden"
+              />
+            </>
+          ) : (
+            <Image
+              src={icon}
+              alt={`icon ${icon}`}
+              width={20}
+              height={20}
+              class="h5 wauto"
+            />
+          )}
+        </>
+      ) : (
+        <span
+          aria-hidden="true"
+          class={`flex ${icon} text-primary text-2xl`}
+        />
+      )
+    }
+  </span>
+  {
+    href.startsWith("http") ? (
+      <span
+        aria-hidden="true"
+        class="absolute group-hover-text-primary top-5 right-5 text-fg-sub text-xs i-ph-arrow-square-out"
+      />
+    ) : (
+      <span
+        aria-hidden="true"
+        class="absolute group-hover-text-primary top-5 right-5 text-fg-sub text-xs i-ph-arrow-up-right"
+      />
+    )
+  }
+
+  <h2 class="font-medium text-lg text-fg-title mt-4">{title}</h2>
+  <p class="text-sm text-fg-sub mt-1 leading-6">
+    {description}
+  </p>
 </UiLink>

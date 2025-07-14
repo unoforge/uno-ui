@@ -1,0 +1,32 @@
+---
+import UiLink from "@components/atoms/UiLink.astro";
+
+
+type Props = {
+    href: string;
+    title: string;
+    padding: number;
+    type?: "soft" | "ghost" | "white";
+}
+const { href, padding, title, type = "white" } = Astro.props;
+---
+
+<UiLink
+    href={href}
+    class:list={[
+        "flex flex-col w-full rd-lg [&>div]:text-fg ease-linear duration-200",
+        {
+            "p1 space-y-0.5": padding === 1,
+            "p2 space-y-1": padding === 2,
+            "p3 space-y-1": padding === 3,
+            "p4 space-y-1.5": padding === 4,
+            "p5 space-y-1.5": padding === 5,
+            "p6 space-y-2": padding === 6,
+            "btn-soft btn-soft-gray": type === "soft",
+            "btn-ghost btn-ghost-gray": type === "ghost",
+            "b b-border text-fg hover-b-border-light hover-bg-bg-surface":type==="white"
+        },
+    ]}
+><span class="font-semibold text-lg">{title}</span>
+    <slot/>
+</UiLink>

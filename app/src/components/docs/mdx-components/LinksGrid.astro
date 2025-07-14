@@ -1,0 +1,14 @@
+---
+import type { UiCardProps } from "@/types/index";
+import LinkCard from "./LinkCard.astro";
+
+type Props = {
+  links: UiCardProps[];
+};
+
+const { links } = Astro.props;
+---
+
+<div class="grid gap4 sm-grid-cols-2 mt6 first-mt0 last-mb0">
+  {links.map((link) => <LinkCard {...link} />)}
+</div>

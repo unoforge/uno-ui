@@ -1,0 +1,31 @@
+---
+import Button from "../button/Button.astro";
+---
+
+<div class="flex flex-wrap items-center gap-3">
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-from-left" aria-controls="slide-over-from-left">
+        From left
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-from-right" aria-controls="slide-over-from-right">
+        From right
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-bottom" aria-controls="slide-over-bottom">
+        From bottom
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-top" aria-controls="slide-over-top">
+        From top
+    </Button>
+</div>
+
+<div data-fx-offcanvas data-slideover id="slide-over-from-left" aria-labelledby="slide-over-from-left" class="fixed h-dvh w-full max-w-sm -left-full top-0 fx-open:left-0 ease-linear duration-200 p-4 bg-bg-muted flex z130">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover aria-labelledby="slide-over-top" id="slide-over-top" class="fixed left-0 w-screen h-64 -top-full ease-linear duration-200 fx-open:top-0 flex p-4 bg-bg-muted z130">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover aria-labelledby="slide-over-bottom" id="slide-over-bottom" class="fixed left-0 w-screen h-64 -bottom-full ease-linear duration-200 fx-open:bottom-0 flex p-4 bg-bg-muted z130">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover id="slide-over-from-right" aria-labelledby="slide-over-from-right" class="fixed h-dvh w-full max-w-sm -right-full top-0 fx-open:right-0 ease-linear duration-200 p-4 bg-bg-muted z130 flex">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>

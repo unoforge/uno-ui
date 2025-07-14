@@ -1,9 +1,11 @@
 ---
-import { githubUrl } from "@/const/index";
 import AppLogoLink from "@components/atoms/AppLogoLink.astro";
+import AppSearchTrigger from "@components/atoms/AppSearchTrigger.astro";
 import Container from "@components/atoms/Container.astro";
-// import PageFind from "@components/ui/PageFind.astro";
-// import ThemeDropdown from "@components/ui/ThemeSetting.astro";
+import GlobalToggleTheme from "@components/atoms/GlobalToggleTheme.astro";
+import LinkToGithubBtn from "@components/atoms/LinkToGithubBtn.astro";
+import TriggerUiTheme from "@components/atoms/TriggerUiTheme.astro";
+
 
 const navItems = [
   {
@@ -25,15 +27,17 @@ const navItems = [
 ];
 ---
 
-<header class="sticky top-0 h14 b-b b-border-high/70 flex items-center z80">
+<header data-pagefind-ignore class="sticky top-0 h14 b-b b-border-strong/70 flex items-center z80">
   <span aria-hidden="true" class="blured-bg-ui"></span>
-  <Container class={"flex justify-between items-center gap-8 relative"}>
-    <AppLogoLink />
+  <Container maxWidthNone class={"flex justify-between items-center gap-8 relative lg-max-w84rem xl-max-w88rem"}>
+    <div class="flex">
+      <AppLogoLink />
+    </div>
     <div
       data-navbar
       class="w-full lg-wauto flex items-center flex-1 navbar-ui navbar-ui-h navbar-ui-states overflow-small-device"
     >
-      <ul class="flex flex-col lg-flex-row gap3 md-gap4 text-fg-subtext hfull wfull text-sm">
+      <ul class="flex flex-col lg-flex-row gap3 md-gap4 text-fg-muted hfull wfull text-sm">
         {
           navItems.map((navItem) => (
             <li
@@ -51,32 +55,23 @@ const navItems = [
         }
       </ul>
     </div>
-    <div class="flex items-center gap-x0.5 text-fg">
-      <a
-        href={githubUrl}
-        target="_blank"
-        aria-label="link to github UnifyPreset Repository"
-        rel="noopener noreferrer"
-        class="btn-nav-icon"
-      >
-        <span aria-hidden="true" class="flex i-fx-github"></span>
-      </a>
-      <button data-switch-theme aria-label="Switch Theme" class="btn-nav-icon">
-        <span class="i-fx-sun hidden dark-flex"></span>
-        <span class="i-fx-moon-star flex dark-hidden"></span>
-      </button>
+    <div class="flex items-center gap0.5 text-fg">
+      <AppSearchTrigger/>
+      <GlobalToggleTheme/>
+      <LinkToGithubBtn/>
+      <TriggerUiTheme/>
       <button
         data-toggle-navbar
         aria-label="Toggle Navbar"
-        class="flex flex-col space-y-2 rd-lg hover-bg-bg-light ease-linear duration-200 px1.5 py2.5 lg-hidden group"
+        class="flex flex-col space-y-2 rd-lg hover-bg-bg-surface ease-linear duration-200 px1.5 py2.5 lg-hidden group rela"
       >
         <span
           aria-hidden="true"
-          class="group-fx-open-rotate-45 group-fx-open-translate-y-1.5 w6 h0.5 rd-full bg-current text-fg-subtext"
+          class="group-fx-open-rotate-45 group-fx-open-translate-y-1.5 w6 h0.5 rd-full bg-current text-fg-muted"
         ></span>
         <span
           aria-hidden="true"
-          class="group-fx-open--rotate-45 group-fx-open--translate-y-1 w6 h0.5 rd-full bg-current text-fg-subtext"
+          class="group-fx-open--rotate-45 group-fx-open--translate-y-1 w6 h0.5 rd-full bg-current text-fg-muted"
         ></span>
       </button>
     </div>

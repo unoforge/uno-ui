@@ -42,25 +42,27 @@ const groups = [
 const getSidebarItems = (val: string) =>
   sidebarItems.find((item) => item.name === val);
 
-const activeItems = getSidebarItems(activeGroup);
+
+const settledActiveGroup = activeGroup === "components" ? 'getting-started' : activeGroup;
+const activeItems = getSidebarItems(settledActiveGroup);
 ---
 
 <aside
-  data-ui-offcanvas
+  data-ui-offcanvas data-pagefind-ignore
   id="doc_sidebar"
-  data-offcanvas-backdrop="u-fx-overlay bg-gray8/20 backdrop-blur-md z100 lg-hidden invisible fx-visible-visible fx-open-visible"
+  data-offcanvas-backdrop="ui-overlay bg-gray8/20 backdrop-blur-md z100 lg-hidden invisible fx-visible-visible fx-open-visible"
   class="sidebar-size sidebar-states sidebar-position sidebar-bg z120 lg-z0  pt4 b-r b-border"
 >
   <button
     data-offcanvas-close
     aria-label="Close Sidebar"
-    class="w5 h8 text-fg b b-border bg-bg-light ease-linear absolute top-1/2 -translate-y-1/2 -right-2.5 flex items-center justify-center lg-hidden rd-lg z10"
+    class="w5 h8 text-fg b b-border bg-bg-surface ease-linear absolute top-1/2 -translate-y-1/2 -right-2.5 flex items-center justify-center lg-hidden rd-lg z10"
   >
     <span aria-hidden="true" class="flex i-ph-caret-left"></span>
   </button>
   <ScrollableY class="wfull py6">
     <nav class="wfull space-y-6 relative px5 sm-px8 lg-pl0 lg-pr4 hfull">
-      <ul class="space-y-3 !text-fg">
+      <ul class="space-y-3">
         {
           groups.map((group) => (
             <GroupItem isActive={activeGroup === group.name} {...group} />

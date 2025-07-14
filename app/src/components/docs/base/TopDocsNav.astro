@@ -6,7 +6,7 @@ type Props = {
 const { hideTableOfContent } = Astro.props;
 ---
 
-<div
+<div data-pagefind-ignore
   class={`h12 top-14 sticky ${hideTableOfContent ? "hidden" : "flex xl-hidden"} z40 lg-pl8 b-b b-border`}
 >
   <span aria-hidden="true" class="blured-bg-ui"></span>
@@ -17,7 +17,7 @@ const { hideTableOfContent } = Astro.props;
       data-offcanvas-trigger
       data-target="doc_sidebar"
       aria-label="toggle sidebar"
-      class="text-xl -ml-2 p2 hover-bg-bg-light ease-linear flex lg-hidden text-fg"
+      class="text-xl -ml-2 p2 hover-bg-bg-surface ease-linear flex lg-hidden text-fg"
     >
       <span aria-hidden="true" class="flex i-fx-list-broken"></span>
     </button>

@@ -1,7 +1,7 @@
 ---
 import dynamic from "astro:import";
 
-import { allComponentCode } from "@components/registry/allCode";
+import { allComponentCode } from "@components/ui/allCode";
 import TabsViewCode from "../ui/TabsViewCode.astro";
 import CodeViewBox from "../ui/CodeViewBox.astro";
 import DocsTab from "./DocsTab.astro";
@@ -21,7 +21,7 @@ const getTabValues = (name_: string[]) =>
     name_.map((name) => allComponentCode[name]);
 
 const correctName = typeof name === "string" ? name : name[0];
-const toImport = `components/registry/${correctName}.astro`;
+const toImport = `components/ui/${correctName}.astro`;
 const Component = await dynamic(toImport);
 ---
 
@@ -31,7 +31,7 @@ const Component = await dynamic(toImport);
             <>
                 <div
                     data-pagefind-ignore
-                    class="b b-border-high/60 rd-lg p4 md-p10 bg-bg justify-center min-h-max my5 first-mt0"
+                    class="b b-border-strong/60 rd-lg p4 md-p10 bg-bg justify-center min-h-max my5 first-mt0"
                 >
                     <Component {...props} />
                 </div>
@@ -44,7 +44,7 @@ const Component = await dynamic(toImport);
             <DocsTab values={["Preview", "Code"]} data-pagefind-ignore>
                 <TabPanel
                     value="Preview"
-                    class="b b-border-high/60 rd-lg p4 md-p10 bg-bg items-center justify-center min-h60 lg-min-h80"
+                    class="b b-border-strong/60 rd-lg p4 md-p10 bg-bg items-center justify-center min-h60 lg-min-h80"
                     active
                 >
                     <Component {...props} />
@@ -61,7 +61,7 @@ const Component = await dynamic(toImport);
         <TabsViewCode data={getTabValues(name)}>
             <div
                 data-pagefind-ignore
-                class="b b-border-high rd-lg p4 md-p10 bg-bg items-center justify-center min-h-max my5 first-mt0"
+                class="b b-border-strong rd-lg p4 md-p10 bg-bg items-center justify-center min-h-max my5 first-mt0"
             >
                 <Component {...props} />
             </div>

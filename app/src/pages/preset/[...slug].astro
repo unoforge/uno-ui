@@ -12,7 +12,6 @@ import DocPageHeader from "@components/docs/DocPageHeader.astro";
 import BoxTableOfContent from "@components/docs/ui/BoxTableOfContent.astro";
 import DocsPagination from "@components/docs/ui/DocsPagination.astro";
 
-
 export async function getStaticPaths() {
   const docs = await getCollection("preset");
   return docs.map((docs) => ({
@@ -21,17 +20,17 @@ export async function getStaticPaths() {
   }));
 }
 
-
 const { docs } = Astro.props;
 
-if(!docs) {
-  return Astro.redirect("/docs/undefined")
+if (!docs) {
+  return Astro.redirect("/docs/undefined");
 }
 
 const { Content, headings } = await render(docs);
 
 const {
-  id,filePath,
+  id,
+  filePath,
   data: { title, description, links, hideTableOfContent },
 } = docs;
 
@@ -47,39 +46,37 @@ const words = splitSlugUrl(id);
 <DocLayout
   activeGroup="preset"
   activeItem={`/preset/${id}`}
-  headings={headings}
-  title={`UnifyUI Preset - ${current.title}`}
+  title={`PresetUI - ${current.title}`}
   description={`${current.description}`}
   keywords={current.keywords}
   hideTableOfContent={hideTableOfContent}
 >
-  <article
-    data-pagefind-body
-    class="px4 sm-px8 xl-px16 grid text-fg hmax"
-  >
-    <DocPageHeader
-      title={title}
-      subTitle={description}
-      links={links}
-      breadcrumbsMain={{ href: "/components", text: "Components" }}
-      breadcrumbsWords={words}
-    />
-    <div data-doc-content class="py10 wfull grid">
-      <Content components={{ ...components }} />
-    </div>
-    <div>
-      <UiLink
-        href={`${repoContentLocation}/${filePath}`}
-        aria-label="edit this page on github"
-        class="wmax flex items-center gap-x-2 underline underline-dashed underline-offset-3 hover-text-fg-title"
-      >
-        <span aria-hidden="true" class="flex i-ph-pencil-simple-line"></span>
-        Edit this page
-      </UiLink>
-    </div>
+  <article data-pagefind-body class="px4 sm-px8 xl-px16 grid text-fg hmax">
+    <div class="w-full xl-max-w2xl mxa">
+      <DocPageHeader
+        title={title}
+        subTitle={description}
+        links={links}
+        breadcrumbsMain={{ href: "/components", text: "Components" }}
+        breadcrumbsWords={words}
+      />
+      <div data-doc-content class="py10 wfull grid">
+        <Content components={{ ...components }} />
+      </div>
+      <div>
+        <UiLink
+          href={`${repoContentLocation}/${filePath}`}
+          aria-label="edit this page on github"
+          class="wmax flex items-center gap-x-2 underline underline-dashed underline-offset-3 hover-text-fg-title"
+        >
+          <span aria-hidden="true" class="flex i-ph-pencil-simple-line"></span>
+          Edit this page
+        </UiLink>
+      </div>
 
-    <div class="flex wfull hpx my8 b-b b-border"></div>
-    <DocsPagination nextSlug={nextSlug} prevSlug={prevSlug}/>
+      <div class="flex wfull hpx my8 b-b b-border"></div>
+      <DocsPagination nextSlug={nextSlug} prevSlug={prevSlug} />
+    </div>
   </article>
   {
     !hideTableOfContent ? (
@@ -90,5 +87,4 @@ const words = splitSlugUrl(id);
       />
     ) : null
   }
-
 </DocLayout>
