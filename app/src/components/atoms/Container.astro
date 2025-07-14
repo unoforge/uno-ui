@@ -1,11 +1,16 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-type Props = HTMLAttributes<"div"> & {}
+type Props = HTMLAttributes<"div"> & {
+  maxWidthNone?: boolean;
+};
 
-const { class: className = "", ...rest } = Astro.props;
+const { class: className = "", maxWidthNone, ...rest } = Astro.props;
 ---
 
-<div class={`mx-auto wfull max-w7xl px4 sm-px8 ${className}`} {...rest}>
+<div
+  class={`mx-auto wfull ${maxWidthNone ? "" : " max-w7xl"} px4 sm-px8 ${className}`}
+  {...rest}
+>
   <slot />
 </div>

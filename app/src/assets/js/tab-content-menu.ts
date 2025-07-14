@@ -1,4 +1,5 @@
-import { $ } from "@assets/js/selector";
+import { $ } from "@flexilla/utilities";
+
 export const initTabOfContent = () => {
   const tabOfContentMob = $("[data-table-of-content]");
   const trigger = $("[data-trigger-tab-content]");

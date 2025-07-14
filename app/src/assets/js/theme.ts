@@ -1,4 +1,5 @@
-import { $, $$ } from "./selector";
+import { $, $$ } from "@flexilla/utilities";
+
 
 export const initScriptTheme = () => {
     const switchTheme = $("[data-switch-theme]")

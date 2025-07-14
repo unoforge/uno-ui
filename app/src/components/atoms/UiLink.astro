@@ -3,8 +3,9 @@ import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a"> & {
   asInternal?: boolean;
+  externalWithIcon?:boolean
 }
-const { href, "aria-label": label, asInternal, ...rest } = Astro.props;
+const { href,externalWithIcon, "aria-label": label, asInternal, ...rest } = Astro.props;
 const href_ = href as string;
 ---
 
@@ -28,6 +29,9 @@ const href_ = href as string;
       {...rest}
     >
       <slot />
+      {
+        externalWithIcon?<span aria-hidden="true" class="i-ph-arrow-up-right  ml2"/>:null
+      }
     </a>
   )
 }
