@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="bg-bg overflow-hidden lg-overflow-y-auto overflow-y-auto">
+    <header class="sticky top-0 z60 pt4 px2">
+        <nav
+            class="mxa max-w-4xl w-full flex gap-x-5 justify-between items-center bg-black rd-lg p4 h16 b b-border-light/70">
+            <div class="flex items-center min-w-max relative">
+                <a href="#" class="font-semibold flex items-center gap-x-2">
+                    <div class="flex items-center -space-x-3">
+                        <span class="h6 aspect-square rd-full flex bg-primary500"></span>
+                        <span class="h6 aspect-square blur rd-full flex bg-secondary600"></span>
+                    </div>
+                    <span class="text-white/70">LeadCRM</span>
+                </a>
+            </div>
+            <div id="app-nav" data-app-navbar class="px5 sm-px10 md-px12 lg-px0 py32 lg-py0 bg-dark lg-bg-transparent fixed inset-x-0 h-dvh lg-h-max top-0 -translate-y-10 fx-open-translate-y-0 op0 fx-open-op100 invisible fx-open-visible lg-visible lg-translate-y-0 lg-op100 left-0 w-full lg-top-0 lg-relative  lg-flex lg-justify-between duration-300 ease-linear lg-transition-none
+                 ">
+                <ul class="flex flex-col lg-flex-row gap-6 lg-items-center lg-w-full lg-pl-10 text-gray300">
+                    <li class="">
+                        <a href="#" class="relative py2.5 duration-300 ease-linear hover-text-primary500">Pipeline</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="relative py2.5 duration-300 ease-linear hover-text-primary500">Leads</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="relative py2.5 duration-300 ease-linear hover-text-primary500">Deals</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="relative py2.5 duration-300 ease-linear hover-text-primary500">Analytics</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="relative py2.5 duration-300 ease-linear hover-text-primary500">Support</a>
+                    </li>
+                </ul>
+                <div class="flex flex-col sm-flex-row sm-items-center lg-min-w-max mt-10 lg-mt-0">
+                    <a href="#"
+                        class="btn btn-sm btn-ghost btn-ghost-gray text-white rd-md w-full sm-w-max justify-center">
+                        Login
+                    </a>
+                    <span class="bg-gray800 h6 w-px mx3 flex"></span>
+                    <a href="#"
+                        class="btn btn-sm btn-solid btn-solid-primary text-white rd-md w-full sm-w-max justify-center">
+                        Sign-up
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center lg-hidden">
+                <button data-nav-trigger data-toggle-nav="app-nav"
+                    class="focus-outline-none pl-3 relative py3 bg-transparent b-l b-gray800 group">
+                    <span class="sr-only">Toggle navbar</span>
+                    <div id="line-1" aria-hidden="true"
+                        class="h0.5 w6 rd transition duration-300 bg-gray300 group-aria-expanded-rotate-45 group-aria-expanded-translate-y-1.5">
+                    </div>
+                    <div id="line-2" aria-hidden="true"
+                        class="mt2 h0.5 w6 rd transition duration-300 bg-gray300 group-aria-expanded--rotate-45 group-aria-expanded--translate-y-1.5">
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="min-h-max pb10">
+        <div
+            class="absolute top-0 inset-x-0 h40 bg-gradient-to-br from-primary300 op-90 blur-lg dark-from-primary800 dark-blur-xl dark-op40 pointer-event-none">
+        </div>
+        <div class="w-full flex items-center relative">
+            <div class="wfull space-y-10 px5 sm-px10 lg-px5 mt16 md-mt23 relative">
+                <div class="max-w-4xl mxa wfull space-y-8 pb6">
+                    <a href="#" class="flex items-center w-max pl2 pr5 py1 rd-full ui-subtle ui-subtle-gray">
+                        <span class="ui-solid ui-solid-primary text-xs px2 py0.5 rd-full mr3">v2.1</span>
+                        AI-powered lead scoring
+                    </a>
+                    <h1 class="max-w-3xl font-semibold text-fg-title text-4xl sm-text-5xl/tight">
+                        Transform Your Sales Pipeline with Intelligent Lead Management
+                    </h1>
+                    <p class="max-w-xl text-fg">
+                        Streamline your sales process with our powerful CRM solution. Track leads, manage opportunities,
+                        and close deals faster with AI-driven insights and automated workflows.
+                    </p>
+                    <div class="flex flex-col gap-5 pt6">
+                        <form action="#"
+                            class="py1 pl4 w-full pr2 flex gap-3 w-full max-w-lg items-center rd-lg ease-linear text-fg-muted bg-bg-surface/40 focus-within-bg-bg/50 focus-within-b-primary b b-border shadow-lg shadow-gray200/20 dark-shadow-transparent">
+                            <input type="email" name="" id="" placeholder="johndoe@gmail.com"
+                                class="w-full py2 focus-outline-none bg-transparent b-transparent focus-b-transparent focus-ring-0 text-fg placeholder-text-gray500">
+                            <button aria-label="sign up"
+                                class="btn btn-md btn-solid btn-solid-primary min-w-max text-white rd-md">
+                                <span class="hidden sm-flex relative z-5">
+                                    Sign up
+                                </span>
+                                <span class="flex sm-hidden relative z-5">
+                                    <span class="i-ph-paper-plane-right text-xl"></span>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div
+                    class="mxa max-w-6xl rd-t-2xl aspect-[5/2.3] overflow-hidden bg-gradient-to-t from-bg to-gray-200/50 dark-to-gray900/30 backdrop-blur-md px2 pt2">
+                    <img src="/images/dash-light.webp" width="1440" height="1024" alt="product image"
+                        class="rd-2xl w-full h-auto dark-hidden">
+                    <img src="/images/dash-dark.webp" width="1440" height="1024" alt="product image"
+                        class="rd-2xl w-full h-auto hidden dark-flex">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/main.js"></script>
+    <script type="module">
+        import { toggleNavbar } from "@flexilla/utilities"
+        toggleNavbar({
+            navbarElement: "[data-app-navbar]", onToggle: ({ isExpanded }) => {
+                document.body.classList[!isExpanded ? "add" : "remove"]("overflow-y-hidden")
+            }
+        })
+    </script>
+</body>
+
+</html>

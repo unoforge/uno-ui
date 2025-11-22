@@ -1,0 +1,74 @@
+[data-palette=earth] {
+  --c-primary-50: var(--c-eucalyptus-50);
+  --c-primary-100: var(--c-eucalyptus-100);
+  --c-primary-200: var(--c-eucalyptus-200);
+  --c-primary-300: var(--c-eucalyptus-300);
+  --c-primary-400: var(--c-eucalyptus-400);
+  --c-primary-500: var(--c-eucalyptus-500);
+  --c-primary-600: var(--c-eucalyptus-600);
+  --c-primary-700: var(--c-eucalyptus-700);
+  --c-primary-800: var(--c-eucalyptus-800);
+  --c-primary-900: var(--c-eucalyptus-900);
+  --c-primary-950: var(--c-eucalyptus-950);
+  
+  --c-secondary-50: var(--c-air-yellow-50);
+  --c-secondary-100: var(--c-air-yellow-100);
+  --c-secondary-200: var(--c-air-yellow-200);
+  --c-secondary-300: var(--c-air-yellow-300);
+  --c-secondary-400: var(--c-air-yellow-400);
+  --c-secondary-500: var(--c-air-yellow-500);
+  --c-secondary-600: var(--c-air-yellow-600);
+  --c-secondary-700: var(--c-air-yellow-700);
+  --c-secondary-800: var(--c-air-yellow-800);
+  --c-secondary-900: var(--c-air-yellow-900);
+  --c-secondary-950: var(--c-air-yellow-950);
+  
+  --c-accent-50: var(--c-thunderbird-50);
+  --c-accent-100: var(--c-thunderbird-100);
+  --c-accent-200: var(--c-thunderbird-200);
+  --c-accent-300: var(--c-thunderbird-300);
+  --c-accent-400: var(--c-thunderbird-400);
+  --c-accent-500: var(--c-thunderbird-500);
+  --c-accent-600: var(--c-thunderbird-600);
+  --c-accent-700: var(--c-thunderbird-700);
+  --c-accent-800: var(--c-thunderbird-800);
+  --c-accent-900: var(--c-thunderbird-900);
+  --c-accent-950: var(--c-thunderbird-950);
+
+  --c-warning-50: var(--c-camouflage-50);
+  --c-warning-100: var(--c-camouflage-100);
+  --c-warning-200: var(--c-camouflage-200);
+  --c-warning-300: var(--c-camouflage-300);
+  --c-warning-400: var(--c-camouflage-400);
+  --c-warning-500: var(--c-camouflage-500);
+  --c-warning-600: var(--c-camouflage-600);
+  --c-warning-700: var(--c-camouflage-700);
+  --c-warning-800: var(--c-camouflage-800);
+  --c-warning-900: var(--c-camouflage-900);
+  --c-warning-950: var(--c-camouflage-950);
+
+  --c-info-50: 210 30% 97%;
+  --c-info-100: 210 29% 85%;
+  --c-info-200: 210 30% 70%;
+  --c-info-300: 208 28% 53%;
+  --c-info-400: 210 50% 40%;
+  --c-info-500: 210 100% 25%;
+  --c-info-600: 210 100% 22%;
+  --c-info-700: 210 100% 18%;
+  --c-info-800: 210 100% 15%;
+  --c-info-900: 210 100% 11%;
+  --c-info-950: 210 100% 7%;
+
+  --c-gray-50: 195 38% 97%;
+  --c-gray-100: 200 25% 95%;
+  --c-gray-200: 200 20% 91%;
+  --c-gray-300: 196 18% 80%;
+  --c-gray-400: 200 11% 64%;
+  --c-gray-500: 200 9% 47%;
+  --c-gray-600: 200 12% 35%;
+  --c-gray-700: 200 18% 27%;
+  --c-gray-800: 204 22% 17%;
+  --c-gray-900: 200 26% 8%;
+  --c-gray-925: 200 29% 6%;
+  --c-gray-950: 200 33% 1%;
+}

@@ -1,9 +1,9 @@
 :root {
-    --ui-input-focus-outline: var(--primary-600);
-    --ui-input-invalid-outline: var(--danger-600);
-    --ui-input-place-holder: var(--neutral-500);
-    --switch-thumb-primary: var(--primary-600);
-    --switch-checked-thumb-primary: var(--primary-500);
+    --ui-input-focus-outline: var(--c-primary-600);
+    --ui-input-invalid-outline: var(--c-danger-600);
+    --ui-input-place-holder: var(--c-gray-500);
+    --switch-thumb-primary: var(--c-primary-600);
+    --switch-checked-thumb-primary: var(--c-primary-500);
 }
 
 
@@ -11,198 +11,198 @@
 
 /* -- ui-solid-* (bg and text) */
 .ui-solid-gray {
-    --ui-solid-bg: hsl(var(--neutral-100));
-    --ui-solid-text: hsl(var(--neutral-700));
+    --ui-solid-bg: hsl(var(--c-gray-100));
+    --ui-solid-text: hsl(var(--c-gray-700));
   }
   .ui-solid-primary {
-    --ui-solid-bg: hsl(var(--primary-600));
+    --ui-solid-bg: hsl(var(--c-primary-600));
     --ui-solid-text: hsl(var(--c-white));
   }
   .ui-solid-secondary {
-    --ui-solid-bg: hsl(var(--secondary-600));
+    --ui-solid-bg: hsl(var(--c-secondary-600));
     --ui-solid-text: hsl(var(--c-white));
   }
   .ui-solid-accent {
-    --ui-solid-bg: hsl(var(--accent-600));
+    --ui-solid-bg: hsl(var(--c-accent-600));
     --ui-solid-text: hsl(var(--c-white));
   }
   .ui-solid-danger {
-    --ui-solid-bg: hsl(var(--danger-600));
+    --ui-solid-bg: hsl(var(--c-danger-600));
     --ui-solid-text: hsl(var(--c-white));
   }
   .ui-solid-neutral {
-    --ui-solid-bg: hsl(var(--neutral-900));
+    --ui-solid-bg: hsl(var(--c-gray-900));
     --ui-solid-text: hsl(var(--c-white));
   }
   
   /* -- ui-outline-* (border and text) */
   .ui-outline-gray {
-    --ui-outline-border: hsl(var(--neutral-200));
-    --ui-outline-text: hsl(var(--neutral-700));
+    --ui-outline-border: hsl(var(--c-gray-200));
+    --ui-outline-text: hsl(var(--c-gray-700));
   }
   .ui-outline-neutral {
-    --ui-outline-border: hsl(var(--neutral-900));
-    --ui-outline-text: hsl(var(--neutral-800));
+    --ui-outline-border: hsl(var(--c-gray-900));
+    --ui-outline-text: hsl(var(--c-gray-800));
   }
   .ui-outline-primary {
-    --ui-outline-border: hsl(var(--primary-600));
-    --ui-outline-text: hsl(var(--primary-600));
+    --ui-outline-border: hsl(var(--c-primary-600));
+    --ui-outline-text: hsl(var(--c-primary-600));
   }
   .ui-outline-secondary {
-    --ui-outline-border: hsl(var(--secondary-600));
-    --ui-outline-text: hsl(var(--secondary-600));
+    --ui-outline-border: hsl(var(--c-secondary-600));
+    --ui-outline-text: hsl(var(--c-secondary-600));
   }
   .ui-outline-accent {
-    --ui-outline-border: hsl(var(--accent-600));
-    --ui-outline-text: hsl(var(--accent-600));
+    --ui-outline-border: hsl(var(--c-accent-600));
+    --ui-outline-text: hsl(var(--c-accent-600));
   }
   .ui-outline-danger {
-    --ui-outline-border: hsl(var(--danger-600));
-    --ui-outline-text: hsl(var(--danger-600));
+    --ui-outline-border: hsl(var(--c-danger-600));
+    --ui-outline-text: hsl(var(--c-danger-600));
   }
   
   /* -- ui-soft-* (bg and text) */
   .ui-soft-gray {
-    --ui-soft-bg: hsl(var(--neutral-100) / .4);
-    --ui-soft-text: hsl(var(--neutral-700));
+    --ui-soft-bg: hsl(var(--c-gray-100) / .4);
+    --ui-soft-text: hsl(var(--c-gray-700));
   }
   .ui-soft-primary {
-    --ui-soft-bg: hsl(var(--primary-100) / .4);
-    --ui-soft-text: hsl(var(--primary-600));
+    --ui-soft-bg: hsl(var(--c-primary-100) / .4);
+    --ui-soft-text: hsl(var(--c-primary-600));
   }
   .ui-soft-secondary {
-    --ui-soft-bg: hsl(var(--secondary-100) / .4);
-    --ui-soft-text: hsl(var(--secondary-600));
+    --ui-soft-bg: hsl(var(--c-secondary-100) / .4);
+    --ui-soft-text: hsl(var(--c-secondary-600));
   }
   .ui-soft-danger {
-    --ui-soft-bg: hsl(var(--danger-100) / .4);
-    --ui-soft-text: hsl(var(--danger-600));
+    --ui-soft-bg: hsl(var(--c-danger-100) / .4);
+    --ui-soft-text: hsl(var(--c-danger-600));
   }
   .ui-soft-accent {
-    --ui-soft-bg: hsl(var(--accent-100) / .4);
-    --ui-soft-text: hsl(var(--accent-600));
+    --ui-soft-bg: hsl(var(--c-accent-100) / .4);
+    --ui-soft-text: hsl(var(--c-accent-600));
   }
   
   /* -- ui-subtle-* (bg, text, and border) */
   .ui-subtle-gray {
-    --ui-subtle-bg: hsl(var(--neutral-100) / .4);
-    --ui-subtle-text: hsl(var(--neutral-700));
-    --ui-subtle-border: hsl(var(--neutral-200));
+    --ui-subtle-bg: hsl(var(--c-gray-100) / .4);
+    --ui-subtle-text: hsl(var(--c-gray-700));
+    --ui-subtle-border: hsl(var(--c-gray-200));
   }
   .ui-subtle-primary {
-    --ui-subtle-bg: hsl(var(--primary-100) / .4);
-    --ui-subtle-text: hsl(var(--primary-600));
-    --ui-subtle-border: hsl(var(--primary-300));
+    --ui-subtle-bg: hsl(var(--c-primary-100) / .4);
+    --ui-subtle-text: hsl(var(--c-primary-600));
+    --ui-subtle-border: hsl(var(--c-primary-300));
   }
   .ui-subtle-secondary {
-    --ui-subtle-bg: hsl(var(--secondary-100) / .4);
-    --ui-subtle-text: hsl(var(--secondary-600));
-    --ui-subtle-border: hsl(var(--secondary-300));
+    --ui-subtle-bg: hsl(var(--c-secondary-100) / .4);
+    --ui-subtle-text: hsl(var(--c-secondary-600));
+    --ui-subtle-border: hsl(var(--c-secondary-300));
   }
   .ui-subtle-danger {
-    --ui-subtle-bg: hsl(var(--danger-100) / .4);
-    --ui-subtle-text: hsl(var(--danger-600));
-    --ui-subtle-border: hsl(var(--danger-300));
+    --ui-subtle-bg: hsl(var(--c-danger-100) / .4);
+    --ui-subtle-text: hsl(var(--c-danger-600));
+    --ui-subtle-border: hsl(var(--c-danger-300));
   }
   .ui-subtle-accent {
-    --ui-subtle-bg: hsl(var(--accent-100) / .4);
-    --ui-subtle-text: hsl(var(--accent-600));
-    --ui-subtle-border: hsl(var(--accent-300));
+    --ui-subtle-bg: hsl(var(--c-accent-100) / .4);
+    --ui-subtle-text: hsl(var(--c-accent-600));
+    --ui-subtle-border: hsl(var(--c-accent-300));
   }
   
   
   /* ===== DARK THEME CLASSES (within .dark) ===== */
   
   .dark .ui-solid-gray {
-    --ui-solid-bg: hsl(var(--neutral-900));
-    --ui-solid-text: hsl(var(--neutral-300));
+    --ui-solid-bg: hsl(var(--c-gray-900));
+    --ui-solid-text: hsl(var(--c-gray-300));
   }
   .dark .ui-solid-primary {
-    --ui-solid-bg: hsl(var(--primary-500));
+    --ui-solid-bg: hsl(var(--c-primary-500));
   }
   .dark .ui-solid-secondary {
-    --ui-solid-bg: hsl(var(--secondary-500));
+    --ui-solid-bg: hsl(var(--c-secondary-500));
   }
   .dark .ui-solid-accent {
-    --ui-solid-bg: hsl(var(--accent-500));
+    --ui-solid-bg: hsl(var(--c-accent-500));
   }
   .dark .ui-solid-danger {
-    --ui-solid-bg: hsl(var(--danger-500));
+    --ui-solid-bg: hsl(var(--c-danger-500));
   }
   .dark .ui-solid-neutral {
     --ui-solid-bg: hsl(var(--c-white));
-    --ui-solid-text: hsl(var(--neutral-900));
+    --ui-solid-text: hsl(var(--c-gray-900));
   }
   
   .dark .ui-outline-gray {
-    --ui-outline-border: hsl(var(--neutral-700));
-    --ui-outline-text: hsl(var(--neutral-300));
+    --ui-outline-border: hsl(var(--c-gray-700));
+    --ui-outline-text: hsl(var(--c-gray-300));
   }
   .dark .ui-outline-neutral {
-    --ui-outline-border: hsl(var(--neutral-400));
-    --ui-outline-text: hsl(var(--neutral-800));
+    --ui-outline-border: hsl(var(--c-gray-400));
+    --ui-outline-text: hsl(var(--c-gray-800));
   }
   .dark .ui-outline-primary {
-    --ui-outline-border: hsl(var(--primary-500));
-    --ui-outline-text: hsl(var(--primary-500));
+    --ui-outline-border: hsl(var(--c-primary-500));
+    --ui-outline-text: hsl(var(--c-primary-500));
   }
   .dark .ui-outline-secondary {
-    --ui-outline-border: hsl(var(--secondary-500));
-    --ui-outline-text: hsl(var(--secondary-500));
+    --ui-outline-border: hsl(var(--c-secondary-500));
+    --ui-outline-text: hsl(var(--c-secondary-500));
   }
   .dark .ui-outline-accent {
-    --ui-outline-border: hsl(var(--accent-500));
-    --ui-outline-text: hsl(var(--accent-500));
+    --ui-outline-border: hsl(var(--c-accent-500));
+    --ui-outline-text: hsl(var(--c-accent-500));
   }
   .dark .ui-outline-danger {
-    --ui-outline-border: hsl(var(--danger-500));
-    --ui-outline-text: hsl(var(--danger-500));
+    --ui-outline-border: hsl(var(--c-danger-500));
+    --ui-outline-text: hsl(var(--c-danger-500));
   }
   
   .dark .ui-soft-gray {
-    --ui-soft-bg: hsl(var(--neutral-800) / .3);
-    --ui-soft-text: hsl(var(--neutral-300));
+    --ui-soft-bg: hsl(var(--c-gray-800) / .3);
+    --ui-soft-text: hsl(var(--c-gray-300));
   }
   .dark .ui-soft-primary {
-    --ui-soft-bg: hsl(var(--primary-900) / .3);
-    --ui-soft-text: hsl(var(--primary-300));
+    --ui-soft-bg: hsl(var(--c-primary-900) / .3);
+    --ui-soft-text: hsl(var(--c-primary-300));
   }
   .dark .ui-soft-secondary {
-    --ui-soft-bg: hsl(var(--secondary-900) / .3);
-    --ui-soft-text: hsl(var(--secondary-300));
+    --ui-soft-bg: hsl(var(--c-secondary-900) / .3);
+    --ui-soft-text: hsl(var(--c-secondary-300));
   }
   .dark .ui-soft-danger {
-    --ui-soft-bg: hsl(var(--danger-900) / .3);
-    --ui-soft-text: hsl(var(--danger-300));
+    --ui-soft-bg: hsl(var(--c-danger-900) / .3);
+    --ui-soft-text: hsl(var(--c-danger-300));
   }
   .dark .ui-soft-accent {
-    --ui-soft-bg: hsl(var(--accent-900) / .3);
-    --ui-soft-text: hsl(var(--accent-300));
+    --ui-soft-bg: hsl(var(--c-accent-900) / .3);
+    --ui-soft-text: hsl(var(--c-accent-300));
   }
   
   .dark .ui-subtle-gray {
-    --ui-subtle-bg: hsl(var(--neutral-800) / .3);
-    --ui-subtle-text: hsl(var(--neutral-300));
-    --ui-subtle-border: hsl(var(--neutral-800) / .8);
+    --ui-subtle-bg: hsl(var(--c-gray-800) / .3);
+    --ui-subtle-text: hsl(var(--c-gray-300));
+    --ui-subtle-border: hsl(var(--c-gray-800) / .8);
   }
   .dark .ui-subtle-primary {
-    --ui-subtle-bg: hsl(var(--primary-900) / .3);
-    --ui-subtle-text: hsl(var(--primary-300));
-    --ui-subtle-border: hsl(var(--primary-900) / .6);
+    --ui-subtle-bg: hsl(var(--c-primary-900) / .3);
+    --ui-subtle-text: hsl(var(--c-primary-300));
+    --ui-subtle-border: hsl(var(--c-primary-900) / .6);
   }
   .dark .ui-subtle-secondary {
-    --ui-subtle-bg: hsl(var(--secondary-900) / .3);
-    --ui-subtle-text: hsl(var(--secondary-500));
-    --ui-subtle-border: hsl(var(--secondary-900) / .5);
+    --ui-subtle-bg: hsl(var(--c-secondary-900) / .3);
+    --ui-subtle-text: hsl(var(--c-secondary-500));
+    --ui-subtle-border: hsl(var(--c-secondary-900) / .5);
   }
   .dark .ui-subtle-danger {
-    --ui-subtle-bg: hsl(var(--danger-900) / .3);
-    --ui-subtle-text: hsl(var(--danger-500));
-    --ui-subtle-border: hsl(var(--danger-900) / .5);
+    --ui-subtle-bg: hsl(var(--c-danger-900) / .3);
+    --ui-subtle-text: hsl(var(--c-danger-500));
+    --ui-subtle-border: hsl(var(--c-danger-900) / .5);
   }
   .dark .ui-subtle-accent {
-    --ui-subtle-bg: hsl(var(--accent-900) / .3);
-    --ui-subtle-text: hsl(var(--accent-300));
-    --ui-subtle-border: hsl(var(--accent-900) / .6);
+    --ui-subtle-bg: hsl(var(--c-accent-900) / .3);
+    --ui-subtle-text: hsl(var(--c-accent-300));
+    --ui-subtle-border: hsl(var(--c-accent-900) / .6);
   }
   
