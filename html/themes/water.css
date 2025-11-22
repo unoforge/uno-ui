@@ -1,0 +1,51 @@
+[data-palette="water"] {
+  --c-primary-50: 213 36% 97%;
+  --c-primary-100: 213 41% 94%;
+  --c-primary-200: 213 54% 86%;
+  --c-primary-300: 210 57% 74%;
+  --c-primary-400: 208 56% 60%;
+  --c-primary-500: 209 50% 48%;
+  --c-primary-600: 210 55% 40%;
+  --c-primary-700: 211 55% 32%;
+  --c-primary-800: 212 52% 27%;
+  --c-primary-900: 213 46% 24%;
+  --c-primary-950: 214 46% 16%;
+
+  --c-secondary-50: var(--c-teal-50);
+  --c-secondary-100: var(--c-teal-100);
+  --c-secondary-200: var(--c-teal-200);
+  --c-secondary-300: var(--c-teal-300);
+  --c-secondary-400: var(--c-teal-400);
+  --c-secondary-500: var(--c-teal-500);
+  --c-secondary-600: var(--c-teal-600);
+  --c-secondary-700: var(--c-teal-700);
+  --c-secondary-800: var(--c-teal-800);
+  --c-secondary-900: var(--c-teal-900);
+  --c-secondary-950: var(--c-teal-950);
+
+
+  --c-accent-50: var(--c-dodger-blue-50);
+  --c-accent-100: var(--c-dodger-blue-100);
+  --c-accent-200: var(--c-dodger-blue-200);
+  --c-accent-300: var(--c-dodger-blue-300);
+  --c-accent-400: var(--c-dodger-blue-400);
+  --c-accent-500: var(--c-dodger-blue-500);
+  --c-accent-600: var(--c-dodger-blue-600);
+  --c-accent-700: var(--c-dodger-blue-700);
+  --c-accent-800: var(--c-dodger-blue-800);
+  --c-accent-900: var(--c-dodger-blue-900);
+  --c-accent-950: var(--c-dodger-blue-950);
+
+  
+  --c-gray-50: var(--c-gray-base-50);
+  --c-gray-100: var(--c-gray-base-100);
+  --c-gray-200: var(--c-gray-base-200);
+  --c-gray-300: var(--c-gray-base-300);
+  --c-gray-400: var(--c-gray-base-400);
+  --c-gray-500: var(--c-gray-base-500);
+  --c-gray-600: var(--c-gray-base-600);
+  --c-gray-700: var(--c-gray-base-700);
+  --c-gray-800: var(--c-gray-base-800);
+  --c-gray-900: var(--c-gray-base-900);
+  --c-gray-950: var(--c-gray-base-950);
+}

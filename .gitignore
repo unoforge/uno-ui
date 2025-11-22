@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local
+test-ui
+# Local Netlify folder
+.netlify

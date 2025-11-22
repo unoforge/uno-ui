@@ -1,0 +1,16 @@
+{
+  "name": "uno-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UNO UI - A modern UI component library",
+  "scripts": {
+    "setup": "node setup.js"
+  },
+  "keywords": [
+    "ui",
+    "components",
+    "design-system"
+  ],
+  "author": "JOHNKAT MJ",
+  "license": "MIT"
+}

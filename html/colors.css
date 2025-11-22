@@ -1,55 +1,85 @@
-@import url(./ui-colors.css);
+@import url(./default-colors.css);
+@import url(./themes/air.css);
+@import url(./themes/earth.css);
+@import url(./themes/fire.css);
+@import url(./themes/water.css);
+
 @import url(./ui.css);
 
 :root {
     --bg: var(--c-white);
-    --bg-lighter: var(--neutral-50);
-    --bg-light: var(--neutral-100);
-    --bg-high: var(--neutral-200);
-    --bg-higher: var(--neutral-300);
+    --bg-subtle: var(--c-gray-50);
+    --bg-surface: var(--c-gray-100);
+    --bg-muted: var(--c-gray-200);
+    --bg-surface-elevated: var(--c-gray-300);
 
-    --fg: var(--neutral-700);
-    --fg-subtext: var(--neutral-600);
-    --fg-title: var(--neutral-900);
-    --fg-subtitle: var(--neutral-800);
-    --border: var(--neutral-200);
+    --fg: var(--c-gray-700);
+    --fg-muted: var(--c-gray-600);
+    --fg-title: var(--c-gray-900);
+    --fg-subtitle: var(--c-gray-800);
+    --border: var(--c-gray-200);
 
-    --border-lighter: var(--neutral-50);
-    --border-light: var(--neutral-200);
-    --border-high: var(--neutral-300);
-    --border-higher: var(--neutral-400);
+    --border-subtle: var(--c-gray-50);
+    --border-light: var(--c-gray-200);
+    --border-strong: var(--c-gray-300);
+    --border-emphasis: var(--c-gray-400);
 
     --ui-checkbox-bg: var(--bg);
-    --ui-checkbox-border: var(--border-high);
+    --ui-checkbox-border: var(--border-strong);
     --ui-radio-bg: var(--bg);
-    --ui-radio-border: var(--border-high);
+    --ui-radio-border: var(--border-strong);
 
-    --switch-checked-thumb-primary: var(--primary-600)
+    --switch-checked-thumb-primary: var(--primary-600);
 
-}
+    --ui-input-focus-outline: var(--c-primary-600);
+    --ui-input-invalid-outline: var(--c-danger-600);
+    --ui-input-place-holder: var(--c-gray-500);
+    --switch-thumb-primary: var(--c-primary-600);
+    --switch-checked-thumb-primary: var(--c-primary-500);
+  
+  
+    --switch-checked-thumb-primary: var(--primary-600);
+
+    --c-primary-DEFAULT:var(--c-primary-600);
+    --c-secondary-DEFAULT:var(--c-secondary-600);
+    --c-danger-DEFAULT:var(--c-danger-600);
+    --c-success-DEFAULT:var(--c-success-600);
+    --c-accent-DEFAULT:var(--c-accent-600);
+    --c-warning-DEFAULT:var(--c-warning-600);
+  }
+  
 
 .dark {
     /* Background colors */
-    --bg:var(--neutral-950);
-    --bg-lighter: var(--neutral-900);
-    --bg-light: var(--neutral-900);
-    --bg-high: var(--neutral-800);
-    --bg-higher: var(--neutral-700);
+    --bg:var(--c-gray-950);
+    --bg-subtle: var(--c-gray-950);
+    --bg-surface: var(--c-gray-900);
+    --bg-muted: var(--c-gray-800);
+    --bg-surface-elevated: var(--c-gray-700);
 
     /* Foreground colors */
-    --fg-text: var(--neutral-300);
+    --fg: var(--c-gray-300);
     --fg-title: var(--c-white);
-    --fg-subtitle: var(--neutral-200);
-    --fg-subtext: var(--neutral-300);
-    --fg-light: var(--neutral-400);
+    --fg-subtitle: var(--c-gray-200);
+    --fg-muted: var(--c-gray-300);
+    --fg-light: var(--c-gray-400);
 
     /* Border colors */
-    --border: var(--neutral-900);
-    --border-light: var(--neutral-800);
-    --border-lighter: var(--neutral-900);
-    --border-high: var(--neutral-700);
-    --border-higher: var(--neutral-600);
+    --border: var(--c-gray-900);
+    --border-light: var(--c-gray-800);
+    --border-subtle: var(--c-gray-900);
+    --border-strong: var(--c-gray-700);
+    --border-emphasis: var(--c-gray-600);
 
     --ui-checkbox-border: var(--border-light);
+
+
+
+    --c-primary-DEFAULT:var(--c-primary-500);
+    --c-secondary-DEFAULT:var(--c-secondary-500);
+    --c-danger-DEFAULT:var(--c-danger-500);
+    --c-success-DEFAULT:var(--c-success-500);
+    --c-accent-DEFAULT:var(--c-accent-500);
+    --c-warning-DEFAULT:var(--c-warning-500);
 
 }

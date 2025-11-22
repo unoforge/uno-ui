@@ -1,12 +1,19 @@
+@import url(./font);
+@import url(./colors.css);
+
+
+
 html {
     min-width: 100vw;
     max-width: 100vw;
     scroll-behavior: smooth;
 }
 
-body{
-    overflow: hidden;
-    overflow-y: auto;
+html,
+body {
+    font-family: 'Geist Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -36,7 +43,7 @@ body{
 
 
 
-@keyframes fadeInScale {
+@keyframes fadeIn {
     from {
         opacity: 0;
         visibility: hidden;
@@ -58,7 +65,7 @@ body{
     }
 }
 
-@keyframes fadeOutScale {
+@keyframes fadeOut {
     from {
         opacity: 1;
         visibility: visible;
@@ -121,4 +128,25 @@ body{
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
+}
+
+/* Swiper Pagination Styles */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-500, #3b82f6);
+    transform: scale(1.2);
+}
+
+.swiper-pagination-bullet:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
 }

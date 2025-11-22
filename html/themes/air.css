@@ -1,0 +1,64 @@
+[data-palette=air] {
+  --c-primary-50: var(--c-air-orange-50);
+  --c-primary-100: var(--c-air-orange-100);
+  --c-primary-200: var(--c-air-orange-200);
+  --c-primary-300: var(--c-air-orange-300);
+  --c-primary-400: var(--c-air-orange-400);
+  --c-primary-500: var(--c-air-orange-500);
+  --c-primary-600: var(--c-air-orange-600);
+  --c-primary-700: var(--c-air-orange-700);
+  --c-primary-800: var(--c-air-orange-800);
+  --c-primary-900: var(--c-air-orange-900);
+  --c-primary-950: var(--c-air-orange-950);
+
+  --c-secondary-50: var(--c-thunderbird-50);
+  --c-secondary-100: var(--c-thunderbird-100);
+  --c-secondary-200: var(--c-thunderbird-200);
+  --c-secondary-300: var(--c-thunderbird-300);
+  --c-secondary-400: var(--c-thunderbird-400);
+  --c-secondary-500: var(--c-thunderbird-500);
+  --c-secondary-600: var(--c-thunderbird-600);
+  --c-secondary-700: var(--c-thunderbird-700);
+  --c-secondary-800: var(--c-thunderbird-800);
+  --c-secondary-900: var(--c-thunderbird-900);
+  --c-secondary-950: var(--c-thunderbird-950);
+
+
+  --c-accent-50: var(--c-air-yellow-50);
+  --c-accent-100: var(--c-air-yellow-100);
+  --c-accent-200: var(--c-air-yellow-200);
+  --c-accent-300: var(--c-air-yellow-300);
+  --c-accent-400: var(--c-air-yellow-400);
+  --c-accent-500: var(--c-air-yellow-500);
+  --c-accent-600: var(--c-air-yellow-600);
+  --c-accent-700: var(--c-air-yellow-700);
+  --c-accent-800: var(--c-air-yellow-800);
+  --c-accent-900: var(--c-air-yellow-900);
+  --c-accent-950: var(--c-air-yellow-950);
+
+
+  --c-info-50: var(--c-sky-50);
+  --c-info-100: var(--c-sky-100);
+  --c-info-200: var(--c-sky-200);
+  --c-info-300: var(--c-sky-300);
+  --c-info-400: var(--c-sky-400);
+  --c-info-500: var(--c-sky-500);
+  --c-info-600: var(--c-sky-600);
+  --c-info-700: var(--c-sky-700);
+  --c-info-800: var(--c-sky-800);
+  --c-info-900: var(--c-sky-900);
+  --c-info-950: var(--c-sky-950);
+
+  
+  --c-gray-50: var(--c-neutral-50);
+  --c-gray-100: var(--c-neutral-100);
+  --c-gray-200: var(--c-neutral-200);
+  --c-gray-300: var(--c-neutral-300);
+  --c-gray-400: var(--c-neutral-400);
+  --c-gray-500: var(--c-neutral-500);
+  --c-gray-600: var(--c-neutral-600);
+  --c-gray-700: var(--c-neutral-700);
+  --c-gray-800: var(--c-neutral-800);
+  --c-gray-900: var(--c-neutral-900);
+  --c-gray-950: var(--c-neutral-950);
+}

@@ -1,5 +1,4 @@
 import { getThemePreference } from "./load.theme";
-
 const themeSwitcher = () => {
   const switchTheme = document.querySelector("[data-switch-theme]");
 
@@ -19,3 +18,5 @@ const themeSwitcher = () => {
 };
 
 themeSwitcher()
+
+
