@@ -1,0 +1,2670 @@
+---
+// This file is auto-generated. Do not edit manually.
+import type { SupportedLanguage } from '../types';
+import Comp0 from '@components/ui/alert/CustomExample1.astro';
+import Comp1 from '@components/ui/alert/Default.astro';
+import Comp2 from '@components/ui/alert/Outline.astro';
+import Comp3 from '@components/ui/alert/Soft.astro';
+import Comp4 from '@components/ui/alert/Solid.astro';
+import Comp5 from '@components/ui/alert/Subtle.astro';
+import Comp6 from '@components/ui/alert/WithTitle.astro';
+import Comp7 from '@components/ui/alert-dialog/Default.astro';
+import Comp8 from '@components/ui/aspect-ratio/35mmfilm.astro';
+import Comp9 from '@components/ui/aspect-ratio/Square.astro';
+import Comp10 from '@components/ui/aspect-ratio/StandardTV.astro';
+import Comp11 from '@components/ui/aspect-ratio/UltrawideMonitor.astro';
+import Comp12 from '@components/ui/aspect-ratio/Video-TV.astro';
+import Comp13 from '@components/ui/accordion/Default.astro';
+import Comp14 from '@components/ui/accordion/Link.astro';
+import Comp15 from '@components/ui/accordion/Outline.astro';
+import Comp16 from '@components/ui/accordion/Soft.astro';
+import Comp17 from '@components/ui/accordion/Solid.astro';
+import Comp18 from '@components/ui/accordion/Subtle.astro';
+import Comp19 from '@components/ui/avatar/AvatarHolder.astro';
+import Comp20 from '@components/ui/avatar/AvatarPlace.astro';
+import Comp21 from '@components/ui/avatar/AvatarUI.astro';
+import Comp22 from '@components/ui/avatar/ImageSize.astro';
+import Comp23 from '@components/ui/breadcrumbs/CustomIndicator.astro';
+import Comp24 from '@components/ui/breadcrumbs/Default.astro';
+import Comp25 from '@components/ui/breadcrumbs/Divider.astro';
+import Comp26 from '@components/ui/breadcrumbs/Outline.astro';
+import Comp28 from '@components/ui/breadcrumbs/WithIcons.astro';
+import Comp29 from '@components/ui/badge/Default.astro';
+import Comp30 from '@components/ui/badge/Outline.astro';
+import Comp31 from '@components/ui/badge/Soft.astro';
+import Comp32 from '@components/ui/badge/Solid.astro';
+import Comp33 from '@components/ui/badge/Subtle.astro';
+import Comp34 from '@components/ui/badge/WithIcon.astro';
+import Comp44 from '@components/ui/dropdown/Default.astro';
+import Comp46 from '@components/ui/input/Leading.astro';
+import Comp47 from '@components/ui/input/Trailing.astro';
+import Comp49 from '@components/ui/card/Default.astro';
+import Comp50 from '@components/ui/card/Ecommerce1.astro';
+import Comp51 from '@components/ui/card/Ecommerce2.astro';
+import Comp52 from '@components/ui/card/PricingCard.astro';
+import Comp53 from '@components/ui/card/WithIcon.astro';
+import Comp60 from '@components/ui/meter/Default.astro';
+import Comp61 from '@components/ui/meter/MeterSize.astro';
+import Comp62 from '@components/ui/meter/ProgIndicator.astro';
+import Comp63 from '@components/ui/pagination/ActiveState.astro';
+import Comp64 from '@components/ui/pagination/Default.astro';
+import Comp65 from '@components/ui/pagination/WithIcon.astro';
+import Comp66 from '@components/ui/popover/Default.astro';
+import Comp67 from '@components/ui/popover/WithContent.astro';
+import Comp68 from '@components/ui/progress/Default.astro';
+import Comp69 from '@components/ui/progress/ProgressIndicator.astro';
+import Comp70 from '@components/ui/progress/ProgressSizes.astro';
+import Comp71 from '@components/ui/progress/WithMessage.astro';
+import Comp74 from '@components/ui/radio/Grouped.astro';
+import Comp77 from '@components/ui/range/Custom.astro';
+import Comp78 from '@components/ui/range/CustomSize.astro';
+import Comp79 from '@components/ui/range/Default.astro';
+import Comp80 from '@components/ui/range/RangeSize.astro';
+import Comp81 from '@components/ui/range/Stepper.astro';
+import Comp82 from '@components/ui/range/Styled.astro';
+import Comp83 from '@components/ui/select/CustomIndicator.astro';
+import Comp84 from '@components/ui/select/Default.astro';
+import Comp85 from '@components/ui/select/WithIcon.astro';
+import Comp86 from '@components/ui/select/WithLabel.astro';
+import Comp87 from '@components/ui/skeleton/Card.astro';
+import Comp88 from '@components/ui/skeleton/Default.astro';
+import Comp89 from '@components/ui/slideover/Default.astro';
+import Comp90 from '@components/ui/slideover/Overlay.astro';
+import Comp91 from '@components/ui/slideover/SlideOver.astro';
+import Comp92 from '@components/ui/switch/Default.astro';
+import Comp93 from '@components/ui/switch/Outline.astro';
+import Comp94 from '@components/ui/switch/Size.astro';
+import Comp95 from '@components/ui/switch/WithLabel.astro';
+import Comp96 from '@components/ui/table/Default.astro';
+import Comp97 from '@components/ui/table/HeaderGray.astro';
+import Comp98 from '@components/ui/tabs/Default.astro';
+import Comp99 from '@components/ui/tabs/TabsWithForm.astro';
+import Comp100 from '@components/ui/tabs/TriggerIcon.astro';
+import Comp101 from '@components/ui/tabs/Vertical.astro';
+import Comp102 from '@components/ui/text-area/Autoresize.astro';
+import Comp103 from '@components/ui/text-area/Default.astro';
+import Comp104 from '@components/ui/text-area/NoResize.astro';
+import Comp105 from '@components/ui/text-area/WithLabel.astro';
+import Comp106 from '@components/ui/tooltip/Default.astro';
+import Comp107 from '@components/ui/tooltip/TriggerClick.astro';
+
+export const componentManifest: Record<string, { lang: SupportedLanguage, name: string, code: string, component:any}> = {
+  'alert/CustomExample1': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="ui-soft ui-soft-gray rd-md p-4 flex items-start gap-x-4 wfull">
+  <div class="w-max">
+    <span class="flex text-lg i-carbon-warning"></span>
+  </div>
+  <div class="flex-1 space-y-3">
+    <p>The data export you requested is ready!</p>
+    <div>
+      <button
+        class="btn btn-sm btn-flexi btn-flexi-white text-fg-subtitle rd-md"
+        aria-label="Trigger Modal Show Data"
+      >
+        View the Data
+      </button>
+    </div>
+  </div>
+</div>
+`,
+    component: Comp0
+  },
+  'alert/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-full flex flex-col gap-2">
+    <div class="bg-bg-surface rd-md p4">
+        <p class="text-fg">
+          You can add components to your app using the ou CLI.
+        </p>
+      </div>
+      <div class="bg-bg-surface rd-md p4 flex items-center gap-4">
+        <span class="min-w-max i-ph-info text-fg text-lg"></span>
+        <div class="flex flex-1">
+          <p class="text-fg">
+            You can add components to your app using the ou CLI.
+          </p>
+        </div>
+    </div>
+    <div class="ui-outline ui-outline-gray rd-md p4 flex items-center gap-x4 text-fg">
+        <span aria-hidden="true" class="flex i-ph-info text-xl"></span>
+        <div class="flex-1 flex">
+          <p>
+            You can add components to your app using the ou CLI.
+          </p>
+        </div>
+      </div>
+</div>
+`,
+    component: Comp1
+  },
+  'alert/Outline': {
+    name: 'index.html',
+    lang: 'html',
+    code: ``,
+    component: Comp2
+  },
+  'alert/Soft': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-full flex flex-col gap-2">
+  <div class="ui-soft ui-soft-gray rd-md p4">
+    <p>You can add components to your app using the ou CLI.</p>
+  </div>
+  <div class="ui-soft ui-soft-primary rd-md p4">
+    <p>You can add components to your app using the ou CLI.</p>
+  </div>
+  <div class="ui-soft ui-soft-primary rd-md p4">
+    <h3>With Border</h3>
+    <p class="text-fg-primary-light">
+      You can add components to your app using the ou CLI.
+    </p>
+  </div>
+  <div class="ui-soft ui-soft-danger rd-md p4">
+    <p class="text-fg-danger-light">
+      You can add components to your app using the ou CLI.
+    </p>
+  </div>
+</div>
+`,
+    component: Comp3
+  },
+  'alert/Solid': {
+    name: 'index.html',
+    lang: 'html',
+    code: ``,
+    component: Comp4
+  },
+  'alert/Subtle': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-full flex flex-col gap-2">
+
+    <div class="ui-subtle ui-subtle-gray rd-md p4">
+        <p>You can add components to your app using the ou CLI.</p>
+      </div>
+      <div class="ui-subtle ui-subtle-primary rd-md p4">
+        <p>You can add components to your app using the ou CLI.</p>
+      </div>
+      <div class="ui-subtle ui-subtle-secondary rd-md p4">
+        <p>You can add components to your app using the ou CLI.</p>
+      </div>
+      <div class="ui-subtle ui-subtle-danger rd-md p4">
+        <p class="text-fg-danger-light">
+          You can add components to your app using the ou CLI.
+        </p>
+      </div>
+</div>
+
+`,
+    component: Comp5
+  },
+  'alert/WithTitle': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-full flex flex-col gap-2">
+    <div class="ui-solid ui-solid-gray rd-md p4">
+        <h3 class="font-semibold text-fg-title">
+          Alert with title : default
+        </h3>
+        <p>
+          You can add components to your app using the ou CLI.
+        </p>
+    </div>
+    <div class="ui-solid ui-solid-gray rd-md p4 flex items-start gap-x4">
+        <div class="wmax">
+          <span aria-hidden="true" class="flex i-ph-info text-xl"></span>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-fg-title">
+            Alert with title & Icon : default Reverse
+          </h3>
+          <p>
+            You can add components to your app using the ou CLI.
+          </p>
+        </div>
+    </div>
+    <div class="ui-outline ui-outline-gray rd-md p4 flex items-start gap-x4 text-fg">
+        <span aria-hidden="true" class="flex i-ph-info text-xl"></span>
+        <div class="flex-1 flex flex-col">
+          <h3 class="font-semibold text-fg-title">
+            Alert with title & Icon : default Reverse
+          </h3>
+          <p>
+            You can add components to your app using the ou CLI.
+          </p>
+        </div>
+    </div>
+</div>`,
+    component: Comp6
+  },
+  'alert-dialog/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<button data-modal-trigger data-modal-target="modal-message-def" class="btn btn-md text-white btn-solid btn-solid-primary rd-lg">
+    Show Modal
+</button>
+<dialog data-fx-modal data-alert-dialog aria-hidden="true" data-modal-id="modal-message-def" data-modal-overlay="ui-overlay bg-gray-800/70 backdrop-filter backdrop-blur-sm" class="items-center justify-center p-4 fixed hidden fx-open-flex size-screen top-0 left-0 z100 bg-transparent">
+    <div data-modal-content data-enter-animation="fadeIn .4s linear" data-exit-animation="fadeOut .1s linear" class="ui-animated-modal-content relative bg-bg rd-lg overflow-hidden w-full max-w-xl p-8 flex flex-col gap-y-4 items-center ease-linear transition-all">
+        <div class="w-max p-3 rd-full ui-soft ui-soft-gray b b-border">
+           <span aria-hidden="true" class="flex i-ph-question text-xl"></span>
+        </div>
+        <h2 class="font-semibold text-xl text-fg-title">Confirm your action</h2>
+        <p class="text-fg">
+            Are you sure you want to proceed with this action?
+        </p>
+        <div class="flex justify-center gap-x-3 pt-4">
+            <button class="btn btn-sm text-white btn-solid btn-solid-primary rd-md">
+                Yes, Proceed
+            </button>
+            <button data-close-modal class="btn btn-sm btn-white ui-btn-white rd-md text-fg-subtitle">
+                No, Cancel
+            </button>
+        </div>
+    </div>
+</dialog>`,
+    component: Comp7
+  },
+  'aspect-ratio/35mmfilm': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-4/5 aspect-35mm-film mxauto">
+    <img src="/images/img2.webp" class="w-full h-full object-cover rd-lg" width="2400"
+        alt="aspect 35by Johnnathan Tshibangu">
+</div>`,
+    component: Comp8
+  },
+  'aspect-ratio/Square': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-4/5 aspect-square mxauto">
+    <img src="/images/img2.webp" class="w-full h-full object-cover rd-lg" width="2400"
+        alt="Aspect Square ,by Johnnathan Tshibangu">
+</div>`,
+    component: Comp9
+  },
+  'aspect-ratio/StandardTV': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-4/5 aspect-standard-tv mxauto">
+    <img src="/images/img2.webp" class="w-full h-full object-cover rd-lg" width="2400"
+        alt="StandardTv,by Johnnathan Tshibangu">
+</div>`,
+    component: Comp10
+  },
+  'aspect-ratio/UltrawideMonitor': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-4/5 aspect-ultrawide mxauto">
+    <img src="/images/img2.webp" class="w-full h-full object-cover rd-lg" width="2400"
+        alt="UltraWide,by Johnnathan Tshibangu">
+</div>`,
+    component: Comp11
+  },
+  'aspect-ratio/Video-TV': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="w-4/5 aspect-video mxauto">
+    <img src="/images/img2.webp" class="w-full h-full object-cover rd-lg" width="2400"
+        alt="Image by Johnnathan Tshibangu">
+</div>
+`,
+    component: Comp12
+  },
+  'accordion/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-accordion data-default-value="accordion-1" data-type="single" class="">
+    <div data-accordion-item data-accordion-value="accordion-1" class="b-b b-b-border">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg group">
+        Is it accessible?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="py2">
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-2" class="b-b b-b-border">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg group">
+        Is it unstyled?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="py2">
+          Yes. It's unstyled by default, giving you freedom over the look and feel.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-3" class="b-b b-b-border">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg group">
+        Can it be animated?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="py2">
+          Yes! You can use the transition prop to configure the animation.
+        </p>
+      </div>
+    </div>
+</div>`,
+    component: Comp13
+  },
+  'accordion/Link': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-accordion data-default-value="accordion-1" data-type="single" class="space-y-2">
+    <div data-accordion-item data-accordion-value="accordion-1">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="pb2 wfull flex justify-between items-center text-fg-subtitle font-medium text-lg hover-underline group">
+        Is it accessible?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-2">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="pb2 wfull flex justify-between items-center text-fg-subtitle font-medium text-lg hover-underline group">
+        Is it unstyled?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p>
+          Yes. It's unstyled by default, giving you freedom over the look and feel.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-3" class="">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="pb2 wfull flex justify-between items-center text-fg-subtitle font-medium text-lg hover-underline group">
+        Can it be animated?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p>
+          Yes! You can use the transition prop to configure the animation.
+        </p>
+      </div>
+    </div>
+</div>`,
+    component: Comp14
+  },
+  'accordion/Outline': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-accordion data-default-value="accordion-1" data-type="single" class="space-y-2">
+    <div data-accordion-item data-accordion-value="accordion-1" class="rd-md b b-border-strong">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg group">
+        Is it accessible?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-2" class="rd-md b b-border-strong">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg group">
+        Is it unstyled?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It's unstyled by default, giving you freedom over the look and feel.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-3" class="rd-md b b-border-strong">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg group">
+        Can it be animated?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes! You can use the transition prop to configure the animation.
+        </p>
+      </div>
+    </div>
+</div>`,
+    component: Comp15
+  },
+  'accordion/Soft': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-accordion data-default-value="accordion-1" data-type="single" class="space-y-2">
+    <div data-accordion-item data-accordion-value="accordion-1"
+      class="rd-xl ui-soft ui-soft-gray">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear rd-xl group">
+        Is it accessible?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-2"
+      class="rd-xl ui-soft ui-soft-gray">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear rd-xl group">
+        Is it unstyled?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It's unstyled by default, giving you freedom over the look and feel.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-3"
+      class="rd-xl ui-soft ui-soft-gray">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear rd-xl group">
+        Can it be animated?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes! You can use the transition prop to configure the animation.
+        </p>
+      </div>
+    </div>
+</div>`,
+    component: Comp16
+  },
+  'accordion/Solid': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-accordion data-default-value="accordion-1" data-type="single" class="space-y-2">
+    <div data-accordion-item data-accordion-value="accordion-1" class="rd-md bg-bg-surface">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear hover-bg-bg-muted rd-md group">
+        Is it accessible?
+        <span
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-2" class="rd-md bg-bg-surface">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear hover-bg-bg-muted rd-md group">
+        Is it unstyled?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It's unstyled by default, giving you freedom over the look and feel.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-3" class="rd-md bg-bg-surface">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear hover-bg-bg-muted rd-md group">
+        Can it be animated?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes! You can use the transition prop to configure the animation.
+        </p>
+      </div>
+    </div>
+</div>`,
+    component: Comp17
+  },
+  'accordion/Subtle': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-accordion data-default-value="accordion-1" data-type="single" class="space-y-2">
+    <div data-accordion-item data-accordion-value="accordion-1"
+      class="rd-xl ui-subtle ui-subtle-gray">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear rd-xl group">
+        Is it accessible?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-2"
+      class="rd-xl ui-subtle ui-subtle-gray">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear rd-xl group">
+        Is it unstyled?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes. It's unstyled by default, giving you freedom over the look and feel.
+        </p>
+      </div>
+    </div>
+    <div data-accordion-item data-accordion-value="accordion-3"
+      class="rd-xl ui-subtle ui-subtle-gray">
+      <button data-accordion-trigger aria-label="toggle button"
+        class="px4 wfull flex justify-between items-center py2 text-fg-subtitle font-medium text-lg ease-linear rd-xl group">
+        Can it be animated?
+        <span data-trigger-icon
+          class="ease-linear duration-300 i-ph-caret-down group-aria-expanded-rotate-180 text-md"></span>
+      </button>
+      <div data-accordion-content class="text-fg duration-200 ease-linear fx-not-open-h-0  overflow-hidden">
+        <p class="p4">
+          Yes! You can use the transition prop to configure the animation.
+        </p>
+      </div>
+    </div>
+</div>`,
+    component: Comp18
+  },
+  'avatar/AvatarHolder': {
+    name: 'index.html',
+    lang: 'html',
+    code: `---
+import ImageSize from "./ImageSize.astro";
+---
+
+<div class="flex flex-wrap items-center gap-2 wmax max-wfull mx-a">
+    <ImageSize type="placeholder" size="xs" variant="soft" withIcon />
+    <ImageSize type="placeholder" size="sm" variant="solid" withIcon />
+    <ImageSize type="placeholder" size="md" variant="subtle" withIcon />
+</div>
+`,
+    component: Comp19
+  },
+  'avatar/AvatarPlace': {
+    name: 'index.html',
+    lang: 'html',
+    code: `---
+import ImageSize from "./ImageSize.astro";
+---
+
+<div class="flex flex-wrap items-center gap-2 wmax max-wfull mx-a">
+    <ImageSize type="placeholder" size="xs" variant="subtle" intent="primary" text="JK" />
+    <ImageSize type="placeholder" size="sm" variant="subtle" intent="gray" text="JK" />
+    <ImageSize type="placeholder" size="md" variant="subtle" intent="neutral" text="JK" />
+</div>`,
+    component: Comp20
+  },
+  'avatar/AvatarUI': {
+    name: 'index.html',
+    lang: 'html',
+    code: `---
+import ImageSize from "./ImageSize.astro";
+---
+
+<div class="flex flex-wrap items-center gap-2 wmax max-wfull mx-a">
+    <ImageSize type="image" size="xs" src="/defaultavatar.webp" placeholder="avatar xs variant" />
+    <ImageSize type="image" size="sm" src="/defaultavatar.webp" placeholder="avatar sm variant" />
+    <ImageSize type="image" size="md" src="/defaultavatar.webp" placeholder="avatar md variant" />
+    <ImageSize type="image" size="lg" src="/defaultavatar.webp" placeholder="avatar lg variant" />
+    <ImageSize type="image" size="xl" src="/defaultavatar.webp" placeholder="avatar xl variant" />
+</div>`,
+    component: Comp21
+  },
+  'avatar/ImageSize': {
+    name: 'index.html',
+    lang: 'html',
+    code: `
+
+---
+import type { UiSize, UiVariant } from "@/types/index";
+
+type PlaceHolderStyle = {
+    type: "placeholder";
+    variant?: UiVariant;
+    intent?: "primary" | "gray" | "neutral";
+    size?: UiSize;
+    icon?: string;
+    text?: string;
+    withIcon?: boolean;
+};
+
+type NormalStyle = {
+    type: "image";
+    size?: UiSize;
+    src?: string;
+    placeholder?: string;
+};
+type Props = NormalStyle | PlaceHolderStyle;
+const defaultImageProps: NormalStyle = {
+    type: "image",
+    size: "md",
+    src: "/defaultavatar.webp",
+    placeholder: "",
+};
+
+const defaultPlaceHolder: PlaceHolderStyle = {
+    type: "placeholder",
+    variant: "solid",
+    size: "md",
+    intent: "gray",
+    icon: "i-ph-user",
+};
+
+const props = Astro.props || defaultImageProps || defaultPlaceHolder;
+
+const placeHolderVariant = {
+    solid: {
+        gray: "ui-solid ui-solid-gray",
+        primary: "ui-solid ui-solid-primary",
+        neutral: "ui-solid ui-solid-neutral",
+    },
+    outline: {
+        gray: "ui-outline ui-outline-gray",
+        primary: "ui-outline ui-outline-primary",
+        neutral: "ui-outline ui-outline-neutral",
+    },
+    soft: {
+        gray: "ui-soft ui-soft-gray",
+        primary: "ui-soft ui-soft-primary",
+        neutral: "ui-soft ui-soft-neutral",
+    },
+    subtle: {
+        gray: "ui-subtle ui-subtle-gray",
+        primary: "ui-subtle ui-subtle-primary",
+        neutral: "ui-subtle ui-subtle-neutral",
+    },
+};
+---
+
+{
+    props.type === "image" ? (
+        <img width="640" height="427"
+            class:list={[
+                "object-cover rd-full",
+                {
+                    "avatar-xs": props.size === "xs",
+                    "avatar-sm": props.size === "sm",
+                    "avatar-md": props.size === "md",
+                    "avatar-lg": props.size === "lg",
+                    "avatar-xl": props.size === "xl",
+                },
+            ]}
+            src={\`\${props.src}\`}
+            alt={\`Illustration \${props.placeholder}||""\`}
+        />
+    ) : (
+        <div
+            class:list={[
+                "avatar-placeholder rd-full",
+                {
+                    "avatar-placeholder-xs": props.size === "xs",
+                    "avatar-placeholder-sm": props.size === "sm",
+                    "avatar-placeholder-md": props.size === "md",
+                    "avatar-placeholder-lg": props.size === "lg",
+                    "avatar-placeholder-xl": props.size === "xl",
+                },
+                placeHolderVariant[props.variant || "solid"][
+                    props.intent || "gray"
+                ],
+            ]}
+        >
+            {props.icon || props.withIcon ? (
+                <span
+                    aria-hidden="true"
+                    class={\`flex \${props.icon || "i-ph-user"}\`}
+                />
+            ) : (
+                <span>{props.text || "JK"}</span>
+            )}
+        </div>
+    )
+}
+
+`,
+    component: Comp22
+  },
+  'breadcrumbs/CustomIndicator': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-4">
+    <nav aria-label="Breadcrumbs">
+        <ol class="flex items-center gap-x3 text-fg-muted">
+            <li class="flex items-center gap-x1.5">
+                <a href="#"
+                    class="ease-linear hover-text-fg-subtitle px1.5 pypx b b-border-strong rd-full">
+                    Home
+                </a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li class="flex items-center gap-x1.5">
+                <a href="#"
+                    class="ease-linear hover-text-fg-subtitle px1.5 pypx b b-border-strong rd-full">
+                    Navigation
+                </a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li
+                class="px1.5 pypx rd-full b b-border-strong bg-bg-surface text-fg-title font-semibold">
+                <span aria-current="page" class="flex">Current Page</span>
+            </li>
+        </ol>
+    </nav>
+    <nav aria-label="Breadcrumbs">
+        <ol class="flex items-center gap-x3 text-fg-muted">
+            <li class="flex items-center gap-x1.5">
+                <a href="#"
+                    class="ease-linear hover-text-fg-subtitle px1.5 pypx b b-border-strong rd-full">
+                    Home
+                </a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li class="flex items-center gap-x1.5">
+                <a href="#"
+                    class="ease-linear hover-text-fg-subtitle px1.5 pypx b b-border-strong rd-full">
+                    Navigation
+                </a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li
+                class="px1.5 pypx rd-full b text-white bg-primary b-primary700 font-semibold">
+                <span aria-current="page" class="flex">Current Page</span>
+            </li>
+        </ol>
+    </nav>
+    <nav aria-label="Breadcrumbs">
+        <ol class="flex items-center gap-x3 text-fg-muted">
+            <li class="flex items-center gap-x1.5">
+                <a href="#"
+                    class="ease-linear hover-text-fg-subtitle flex items-center gap-x1.5 px1.5 pypx rd-full bg-bg-surface hover-bg-bg-muted">
+                    <span aria-hidden="true" class="flex i-carbon-home text-xl"></span>
+                    Home
+                </a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li class="flex items-center gap-x1.5">
+                <a href="#"
+                    class="ease-linear hover-text-fg-subtitle flex items-center gap-x1.5 px1.5 pypx rd-full bg-bg-surface hover-bg-bg-muted">
+                    <span aria-hidden="true" class="flex i-carbon-api text-xl"></span>
+                    Navigation
+                </a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li
+                class="flex items-center gap-x1.5 text-bg font-semibold px1.5 pypx rd-full bg-fg-title">
+                <span aria-hidden="true" class="flex i-carbon-worship"></span>
+                <span aria-current="page" class="flex">Current Page</span>
+            </li>
+        </ol>
+    </nav>
+</div>`,
+    component: Comp23
+  },
+  'breadcrumbs/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-4">
+    <nav aria-label="Breadcrumbs">
+        <ol class="flex items-center gap-x1.5 text-fg-muted">
+            <li class="flex items-center gap-x1.5">
+                <a href="#" class="ease-linear hover-text-fg-subtitle">Home</a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li class="flex items-center gap-x1.5">
+                <a href="#" class="ease-linear hover-text-fg-subtitle">Navigation</a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li class="flex items-center gap-x1.5 text-fg-title font-semibold">
+                <span aria-current="page">Current Page</span>
+            </li>
+        </ol>
+    </nav>
+    <nav aria-label="Breadcrumbs">
+        <ol class="flex items-center gap-x1.5 text-fg-muted">
+            <li class="flex items-center gap-x1.5">
+                <a href="#" class="ease-linear hover-text-fg-subtitle">Home</a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li class="flex items-center gap-x1.5">
+                <a href="#" class="ease-linear hover-text-fg-subtitle">Navigation</a>
+                <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+            </li>
+            <li class="flex items-center gap-x1.5 text-primary font-semibold">
+                <span aria-current="page">Current Page</span>
+            </li>
+        </ol>
+    </nav>
+</div>`,
+    component: Comp24
+  },
+  'breadcrumbs/Divider': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-4">
+    <nav aria-label="Breadcrumbs">
+        <ol class="flex items-center gap-x-3 text-fg-muted">
+            <li class="flex items-center gap-x-1.5">
+                <a href="#" class="ease-linear hover-text-sub-title">
+                    Home
+                </a>
+                <span class="select-none pointer-events-none" aria-hidden="true">/</span>
+            </li>
+            <li class="flex items-center gap-x-1.5">
+                <a href="#" class="ease-linear hover-text-sub-title">
+                    Navigation
+                </a>
+                <span class="select-none pointer-events-none" aria-hidden="true">/</span>
+            </li>
+            <li class="text-title font-semibold">
+                <span aria-current="page" class="flex">Current Page</span>
+            </li>
+        </ol>
+    </nav>
+    <nav aria-label="Breadcrumbs">
+        <ol class="flex items-center gap-x-3 text-fg-muted">
+            <li class="flex items-center gap-x-1.5">
+                <a href="#" class="ease-linear hover-text-sub-title flex items-center gap-x-1.5">
+                    <span aria-hidden="true" class="flex i-ph-house text-lg"></span>
+                    Home
+                </a>
+                <svg width="16" height="16" fill="currentColor" class="size-4 shrink-0 -rotate-20deg"
+                    viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                </svg>
+            </li>
+            <li class="flex items-center gap-x-1.5">
+                <a href="#" class="ease-linear hover-text-sub-title flex items-center gap-x-1.5">
+                    <span aria-hidden="true" class="flex i-ph-link text-lg"></span>
+                    Navigation
+                </a>
+                <svg width="16" height="16" fill="currentColor" class="size-4 shrink-0 -rotate-20deg"
+                    viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                </svg>
+            </li>
+            <li class="flex items-center gap-x-1.5 text-title font-semibold">
+                <span aria-hidden="true" class="flex i-ph-link text-lg"></span>
+                <span aria-current="page" class="flex">Current Page</span>
+            </li>
+        </ol>
+    </nav>
+</div>`,
+    component: Comp25
+  },
+  'breadcrumbs/Outline': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-4 wfull">
+  <nav aria-label="Breadcrumbs" class="py2 px4 rd-md b b-border-strong">
+    <ol class="flex items-center gap-x3 text-fg-muted">
+      <li class="flex items-center gap-x1.5">
+        <a href="#" class="ease-linear hover-text-fg-subtitle"> Home </a>
+        <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"
+        ></span>
+      </li>
+      <li class="flex items-center gap-x1.5">
+        <a href="#" class="ease-linear hover-text-fg-subtitle"> Navigation </a>
+        <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"
+        ></span>
+      </li>
+      <li class="text-fg-title font-semibold">
+        <span aria-current="page" class="flex">Current Page</span>
+      </li>
+    </ol>
+  </nav>
+  <nav aria-label="Breadcrumbs" class="b-y py2 px4 b-border-strong">
+    <ol class="flex items-center gap-x3 text-fg-muted">
+      <li class="flex items-center gap-x1.5">
+        <a
+          href="#"
+          class="ease-linear hover-text-fg-subtitle flex items-center gap-x1.5"
+        >
+          <span aria-hidden="true" class="flex i-carbon-home text-xl"></span>
+          Home
+        </a>
+        <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"
+        ></span>
+      </li>
+      <li class="flex items-center gap-x1.5">
+        <a
+          href="#"
+          class="ease-linear hover-text-fg-subtitle flex items-center gap-x1.5"
+        >
+          <span aria-hidden="true" class="flex i-carbon-api text-xl"></span>
+          Navigation
+        </a>
+        <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"
+        ></span>
+      </li>
+      <li class="flex items-center gap-x1.5 text-fg-title font-semibold">
+        <span aria-hidden="true" class="flex i-carbon-worship"></span>
+        <span aria-current="page" class="flex">Current Page</span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`,
+    component: Comp26
+  },
+  'breadcrumbs/WithIcons': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<nav aria-label="Breadcrumbs">
+    <ol class="flex items-center gap-x3 text-fg-muted">
+        <li class="flex items-center gap-x1.5">
+            <a href="#" class="ease-linear hover-text-fg-subtitle flex items-center gap-x1.5">
+                <span aria-hidden="true" class="flex i-carbon-home text-xl"></span>
+                Home
+            </a>
+            <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+        </li>
+        <li class="flex items-center gap-x1.5">
+            <a href="#" class="ease-linear hover-text-fg-subtitle flex items-center gap-x1.5">
+                <span aria-hidden="true" class="flex i-carbon-api text-xl"></span>
+                Navigation
+            </a>
+            <span aria-hidden="true" class="flex shring-0 i-carbon-chevron-right"></span>
+        </li>
+        <li class="flex items-center gap-x1.5 text-fg-title font-semibold">
+            <span aria-hidden="true" class="flex i-carbon-worship"></span>
+            <span aria-current="page" class="flex">Current Page</span>
+        </li>
+    </ol>
+</nav>`,
+    component: Comp28
+  },
+  'badge/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-wrap gap-4">
+    <span class="rd-xl badge-md ui-subtle ui-subtle-gray">Badge</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-primary">Badge</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-warning">Badge</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-danger">Badge</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-neutral text-sub-title-reverse">Badge</span>
+</div>`,
+    component: Comp29
+  },
+  'badge/Outline': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-wrap gap-4">
+    <span class="rd-xl badge-md ui-outline ui-outline-gray">Badge Gray</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-neutral">Badge Neutral</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-primary">Badge Primary</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-secondary">Badge Secondary</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-accent">Badge Accent</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-warning">Badge Warning</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-danger">Badge danger</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-info">Badge Info</span>
+    <span class="rd-xl badge-md ui-outline ui-outline-success">Badge Success</span>
+</div>`,
+    component: Comp30
+  },
+  'badge/Soft': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-wrap gap-4">
+    <span class="rd-xl badge-md ui-soft ui-soft-gray">Badge Gray</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-neutral">Badge Neutral</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-primary">Badge Primary</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-secondary">Badge Secondary</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-accent">Badge Accent</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-warning">Badge Warning</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-danger">Badge danger</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-info">Badge Info</span>
+    <span class="rd-xl badge-md ui-soft ui-soft-success">Badge Success</span>
+</div>`,
+    component: Comp31
+  },
+  'badge/Solid': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-wrap gap-4">
+    <span class="rd-xl badge-md ui-solid ui-solid-gray">Badge Gray</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-neutral text-sub-title-reverse">Badge Neutral</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-primary">Badge Primary</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-secondary">Badge Secondary</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-accent">Badge Accent</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-warning">Badge Warning</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-danger">Badge danger</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-info">Badge Info</span>
+    <span class="rd-xl badge-md ui-solid ui-solid-success">Badge Success</span>
+</div>`,
+    component: Comp32
+  },
+  'badge/Subtle': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-wrap gap-4">
+    <span class="rd-xl badge-md ui-subtle ui-subtle-gray">Badge Gray</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-neutral">Badge Neutral</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-primary">Badge Primary</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-secondary">Badge Secondary</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-accent">Badge Accent</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-warning">Badge Warning</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-danger">Badge danger</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-info">Badge Info</span>
+    <span class="rd-xl badge-md ui-subtle ui-subtle-success">Badge Success</span>
+</div>`,
+    component: Comp33
+  },
+  'badge/WithIcon': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-wrap gap-4">
+    <span class="rd-xl badge-md ui-soft ui-soft-success d-flex-items-center gap-x1">
+        12%
+        <span aria-hidden="true" class="flex i-ph-trend-up"></span>
+    </span>
+    <span class="rd-xl badge-md ui-soft ui-soft-danger d-flex-items-center gap-x1">
+        50%
+        <span aria-hidden="true" class="flex i-ph-trend-down"></span>
+    </span>
+    <span class="rd-xl badge-md ui-soft ui-soft-warning d-flex-items-center gap-x1">
+        You're reaching out your limit
+        <span aria-hidden="true" class="flex i-ph-warning"></span>
+    </span>
+</div>`,
+    component: Comp34
+  },
+  'dropdown/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<button
+  data-dropdown-trigger
+  data-dropdown-id="dropdown-1"
+  class="btn btn-sm rd-md btn-soft btn-soft-gray b b-border-light gap-x2 group"
+>
+  User Setting
+  <span
+    aria-hidden="true"
+    class="flex i-ph-caret-down ease-linear duration-200 group-aria-expanded-rotate-180"
+  ></span>
+</button>
+<div
+  role="list"
+  id="dropdown-1"
+  data-drop-down
+  class="ui-popper z-20 op0 invisible translate-y-3 fx-open-op100 fx-open-visible fx-open-translate-y-0 w-54 text-sm bg-bg-subtle b b-border/50 flex flex-col overflow-hidden text-fg ease-linear transition-transform 
+  [--dropdown-padding:var(--padding-1)] [--dropdown-radius:var(--global-main-radius)] rounded-[--dropdown-radius]"
+>
+  <div
+    class="dropdown-content p-[--dropdown-padding] text-left gap-0.5"
+  >
+    <a
+      href="#link"
+      aria-label="some alt text for link"
+      class="[--mr-icon:0.25rem] group relative select-none dropdown-item-base dropdown-item-grid items-center text-left dropdown-item-slot dropdown-item-icon dropdown-item-label dropdown-item-force-color cursor-default text-base/6 sm:text-sm/6 text-fg focus:outline-primary hover-text-fg-title focus-bg-bg-muted fx-focus-active-bg-bg-muted hover-bg-bg-muted"
+    >
+      <span slot="icon" data-slot="icon" class="size-5 flex items-center mr-[--mr-icon]">
+        <span aria-hidden="true" class="text-lg flex i-ph-user"></span>
+      </span>
+      <span class="col-start-2 text-left">Edit Profile</span>
+    </a>
+    <a
+      href="#link"
+      aria-label="some alt text for link"
+      class="[--mr-icon:0.25rem] group relative select-none dropdown-item-base dropdown-item-grid items-center text-left dropdown-item-slot dropdown-item-icon dropdown-item-label dropdown-item-force-color cursor-default text-base/6 sm:text-sm/6 text-fg focus:outline-primary hover-text-fg-title focus-bg-bg-muted fx-focus-active-bg-bg-muted hover-bg-bg-muted"
+    >
+      <span slot="icon" data-slot="icon" class="size-5 flex items-center mr-[--mr-icon]">
+        <span aria-hidden="true" class="text-lg flex i-ph-gear"></span>
+      </span>
+      <span class="col-start-2 text-left">Setting</span>
+    </a>
+    <a
+      href="#link"
+      aria-label="some alt text for link"
+      class="[--mr-icon:0.25rem] group relative select-none dropdown-item-base dropdown-item-grid items-center text-left dropdown-item-slot dropdown-item-icon dropdown-item-label dropdown-item-force-color cursor-default text-base/6 sm:text-sm/6 text-fg focus:outline-primary hover-text-fg-title focus-bg-bg-muted fx-focus-active-bg-bg-muted hover-bg-bg-muted"
+    >
+      <span slot="icon" data-slot="icon" class="size-5 flex items-center mr-[--mr-icon]">
+        <span aria-hidden="true" class="text-lg flex i-ph-invoice"></span>
+      </span>
+      <span class="col-start-2 text-left">Billing</span>
+    </a>
+  </div>
+</div>`,
+    component: Comp44
+  },
+  'input/Leading': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<form action="" class="space-y-4 w-full text-fg">
+    <div class="relative">
+        <input type="text" placeholder="Your email here"
+        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg text-fg ps9 rd-md">
+        <span aria-hidden="true"
+            class="absolute left-3 h-full flex items-center top-0 text-fg pointer-events-none">
+            <span class="flex text-lg i-ph-user"></span>
+        </span>
+    </div>
+    <div class="relative">
+        <input type="text" placeholder="Your email here"
+        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg text-fg ps11 rd-md">
+        <span aria-hidden="true"
+            class="absolute text-sm left-3 h-full flex items-center top-0 text-fg pointer-events-none">
+            CDF
+        </span>
+    </div>
+    <div class="relative">
+        <input type="text" placeholder="Your email here"
+        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg text-fg ps16 rd-md">
+        <span aria-hidden="true"
+            class="absolute text-sm left-3 h-full flex items-center top-0 text-fg pointer-events-none">
+            https://
+        </span>
+    </div>
+    <div class="flex">
+        <span aria-hidden="true"
+            class="px3 flex items-center text-fg form-input-gray rd-l-md b-y b-l b-border-strong/90 pointer-events-none">
+            <span class="flex text-lg i-ph-user"></span>
+        </span>
+        <input type="text" placeholder="Your email here"
+        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg text-fg rd-r-md">
+    </div>
+</form>`,
+    component: Comp46
+  },
+  'input/Trailing': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<form action="" class="space-y-4 w-full text-fg">
+    <div class="relative">
+        <input type="search" placeholder="Start tapping..." class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg">
+        <span aria-hidden="true" class="absolute right-3 hfull flex items-center top-0 text-fg pointer-events-none">
+            <span aria-hidden="true" class="flex i-ph-magnifying-glass text-lg"></span>                                                  
+        </span>
+    </div>
+    <div class="relative">
+        <input type="text" placeholder="Your email here" class="pe11 ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg">
+        <span aria-hidden="true" class="absolute text-sm right-3 hfull flex items-center top-0 text-fg pointer-events-none">
+            CDF                         
+        </span>
+    </div>
+    <div class="relative">
+        <input type="text" placeholder="Your email here" class="pe24 ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg">
+        <span aria-hidden="true" class="absolute text-sm right-3 hfull flex items-center top-0 text-fg pointer-events-none">
+            @gmail.com                         
+        </span>
+    </div>
+    <div class="flex">
+        <input type="text" placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md bg-bg b b-border-strong/90 rd-l-lg text-fg">
+        <span aria-hidden="true" class="p3 flex items-center text-fg bg-bg-surface rd-r-md b-y b-r b-border-strong/90 pointer-events-none">
+            <span aria-hidden="true" class="flex i-ph-envelope-open text-lg"></span>                        
+        </span>
+    </div>
+</form>`,
+    component: Comp47
+  },
+  'card/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="max-w-sm mx-auto w-full">
+    <div class="ui-card-xl rd-md b b-border-light space-y-6">
+        <div class="aspect-video b b-border-light b-dashed rounded">
+
+        </div>
+        <div class="space-y-3 text-fg">
+            <h2 class="text-xl font-semibold text-fg-title">
+                Card Title</h2>
+            <p class="text-fg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+    </div>
+</div>`,
+    component: Comp49
+  },
+  'card/Ecommerce1': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="max-w-sm mx-auto w-full">
+    <!-- card component -->
+    <div class="p-1 rd-lg ui-solid ui-solid-gray relative">
+        <div class="relative">
+            <div
+                class="absolute inset-x-1 top-1 flex justify-between items-center  text-white text-xs">
+                <span
+                    class="bg-gray-900/80 px-2 py-px rd-full">
+                    -40%
+                </span>
+                <button aria-label="add to favorite"
+                    class="p-1.5 bg-gray-900/80 backdrop-filter backdrop-blur-sm rd-full">
+                    <span aria-hidden="true" class="flex i-ph-heart"></span>
+                </button>
+            </div>
+            <img src="/images/bottes-cuir.webp" alt="bottes cuir" class="w-full h-auto rd-md">
+        </div>
+        <div class="flex justify-between items-start gap-2 px-4 pt-3 pb-2 text-sm">
+            <h2 class="flex-1 text-title font-medium">
+                Air Nike
+            </h2>
+            <span class="text-fg-subtitle">12$</span>
+        </div>
+    </div>
+    <!-- end card component -->
+</div>`,
+    component: Comp50
+  },
+  'card/Ecommerce2': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="max-w-sm mx-auto w-full">
+    <!-- card component -->
+    <div class="p-1 rd-lg ui-solid ui-solid-gray relative space-y-3">
+        <div class="px-4 pt-2">
+            <span class="text-subtitle text-sm">
+                Top Seller
+            </span>
+        </div>
+        <img src="/images/sports-shoe.webp" alt="Sport Shoe" class="w-full h-auto rd-md">
+        <div class="px-4 pb-2 text-sm space-y-2">
+            <div class="flex justify-between items-start gap-2">
+                <h2 class="flex-1 text-fg-title font-medium">
+                    Air Nike
+                </h2>
+                <span class="text-fg-subtitle">12$</span>
+            </div>
+            <div class="flex justify-between items-start gap-2 text-sm">
+                <p class="flex-1 text-fg-muted">
+                    Colored
+                </p>
+                <button
+                    class="btn btn-xs btn-solid btn-solid-neutral text-bg rd-md">
+                    Add to card
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- end card component -->
+</div>`,
+    component: Comp51
+  },
+  'card/PricingCard': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="max-w-sm w11/12 ">
+    <div class="b b-border-light ui-solid ui-solid-gray p6 md-p8  rd-lg flex flex-col">
+        <span class="text-title font-bold text-xl">Business Plan</span>
+        <p class="text-fg my6">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <div class="flex items-end gap4 py4 b-y b-border-light">
+            <span
+                class="bg-clip-text text-transparent bg-gradient-to-br from-primary500 to-accent-400 font-bold text-4xl">
+                $400
+            </span>
+            <span class="ui-soft ui-soft-primary ui-size-md rd-md">
+                lifetime
+            </span>
+        </div>
+        <ul class="flex flex-col gap-y3 children-flex children-items-center children-gap-x4 py8">
+            <li>
+                <span aria-hidden="true" class="flex i-ph-check text-primary500"></span>
+                Lorem ipsum dolor sit amet
+            </li>
+            <li>
+                <span aria-hidden="true" class="flex i-ph-check text-primary500"></span>
+                Lorem ipsum dolor sit amet
+            </li>
+            <li>
+                <span aria-hidden="true" class="flex i-ph-check text-primary500"></span>
+                Lorem ipsum dolor sit amet
+            </li>
+            <li>
+                <span aria-hidden="true" class="flex i-ph-check text-primary500"></span>
+                Lorem ipsum dolor sit amet
+            </li>
+            <li>
+                <span aria-hidden="true" class="flex i-ph-check text-primary500"></span>
+                Lorem ipsum dolor sit amet
+            </li>
+        </ul>
+        <a href="#pricing" class="btn btn-md rd-md btn-solid btn-solid-primary text-white wfull justify-center">
+            Get Started
+        </a>
+    </div>
+</div>`,
+    component: Comp52
+  },
+  'card/WithIcon': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="max-w-sm mx-auto w-full">
+    <!-- card component -->
+    <div class="ui-card-xl rd-md b b-border-light bg-bg space-y-6">
+        <div class="size-12 b b-border-light b-dashed rounded">
+
+        </div>
+        <div class="space-y-3 text-fg">
+            <h2 class="text-xl font-semibold text-fg-title">
+                Card Title</h2>
+            <p class="text-fg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+    </div>
+    <!-- end card component -->
+</div>`,
+    component: Comp53
+  },
+  'meter/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-8 wfull">
+    <meter max="9" value="4" class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-muted"></meter>
+    <meter max="9" value="4" class="ui-meter ui-meter-h-md ui-meter-rounded-md text-secondary bg-bg-muted"></meter>
+</div>`,
+    component: Comp60
+  },
+  'meter/MeterSize': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-8 wfull">
+  <meter
+    max="9"
+    value="4"
+    class="ui-meter ui-meter-h-xs ui-meter-rounded-md text-primary bg-bg-muted"
+  ></meter>
+  <meter
+    max="9"
+    value="4"
+    class="ui-meter ui-meter-h-sm ui-meter-rounded-md text-primary bg-bg-muted"
+  ></meter>
+  <meter
+    max="9"
+    value="4"
+    class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-muted"
+  ></meter>
+  <meter
+    max="9"
+    value="4"
+    class="ui-meter ui-meter-h-lg ui-meter-rounded-md text-primary bg-bg-muted"
+  ></meter>
+  <meter
+    max="9"
+    value="4"
+    class="ui-meter ui-meter-h-xl ui-meter-rounded-md text-primary bg-bg-muted"
+  ></meter>
+  <meter
+    max="9"
+    value="4"
+    class="ui-meter ui-meter-h-2xl ui-meter-rounded-md text-primary bg-bg-muted"
+  ></meter>
+</div>
+`,
+    component: Comp61
+  },
+  'meter/ProgIndicator': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-8 wfull">
+  <div class="">
+    <div class="flex justify-end" style="width: 40%">
+      <span class="text-sm text-fg">40%</span>
+    </div>
+    <meter
+      max="10"
+      value="4"
+      class="ui-meter ui-meter-h-md ui-meter-rounded-md text-primary bg-bg-muted"
+    ></meter>
+  </div>
+  <div class="relative hmax">
+    <meter
+      max="100"
+      value="70"
+      class="ui-meter ui-meter-h-2xl ui-meter-rounded-md text-primary bg-bg-muted"
+    ></meter>
+    <div
+      class="flex justify-end absolute z-5 top-0 left-0 h6 items-center"
+      style="width: 40%"
+    >
+      <span class="text-sm text-white">70%</span>
+    </div>
+  </div>
+</div>
+`,
+    component: Comp62
+  },
+  'pagination/ActiveState': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<nav>
+    <ul class="flex items-center gap-0.5 text-fg">
+        <li>
+            <a aria-label="Prev page" aria-disabled="true" href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md aria-disabled:cursor-not-allowed aria-disabled:op60 aria-disabled:hover:!bg-transparent">
+                <span aria-hidden="true" class="flex i-ph-caret-left text-lg"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="bg-bg-muted btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                1
+            </a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                2
+            </a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                3
+            </a>
+        </li>
+        <li>
+            <a aria-label="Next page" href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md aria-disabled:cursor-not-allowed aria-disabled:op60 aria-disabled:hover:!bg-transparent">
+                <span aria-hidden="true" class="flex i-ph-caret-right text-lg"></span>
+            </a>
+        </li>
+    </ul>
+</nav>`,
+    component: Comp63
+  },
+  'pagination/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-3">
+    <nav>
+        <ul class="flex items-center gap-0.5 text-fg">
+            <li>
+                <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                    Prev
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                    1
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                    2
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                    3
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                    Next
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>`,
+    component: Comp64
+  },
+  'pagination/WithIcon': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<nav>
+    <ul class="flex items-center gap-0.5 text-fg">
+        <li>
+            <a aria-label="Prev page" href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px gap-x-1.5 justify-center rd-md">
+                <span aria-hidden="true" class="flex i-ph-caret-left text-lg"></span>
+                Prev
+            </a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                1
+            </a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                2
+            </a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center rd-md">
+                3
+            </a>
+        </li>
+        <li>
+            <a aria-label="Next page" href="#" class="btn btn-sm btn-ghost btn-ghost-gray min-w-36px justify-center gap-x-1.5 rd-md">
+                Next
+                <span aria-hidden="true" class="flex i-ph-caret-right text-lg"></span>
+            </a>
+        </li>
+    </ul>
+</nav>`,
+    component: Comp65
+  },
+  'popover/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex items-center flex-wrap gap-x4 gap-y-3">
+    <button data-popover-trigger data-popover-id="popover-default" aria-controls="popper"
+        class="btn btn-md rd-md btn-white ui-btn-white text-fg-subtitle">
+        Show Content
+    </button>
+    <div aria-labelledby="popper" data-popover id="popover-default" aria-hidden="true"
+        class="u-fx-popper invisible op0 fx-open-visible fx-open-op100 w60 p4 bg-bg-surface rd-md">
+        <div class="flex h40 rd bg-bg-muted">
+
+        </div>
+    </div>
+</div>`,
+    component: Comp66
+  },
+  'popover/WithContent': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<button data-popover-trigger data-popover-id="popover-example2" aria-controls="popper"
+class="flex items-center gap-x2 p2 rd-lg btn-white ui-btn-white text-fg-subtitle">
+    <img src="/defaultavatar.webp" alt="avatar" width="640" height="427"
+        class="size-9 rd-full object-cover">
+    <div class="flex items-start flex-col">
+        <h4 class="font-semibold text-fg-title">Johnkat MJ</h4>
+        <span class="text-sm  text-fg-muted">FrontEnd Designer</span>
+    </div>
+</button>
+<div aria-labelledby="popper" data-popover id="popover-example2" aria-hidden="true"
+class="u-fx-popper w60 p5 bg-bg-surface rd-md invisible op0 fx-open-op100 fx-open-visible space-y-2 shadow shadowgray2/30 dark-shadow-transparent flex flex-col items-center text-center z-60">
+    <img src="/defaultavatar.webp" alt="avatar" class="size-16 object-cover rd-full">
+    <div class="space-y-0.5">
+        <h4 class="text-fg-title font-semibold">John Doe</h4>
+        <p class="text-fg text-sm">12k followers</p>
+    </div>
+    <button
+        class="rd-full btn btn-md btn-solid btn-solid-primary text-white">
+        Follow
+    </button>
+</div>`,
+    component: Comp67
+  },
+  'progress/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-8 wfull">
+    <progress max="9" value="4"
+    class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-primary"></progress>
+  <progress max="100" value="60"
+    class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-secondary"></progress>
+  <progress max="40" value="20"
+    class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-red6"></progress>
+  <progress max="14" value="14"
+    class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-emerald6"></progress>
+</div>`,
+    component: Comp68
+  },
+  'progress/ProgressIndicator': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-8 wfull">
+    <div class="">
+        <div class="flex justify-end" style="width: 40%">
+          <span class="text-sm text-fg">40%</span>
+        </div>
+        <progress max="10" value="4"
+          class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-primary"></progress>
+      </div>
+      <div class="relative hmax">
+        <div class="flex justify-end absolute top-0 left-0 h6 items-center z-5" style="width: 40%">
+          <span class="text-sm text-white">40%</span>
+        </div>
+        <progress max="10" value="4"
+          class="ui-progress-bar ui-progress-bar-2xl ui-progress-bar-rounded-md bg-bg-muted text-primary"></progress>
+      </div>
+</div>`,
+    component: Comp69
+  },
+  'progress/ProgressSizes': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-8 wfull">
+<progress max="9" value="4"
+    class="ui-progress-bar ui-progress-bar-xs ui-progress-bar-rounded-md bg-bg-muted text-primary rounded-md"></progress>
+  <progress max="9" value="4"
+    class="ui-progress-bar ui-progress-bar-sm ui-progress-bar-rounded-md bg-bg-muted text-primary rounded-md"></progress>
+  <progress max="9" value="4"
+    class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-primary rounded-md"></progress>
+  <progress max="9" value="4"
+    class="ui-progress-bar ui-progress-bar-lg ui-progress-bar-rounded-md bg-bg-muted text-primary"></progress>
+  <progress max="9" value="4"
+    class="ui-progress-bar ui-progress-bar-xl ui-progress-bar-rounded-md bg-bg-muted text-primary"></progress>
+  <progress max="9" value="4"
+    class="ui-progress-bar ui-progress-bar-2xl ui-progress-bar-rounded-md bg-bg-muted text-primary"></progress>
+</div>`,
+    component: Comp70
+  },
+  'progress/WithMessage': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-8 wfull">
+  <div class="flex flex-col wfull">
+    <progress
+      max="10"
+      value="4"
+      class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-primary rounded-md"
+    ></progress>
+    <div class="flex justify-end text-right">
+      <span class="text-orange6 text-sm">Installing ...</span>
+    </div>
+  </div>
+  <div class="flex items-center gap-x6">
+    <progress
+      max="10"
+      value="6"
+      class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-primary rounded-md"
+    ></progress>
+    <div class="text-sm text-fg">60%</div>
+  </div>
+  <div class="flex items-center gap-x6">
+    <progress
+      max="10"
+      value="3"
+      class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-primary flex-1 w-auto flex rounded-md"
+    ></progress>
+    <div
+      class="text-sm text-white bg-red6 rd-full size-5 flex items-center justify-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w3.5 h3.5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="flex items-center gap-x6 wfull">
+    <progress
+      max="10"
+      value="10"
+      class="ui-progress-bar ui-progress-bar-md ui-progress-bar-rounded-md bg-bg-muted text-primary rounded-md"
+    ></progress>
+    <div
+      class="text-sm text-white bg-green6 rd-full size-5 flex items-center justify-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="w3.5 h3.5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+`,
+    component: Comp71
+  },
+  'radio/Grouped': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="grid gap-6 wfull max-w-sm">
+    <div class="b b-border-strong/60 p-4 rounded">
+        <h3 class="text-fg-title">Contact Mode</h3>
+        <div class="flex gap-x-3 text-sm items-start mt-4">
+            <input type="radio" checked name="grouped_1" id="grouped_1_1" class="ui-checkbox-radio-base ui-form-radio size-4 b b-border-light bg-bg  mt0.5 peer text-primary500 rd-full">
+            <label for="grouped_1_1" class="text-fg peer-disabled:op80 peer-disabled:pointer-events-none ">Email</label>
+        </div>
+        <div class="flex gap-x-3 text-sm items-start mt-2">
+            <input type="radio" name="grouped_1" id="grouped_1_2" class="ui-checkbox-radio-base ui-form-radio size-4 b b-border-light bg-bg  mt0.5 peer text-primary500 rd-full">
+            <label for="grouped_1_2" class="text-fg peer-disabled:op80 peer-disabled:pointer-events-none ">Phone (SMS)</label>
+        </div>
+        <div class="flex gap-x-3 text-sm items-start mt-2">
+            <input type="radio" name="grouped_1" id="grouped_1_3" class="ui-checkbox-radio-base ui-form-radio size-4 b b-border-light bg-bg  mt0.5 peer text-primary500 rd-full">
+            <label for="grouped_1_3" class="text-fg peer-disabled:op80 peer-disabled:pointer-events-none ">Push Notification</label>
+        </div>
+    </div>
+    <div class="b b-border-strong/60 p-4 rounded">
+        <h3 class="text-fg-title">Choose something</h3>
+        <div class="flex gap-x-3 text-sm items-start mt-4">
+            <input type="radio" checked name="grouped_2" id="grouped_2_1" class="ui-checkbox-radio-base ui-form-radio size-4 b b-border-light bg-bg  mt0.5 peer text-primary500 rd-full">
+            <label for="grouped_2_1" class="text-fg peer-disabled:op80 peer-disabled:pointer-events-none ">ReactJS</label>
+        </div>
+        <div class="flex gap-x-3 text-sm items-start mt-2">
+            <input type="radio" name="grouped_2" id="grouped_2_2" class="ui-checkbox-radio-base ui-form-radio size-4 b b-border-light bg-bg  mt0.5 peer text-primary500 rd-full">
+            <label for="grouped_2_2" class="text-fg peer-disabled:op80 peer-disabled:pointer-events-none ">Angular</label>
+        </div>
+        <div class="flex gap-x-3 text-sm items-start mt-2">
+            <input type="radio" name="grouped_2" id="grouped_2_3" class="ui-checkbox-radio-base ui-form-radio size-4 b b-border-light bg-bg  mt0.5 peer text-primary500 rd-full">
+            <label for="grouped_2_3" class="text-fg peer-disabled:op80 peer-disabled:pointer-events-none ">vueJS</label>
+        </div>
+    </div>
+</div>`,
+    component: Comp74
+  },
+  'range/Custom': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="p-6 flex flex-col space-y-4 wfull">
+    <div data-custom-range-wrapper
+        data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-success600 dark-bg-success500 h-2"
+        id="range_custom1" class="relative w-full flex items-center h-4">
+        <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-success">
+    </div>
+    <div data-custom-range-wrapper
+        data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary-600 dark-bg-primary-500 h-2"
+        id="range_custom3" class="relative w-full flex items-center h-4">
+        <input data-input-range type="range" name="range_slide_3" min="0" value="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary">
+    </div>
+</div>`,
+    component: Comp77
+  },
+  'range/CustomSize': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="space-y-4 wfull">
+    <div
+        data-custom-range-wrapper
+        data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h1"
+        class="relative wfull flex items-center h2"
+    >
+        <input
+            data-input-range
+            type="range"
+            name="range_slide_3"
+            min="0"
+            value="0"
+            max="100"
+            class="ui-input-range ui-range-thumb-size-xs ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary"
+        />
+    </div>
+    <div
+        data-custom-range-wrapper
+        data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h1"
+        class="relative wfull flex items-center h3"
+    >
+        <input
+            data-input-range
+            type="range"
+            name="range_slide_3"
+            min="0"
+            value="0"
+            max="100"
+            class="ui-input-range ui-range-thumb-size-sm ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary"
+        />
+    </div>
+    <div
+        data-custom-range-wrapper
+        data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h2"
+        id="range_custom1"
+        class="relative wfull flex items-center h4"
+    >
+        <input
+            data-input-range
+            type="range"
+            name="range_slide_3"
+            min="0"
+            value="0"
+            max="100"
+            class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary"
+        />
+    </div>
+    <div
+        data-custom-range-wrapper
+        data-range-indicator="z-7 peer-disabled-bg-op50 rd-lg bg-primary h2.5"
+        id="range_custom1"
+        class="relative wfull flex items-center h4"
+    >
+        <input
+            data-input-range
+            type="range"
+            name="range_slide_3"
+            min="0"
+            value="0"
+            max="100"
+            class="ui-input-range ui-range-thumb-size-lg ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary"
+        />
+    </div>
+</div>
+`,
+    component: Comp78
+  },
+  'range/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col space-y-5 wfull">
+    <div class="relative wfull flex items-center h4">
+        <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary">
+    </div>
+    <div class="relative wfull flex items-center h4">
+        <input type="range" name="range_slide" min="0" max="80" value="20" class="
+        ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-secondary
+         ">
+    </div>
+</div>`,
+    component: Comp79
+  },
+  'range/RangeSize': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="space-y-4 wfull">
+    <div class="relative wfull flex items-center h2"><label for="range_slide_xs" class="sr-only">rangexs</label><input type="range" name="range_slide_xs" id="range_slide_xs" min="0" max="100" class="ui-input-range ui-range-thumb-size-xs ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" /></div>
+    <div class="relative wfull flex items-center h3"><label for="range_slide_sm" class="sr-only">rangesm</label><input type="range" name="range_slide_sm" id="range_slide_sm" min="0" max="100" class="ui-input-range ui-range-thumb-size-sm ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" /></div>
+    <div class="relative wfull flex items-center h4"><label for="range_slide_md" class="sr-only">rangemd</label><input type="range" name="range_slide_md" id="range_slide_md" min="0" max="100" class="ui-input-range ui-range-thumb-size-sm ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" /></div>
+    <div class="relative wfull flex items-center h5"><label for="range_slide_lg" class="sr-only">rangelg</label><input type="range" name="range_slide_lg" id="range_slide_lg" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" /></div>
+    <div class="relative wfull flex items-center h6"><label for="range_slide_xl" class="sr-only">rangexl</label><input type="range" name="range_slide_xl" id="range_slide_xl" min="0" max="100" class="ui-input-range ui-range-thumb-size-lg ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary" /></div>
+  </div>
+  `,
+    component: Comp80
+  },
+  'range/Stepper': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="relative w-full flex items-center h-4">
+    <input type="range" name="range_slide" step="4" min="0" max="40" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary">
+</div>`,
+    component: Comp81
+  },
+  'range/Styled': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col space-y-5 wfull">
+    <div class="relative w-full flex items-center h-4">
+        <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-primary600">
+    </div>
+    <div class="relative w-full flex items-center h-4">
+        <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-secondary600">
+    </div>
+    <div class="relative w-full flex items-center h-4">
+        <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-accent600">
+    </div>
+    <div class="relative w-full flex items-center h-4">
+        <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-success600">
+    </div>
+    <div class="relative w-full flex items-center h-4">
+        <input type="range" name="range_slide" min="0" max="100" class="ui-input-range ui-range-thumb-size-md ui-range-thumb-bg-gray ui-range-track-bg-gray text-info600">
+    </div>
+</div>`,
+    component: Comp82
+  },
+  'select/CustomIndicator': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="relative wfull">
+    <select name="select-country" id="select-country"
+        class="pe9 ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+    <span aria-hidden="true"
+        class="absolute right-3 inset-y-px text-fg pointer-events-none flex items-center bg-bg">
+        <span class="flex i-ph-caret-up-down"></span>                             
+    </span>
+</div>`,
+    component: Comp83
+  },
+  'select/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="wfull space-y-3">
+    <select name="select-country" id="select-country"
+        class="ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+    <select name="select-country" id="select-country"
+        class="ui-form-base ui-form-input ui-form-select bg-bg-surface  ui-form-input-md rd-lg text-fg bg-bg">
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+</div>`,
+    component: Comp84
+  },
+  'select/WithIcon': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-3 wfull">
+    <div class="relative">
+        <select name="select-country" id="select-country"
+            class="ps9 ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+            <option value="DRC">DR Congo</option>
+            <option value="TZ">Tanzania</option>
+            <option value="MA">Morocco</option>
+            <option value="NG">Nigeria</option>
+        </select>
+        <span aria-hidden="true" class="absolute left-3 hfull flex items-center top-0 text-fg peer-invalid-text-red6 dark-invalid-text-red5">
+            <span aria-hidden="true" class="flex i-ph-flag"></span>
+        </span>
+    </div>
+    <div class="relative flex">
+        <span aria-hidden="true" class="p2.5 flex items-center bg-bg-surface b b-border-strong b-r-indigo-50 rd-l-md text-fg">
+            <span class="flex i-ph-flag"></span>
+        </span>
+        <select name="select-country" id="select-country"
+            class="ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-r-lg text-fg">
+            <option value="DRC">DR Congo</option>
+            <option value="TZ">Tanzania</option>
+            <option value="MA">Morocco</option>
+            <option value="NG">Nigeria</option>
+        </select>
+    </div>
+</div>`,
+    component: Comp85
+  },
+  'select/WithLabel': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="space-y-2">
+    <label for="country-list" class="text-sm text-gray6 dark-text-gray4">Select Country</label>
+    <select name="country-list" id="country-list"
+        class="ui-form-base ui-form-input ui-form-select bg-bg b b-border-strong/90 ui-form-input-md rd-lg text-fg">
+        <option value="" disabled class="op60">Search Country</option>
+        <option value="DRC">DR Congo</option>
+        <option value="TZ">Tanzania</option>
+        <option value="MA">Morocco</option>
+        <option value="NG">Nigeria</option>
+    </select>
+</div>`,
+    component: Comp86
+  },
+  'skeleton/Card': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="max-w-sm wfull p-8 rd-md b-border-strong bg-bgy space-y-6   animate-pulse">
+    <div class="aspect-video bg-bg-muted rd animate-pulse"></div>
+    <div class="space-y-3 text-fg">
+        <h3 class="text-lg content-['skeleton'] text-transparent rd-full bg-bg-muted"></h3>
+        <p class="text-transparent text-xs w-9/12 bg-bg-muted rd-full">
+            description
+        </p>
+        <p class="text-transparent text-xs w-3/6 bg-bg-muted rd-full">
+            description
+        </p>
+    </div>
+</div>`,
+    component: Comp87
+  },
+  'skeleton/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="wfull max-w-xl flex items-start gap-x-4  animate-pulse">
+    <div class="size-14 rd-full bg-bg-muted">
+    </div>
+    <div class="flex-1 space-y-3">
+        <h3 class="text-xl content-['skeleton'] text-transparent w-4/5 rd-full bg-bg-muted">sd</h3>
+        <p class="text-transparent text-xs w-9/12 bg-bg-muted rd-full">
+            description
+        </p>
+        <p class="text-transparent text-xs w-3/6 bg-bg-muted rd-full">
+            description
+        </p>
+    </div>
+</div>`,
+    component: Comp88
+  },
+  'slideover/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `---
+import Button from "../button/Button.astro";
+---
+
+<div class="flex flex-wrap items-center gap-3">
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-from-left" aria-controls="slide-over-from-left">
+        From left
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-from-right" aria-controls="slide-over-from-right">
+        From right
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-bottom" aria-controls="slide-over-bottom">
+        From bottom
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-top" aria-controls="slide-over-top">
+        From top
+    </Button>
+</div>
+
+<div data-fx-offcanvas data-slideover id="slide-over-from-left" aria-labelledby="slide-over-from-left" class="fixed h-dvh w-full max-w-sm -left-full top-0 fx-open:left-0 ease-linear duration-200 p-4 bg-bg-muted flex z130">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover aria-labelledby="slide-over-top" id="slide-over-top" class="fixed left-0 w-screen h-64 -top-full ease-linear duration-200 fx-open:top-0 flex p-4 bg-bg-muted z130">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover aria-labelledby="slide-over-bottom" id="slide-over-bottom" class="fixed left-0 w-screen h-64 -bottom-full ease-linear duration-200 fx-open:bottom-0 flex p-4 bg-bg-muted z130">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover id="slide-over-from-right" aria-labelledby="slide-over-from-right" class="fixed h-dvh w-full max-w-sm -right-full top-0 fx-open:right-0 ease-linear duration-200 p-4 bg-bg-muted z130 flex">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>`,
+    component: Comp89
+  },
+  'slideover/Overlay': {
+    name: 'index.html',
+    lang: 'html',
+    code: `---
+import Button from "../button/Button.astro";
+---
+
+<div class="flex flex-wrap items-center gap-3">
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-overlay" aria-controls="slide-over-overlay">
+        Overlay
+    </Button>
+    <Button class="btn-solid-primary text-white" size="sm" data-offcanvas-trigger data-target="slide-over-overlay1" aria-controls="slide-over-overlay1">
+        Overlay with blur
+    </Button>
+</div>
+
+<div data-fx-offcanvas data-slideover data-offcanvas-backdrop="fixed inset-0 bg-gray800/80 z100" id="slide-over-overlay" aria-labelledby="slide-over-overlay" class="fixed h-dvh w-full max-w-sm -right-full top-0 fx-open:right-0 ease-linear duration-200 p-4 bg-bg-muted flex z110">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>
+<div data-fx-offcanvas data-slideover data-offcanvas-backdrop="fixed inset-0 backdrop-filter backdrop-blur-xl bg-gray-800/50 z100" id="slide-over-overlay1" aria-labelledby="slide-over-overlay1" class="fixed h-dvh w-full max-w-sm -right-full top-0 fx-open:right-0 ease-linear duration-200 p-4 bg-bg-muted z110 flex">
+    <div class="size-full border-dashed b bdr-high"></div>
+</div>`,
+    component: Comp90
+  },
+  'slideover/SlideOver': {
+    name: 'index.html',
+    lang: 'html',
+    code: `---
+import type { HTMLAttributes } from "astro/types";
+type Props = {
+    id: string;
+    position: "top" | "bottom" | "left" | "right";
+    withChildren?: boolean;
+} & HTMLAttributes<"div">;
+
+const positions = {
+    top: "-top-full left-0 fx-open:top-0 w-screen h-64",
+    bottom: "-bottom-full left-0 fx-open:bottom-0 w-screen h-64",
+    left: "-left-full top-0 fx-open-left-0 h-dvh w-full max-w-sm",
+    right: "-right-full top-0 fx-open:right-0 h-dvh w-full max-w-sm",
+};
+
+const { id, position, withChildren, ...rest } = Astro.props;
+---
+
+<div
+    data-fx-offcanvas
+    data-slideover
+    aria-labelledby={id}
+    id={id}
+    class={\`fixed ease-linear duration-200  flex p-4 bg-bg-muted z130 \${positions[position]}\`}
+    {...rest}
+>
+    {
+        withChildren ? (
+            <slot />
+        ) : (
+            <div class="size-full border-dashed b bdr-high" />
+        )
+    }
+</div>
+`,
+    component: Comp91
+  },
+  'switch/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex items-center flex-wrap gap-6">
+    <input type="checkbox" name="switch_1" id="switch_1" class="bg-bg-muted text-primary switch switch-sm switch-knob-white" />
+    <input type="checkbox" name="switch_def2" id="switch_def2" class="bg-bg-muted text-fg-title switch switch-sm switch-knob-dark" />
+    <input type="checkbox" name="switch_def3" id="switch_def3" class="bg-bg-muted text-bg-muted switch switch-sm switch-knob-white" />
+</div>`,
+    component: Comp92
+  },
+  'switch/Outline': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex items-center flex-wrap gap-6">
+    <input type="checkbox" name="switch_outline1" id="switch_outline1" class="bg-bg-muted/40 text-primary switch-outline b-border-strong/70 checked-b-primary switch-outline-sm switch-knob-white" />
+    <input type="checkbox" name="switch_outline2" id="switch_outline2" class="bg-bg-muted/40 text-fg-title switch-outline b-border-strong/70 checked-b-fg-title switch-outline-sm switch-knob-dark" />
+</div>`,
+    component: Comp93
+  },
+  'switch/Size': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-3 wfull">
+    <label for="switch_xl" class="flex items-center gap-x1">
+        <input type="checkbox" checked name="switch_xl" id="switch_xl" class="bg-bg-muted text-primary switch switch-xs switch-knob-white" />
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 ms-3">Xs</span>
+    </label>
+    <label for="switch_sm" class="flex items-center gap-x1">
+        <input type="checkbox" name="switch_sm" id="switch_sm" class="bg-bg-muted text-primary switch switch-sm switch-knob-white" />
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 ms-3">SM</span>
+    </label>
+    <label for="switch_normal" class="flex items-center gap-x1">
+        <input type="checkbox" name="switch_normal" id="switch_normal" class="bg-bg-muted text-primary switch switch-md switch-knob-white" />
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 ms-3">MD</span>
+    </label>
+    <label for="switch_lg" class="flex items-center gap-x1">
+        <input type="checkbox" checked name="switch_lg" id="switch_lg" class="bg-bg-muted text-primary switch switch-lg switch-knob-white" />
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 ms-3">LG</span>
+    </label>
+</div>`,
+    component: Comp94
+  },
+  'switch/WithLabel': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="flex flex-col gap-3">
+    <label for="switch" class="flex items-center gap-x1">
+        <input type="checkbox" name="switch" id="switch" class="bg-bg-muted text-primary switch switch-sm switch-knob-white" />
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 ms-3">Use
+            Dark Theme</span>
+    </label>
+    <label for="switch_lab1" class="flex items-center gap-x1">
+        <input type="checkbox" checked name="switch_lab1" id="switch_lab1" class="bg-bg-muted text-primary switch switch-sm switch-knob-white" />
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 ms-3">Checked</span>
+    </label>
+    <label for="switch_lab_2" class="flex items-center gap-x1">
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 me-3">No</span>
+        <input type="checkbox" name="switch_lab_2" id="switch_lab_2" class="bg-bg-muted text-primary switch switch-sm switch-knob-white" />
+        <span class="text-sub-title peer-disabled:pointer-events-none peer-disabled:op50 ms-3">Yes</span>
+    </label>
+</div>`,
+    component: Comp95
+  },
+  'table/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="relative overflow-x-auto rd-md  b b-border-strong/60 wfull">
+    <table class="w-full text-fg text-left">
+        <thead
+            class="capitalize font-medium text-sm text-title py-2 b-b b-border-strong/60 rd-t-md">
+            <tr>
+                <th scope="col" class="px-5 py-2.5">
+                    ID
+                </th>
+                <th scope="col" class="px-5 py-2.5">
+                    Name
+                </th>
+                <th scope="col" class="px-5 py-2.5">
+                    Title
+                </th>
+                <th scope="col" class="px-5 py-2.5">
+                    Email
+                </th>
+            </tr>
+        </thead>
+        <tbody class="text-sm divide-y divide-border-strong/60">
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    1.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    2.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    3.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    4.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>`,
+    component: Comp96
+  },
+  'table/HeaderGray': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="relative overflow-x-auto rd-md  b b-border-strong/60 wfull">
+    <table class="w-full text-fg text-left">
+        <thead
+            class="capitalize font-medium text-sm text-title py-2 b-b b-border-strong/60 rd-t-md bg-bg-surface">
+            <tr>
+                <th scope="col" class="px-5 py-2.5">
+                    ID
+                </th>
+                <th scope="col" class="px-5 py-2.5">
+                    Name
+                </th>
+                <th scope="col" class="px-5 py-2.5">
+                    Title
+                </th>
+                <th scope="col" class="px-5 py-2.5">
+                    Email
+                </th>
+            </tr>
+        </thead>
+        <tbody class="text-sm divide-y divide-border-strong/60">
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    1.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    2.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    3.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"
+                    class="px-5 py-2.5 font-medium text-title whitespace-nowrap">
+                    4.
+                </th>
+                <td class="px-5 py-2.5">
+                    John Doe
+                </td>
+                <td class="px-5 py-2.5">
+                    Admin
+                </td>
+                <td class="px-5 py-2.5">
+                    johndow@gmail.com
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>`,
+    component: Comp97
+  },
+  'tabs/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-fx-tabs data-tabs role="tab" class="wfull">
+    <ul data-tab-list role="tablist"
+        class="flex items-center relative h-12 px-px bg-bg-surface w-full rd-md">
+        <li role="presentation" class="flex">
+            <a href="#tab1" data-tabs-trigger data-target="tab1" aria-controls="tab1" tabindex="0"
+                class="px-4 py-2 rd text-fg disabled:cursor-not-allowed disabled:op80 fx-active-bg-bg-muted outline outline-1 outline-transparent focus:outline-primary-500 dark:focus:outline-primary-400">
+                Tab 1
+            </a>
+        </li>
+        <li role="presentation" class="flex">
+            <a href="#tab2" data-tabs-trigger data-target="tab2" aria-controls="tab2" tabindex="-1"
+                class="px-4 py-2 rd text-fg disabled:cursor-not-allowed disabled:op80 fx-active-bg-bg-muted outline outline-1 outline-transparent focus:outline-primary-500 dark:focus:outline-primary-400">
+                Tab2
+            </a>
+        </li>
+        <li role="presentation" class="flex">
+            <a href="#tab3" data-tabs-trigger data-target="tab3" aria-controls="tab3" tabindex="-1"
+                class="px-4 py-2 rd text-fg disabled:cursor-not-allowed disabled:op80 fx-active-bg-bg-muted outline outline-1 outline-transparent focus:outline-primary-500 dark:focus:outline-primary-400">
+                Tab3
+            </a>
+        </li>
+    </ul>
+    <div data-panels-container>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2"
+            data-tab-panel id="tab1" aria-labelledby="tab1">
+            Tab 1 Content
+        </section>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2"
+            data-tab-panel id="tab2" aria-labelledby="tab2">
+            Tab 2 Content
+        </section>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2"
+            data-tab-panel id="tab3" aria-labelledby="tab3">
+            Tab 3 Content
+        </section>
+    </div>
+</div>`,
+    component: Comp98
+  },
+  'tabs/TabsWithForm': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-fx-tabs data-tabs data-indicator-class-name="ui-tabs-indicator flex bg-bg-muted rd absolute top-0 left-0" role="tab" class="wfull max-w-lg">
+    <div data-tab-list-wrapper class="flex w-full p-0.5 bg-bg-surface rd-md">
+        <ul data-tab-list role="tablist"
+            class="flex items-center relative w-full">
+            <li role="presentation" class="flex flex-1">
+                <a href="#accountTab" data-tabs-trigger data-target="accountTab"
+                    aria-controls="accountTab" tabindex="0"
+                    class="px-4 py-2 rd flex-1 flex items-center justify-center text-fg disabled:cursor-not-allowed disabled:op80 relative">
+                    Account
+                </a>
+            </li>
+            <li role="presentation" class="flex flex-1">
+                <a href="#passTab" data-tabs-trigger data-target="passTab" aria-controls="passTab"
+                    tabindex="-1"
+                    class="px-4 py-2 rd flex-1 flex items-center justify-center text-fg disabled:cursor-not-allowed disabled:op80 relative">
+                    Password
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-panels-container>
+        <form role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 p-6 md:p-10 divide-y divide-gray-200 dark:divide-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2 bg-white dark:bg-gray-950 flex-col"
+            data-tab-panel id="accountTab" aria-labelledby="accountTab">
+            <div class="space-y-1.5 pb-6 md:pb-8">
+                <h3
+                    class="text-2xl font-semibold leading-none tracking-tight text-title">
+                    Account</h3>
+                <p class="text-sm text-fg">Make changes to your account here.
+                    Click save
+                    when you're done.</p>
+            </div>
+            <div class="py-6 md:py-8 space-y-4">
+                <div class="flex flex-col w-full space-y-2">
+                    <label for="user_email"
+                        class="text-sm text-fg-muted">Email</label>
+                    <input type="email" id="user_email" name="user_email"
+                        placeholder="johndoe@gmail.com"
+                        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-md text-fg">
+                </div>
+                <div class="flex flex-col w-full space-y-2">
+                    <label for="user_name"
+                        class="text-sm text-fg-muted">Username</label>
+                    <input type="text" id="user_name" name="user_name" placeholder="@doedoe"
+                        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-md text-fg">
+                </div>
+            </div>
+            <div class="flex items-center pt-6 md:pt-8">
+                <button
+                    class="rd-md btn btn-md btn-solid btn-solid-neutral text-bg">
+                    Save changes
+                </button>
+            </div>
+        </form>
+        <form role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 p-6 md:p-10 divide-y divide-gray-200 dark:divide-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2 bg-white dark:bg-gray-950 flex-col"
+            data-tab-panel id="passTab" aria-labelledby="passTab">
+            <div class="space-y-1.5 pb-6 md:pb-8">
+                <h3
+                    class="text-2xl font-semibold leading-none tracking-tight text-title">
+                    Password</h3>
+                <p class="text-sm text-fg">Change your password here. After
+                    saving, you'll be logged out.</p>
+            </div>
+            <div class="py-6 md:py-8 space-y-4">
+                <div class="flex flex-col w-full space-y-2">
+                    <label for="currentPassword"
+                        class="text-sm text-fg-muted">Current Password</label>
+                    <input type="password" id="currentPassword" name="currentPassword"
+                        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-md text-fg">
+                </div>
+                <div class="flex flex-col w-full space-y-2">
+                    <label for="new_password" class="text-sm text-fg-muted">New
+                        Password</label>
+                    <input type="password" id="new_password" name="new_password"
+                        class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-md text-fg">
+                </div>
+            </div>
+            <div class="flex items-center pt-6 md:pt-8">
+                <button  class="btn btn-md btn-solid btn-solid-neutral text-bg rd-md">Save changes </button>
+            </div>
+        </form>
+    </div>
+</div>`,
+    component: Comp99
+  },
+  'tabs/TriggerIcon': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-fx-tabs data-tabs data-indicator-class-name="ui-tabs-indicator flex bg-bg-muted rd" role="tab" class="wfull">
+    <div data-tab-list-wrapper class="w-full p-0.5 bg-bg-surface rd-lg">
+        <ul data-tab-list role="tablist" class="flex items-center relative  w-full rd-md">
+            <li role="presentation" class="flex">
+                <a href="#tab1" data-tabs-trigger data-target="settingTab" aria-controls="settingTab"
+                    tabindex="0"
+                    class="px-4 py-2 flex items-center gap-x-2 rd text-fg disabled:cursor-not-allowed disabled:op80 relative z-20">
+                    <span aria-hidden="true" class="flex text-lg i-ph-gear"></span>
+                    Setting
+                </a>
+            </li>
+            <li role="presentation" class="flex">
+                <a href="#tab2" data-tabs-trigger data-target="billingTab" aria-controls="billingTab"
+                    tabindex="-1"
+                    class="px-4 py-2 flex items-center gap-x-2 rd text-fg disabled:cursor-not-allowed disabled:op80 relative z-20">
+                    <span aria-hidden="true" class="flex text-lg i-ph-money"></span>
+                    Billing
+                </a>
+            </li>
+            <li role="presentation" class="flex">
+                <a href="#tab3" data-tabs-trigger data-target="accountTab" aria-controls="accountTab"
+                    tabindex="-1"
+                    class="px-4 py-2 flex items-center gap-x-2 rd text-fg disabled:cursor-not-allowed disabled:op80 relative z-20">
+                    <span aria-hidden="true" class="flex text-lg i-ph-user"></span>
+                    Account
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-panels-container>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2"
+            data-tab-panel id="settingTab" aria-label="settingTab">
+            Setting tab Content
+        </section>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2"
+            data-tab-panel id="billingTab" aria-labelledby="billingTab">
+            Billing Tab Content
+        </section>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md mt-2"
+            data-tab-panel id="accountTab" aria-labelledby="accountTab">
+            Account Tab Content
+        </section>
+    </div>
+</div>`,
+    component: Comp100
+  },
+  'tabs/Vertical': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div data-fx-tabs data-tabs data-orientation="vertical" role="tab" class="flex items-start w-full">
+    <ul data-tab-list role="tablist"
+        class="flex flex-col p-0.5 w-max relative bg-bg-surface rd-md">
+        <li role="presentation" class="flex">
+            <a href="#tab1" data-tabs-trigger data-target="tab1" aria-controls="tab1" tabindex="0"
+                class="px-4 py-2 rd fx-active-bg-bg-muted text-fg disabled:cursor-not-allowed disabled:op80 relative w-full">
+                Tab 1
+            </a>
+        </li>
+        <li role="presentation" class="flex">
+            <a href="#tab2" data-tabs-trigger data-target="tab2" aria-controls="tab2" tabindex="-1"
+                class="px-4 py-2 rd fx-active-bg-bg-muted text-fg disabled:cursor-not-allowed disabled:op80 relative w-full">
+                Tab2
+            </a>
+        </li>
+        <li role="presentation" class="flex">
+            <a href="#tab3" data-tabs-trigger data-target="tab3" aria-controls="tab3" tabindex="-1"
+                class="px-4 py-2 rd fx-active-bg-bg-muted text-fg disabled:cursor-not-allowed disabled:op80 relative w-full">
+                Tab3
+            </a>
+        </li>
+    </ul>
+    <div data-panels-container class="flex-1">
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md ml-2"
+            data-tab-panel id="tab1" aria-labelledby="tab1">
+            Tab 1 Content
+        </section>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md ml-2"
+            data-tab-panel id="tab2" aria-labelledby="tab2">
+            Tab 2 Content
+        </section>
+        <section role="tabpanel" tabindex="0"
+            class="hidden fx-active-flex ring-offset-gray-950 h-40 p-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-danger-500 focus-visible:ring-offset-2 b b-border-strong/60 rd-md ml-2"
+            data-tab-panel id="tab3" aria-labelledby="tab3">
+            Tab 3 Content
+        </section>
+    </div>
+</div>`,
+    component: Comp101
+  },
+  'text-area/Autoresize': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="wfull">
+    <textarea data-fx-autoresize placeholder="Your message" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg"></textarea>
+</div>`,
+    component: Comp102
+  },
+  'text-area/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="space-y-4 wfull">
+    <textarea placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg"></textarea>
+    <textarea placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md bg-bg bg-bg-surface rd-lg b-transparent text-fg"></textarea>
+</div>`,
+    component: Comp103
+  },
+  'text-area/NoResize': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="wfull">
+    <textarea placeholder="Your email here" class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg"></textarea>
+</div>`,
+    component: Comp104
+  },
+  'text-area/WithLabel': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<div class="space-y-2">
+    <label for="message" class="w-max text-sm text-fg-muted">Your Message</label>
+    <textarea id="message" name="message" placeholder="Tell us your ...." class="ui-form-base ui-form-input ui-form-input-md b b-border-strong/90 bg-bg rd-lg text-fg"></textarea>
+</div>`,
+    component: Comp105
+  },
+  'tooltip/Default': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<button data-tooltip-trigger data-tooltip-id="tooltip-default" aria-controls="popper"
+    class="btn btn-icon-sm rd-full btn-white ui-btn-white text-fg-subtitle">
+    <span aria-hidden="true" class="flex i-ph-caret-down"></span>
+</button>
+<div aria-labelledby="popper" data-tooltip id="tooltip-default" aria-hidden="true"
+    class="u-fx-popper w-48 px-4 py-1.5 text-center text-fg-muted truncate bg-bg-muted rd-lg shadow-lg dark:shadow-none shadow-gray-200 invisible fx-open-visible">
+    This is a tooltip
+</div>`,
+    component: Comp106
+  },
+  'tooltip/TriggerClick': {
+    name: 'index.html',
+    lang: 'html',
+    code: `<button data-tooltip-trigger data-tooltip-id="tooltip-click" aria-controls="popper"
+    class="btn btn-icon-sm rd-full btn-white ui-btn-white text-fg-subtitle">
+    <span aria-hidden="true" class="flex i-ph-caret-down"></span>
+</button>
+<div aria-labelledby="popper" data-tooltip id="tooltip-click" aria-hidden="true" data-trigger-strategy="click"
+    class="u-fx-popper w-48 px-4 py-1.5 text-center text-fg-muted truncate bg-bg-muted rd-lg shadow-lg dark:shadow-none shadow-gray-200 invisible fx-open-visible">
+    This is a tooltip
+</div>`,
+    component: Comp107
+  },
+};
+---

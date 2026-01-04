@@ -1,0 +1,58 @@
+---
+import UiLink from "@components/atoms/UiLink.astro";
+import ShowCases from "./ShowCases.astro";
+---
+
+<section class="pt16 md-pt24 relative isolate">
+  <span
+    class="absolute size-full -top-16 bottom-0 z1 cross-dots-pattern op30 dark-op60"
+  ></span>
+  <div
+    class="px4 sm-px8 md-px16 lg-px8 xl-px0 mxa wfull max-w3xl lg-max-w5xl xl-max-w6xl flex mb-7 relative z3"
+  >
+    <UiLink
+      href="#"
+      class="cp-1 pr3 bg-bg ui-card c-rd-lg flex items-center wmax b b-border-strong/60 shadow-sm text-fg-muted"
+    >
+      <span
+        class="ui-solid ui-solid-primary px-2 py-0.5 inner-radius mr3 text-sm"
+      >
+        News
+      </span>
+      <span> Introducting UnoUI v1 </span>
+    </UiLink>
+  </div>
+  <div
+    class="px4 sm-px8 md-px16 lg-px8 xl-px0 z3 relative mxa wfull max-w3xl lg-max-w5xl xl-max-w6xl flex flex-col lg:flex-row gap-8 lg-gap-12"
+  >
+    <div class="lg-w1/2 max-w-3xl">
+      <h1
+        class="font-semibold capitalize text-4xl sm-text-5xl xl-text-6xl leading-tight md-leading-snug text-transparent bg-clip-text bg-gradient-to-b from-20% from-fg-title to-gray-500 dark-to-gray300 text-balance"
+      >
+        Build beautiful interfaces faster than ever
+      </h1>
+    </div>
+    <div class="flex-1 lg-w1/2 flex flex-col gap-6">
+      <p class="text-fg">
+        Crafted with sleek, responsive components and intuitive customization,
+        everything you need to build you to build stunning, modern modern UIs,
+        fast and clean.
+      </p>
+      <div class="flex items-center flex-wrap gap-4">
+        <a
+          href="/blocks/hero-sections"
+          class="btn btn-md rd-global-radius btn-solid btn-solid-primary text-white"
+        >
+          Start building
+        </a>
+        <a
+          href="/docs/introduction"
+          class="btn btn-md rd-global-radius btn-outline btn-outline-gray"
+        >
+          Read docs
+        </a>
+      </div>
+    </div>
+  </div>
+  <ShowCases />
+</section>

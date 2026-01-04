@@ -1,21 +1,39 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import dynamicImport from "astro-dynamic-import";
 import { transformerNotationDiff } from "@shikijs/transformers";
 
 import unoCSS from "unocss/astro";
-
 import mdx from "@astrojs/mdx";
-
 import vue from "@astrojs/vue";
+
+
 
 import vercel from "@astrojs/vercel";
 
+
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [unoCSS({
-    injectReset: true,
-  }), dynamicImport(), mdx(), vue()],
+  integrations: [
+    unoCSS({
+      injectReset: true,
+    }),
+    dynamicImport(),
+    mdx(),
+    vue(),
+  ],
+
+  env: {
+    schema: {
+      PREVIEW_BASE_URL: envField.string({
+        context: "client",
+        access: "public",
+        optional: true,
+        default: "https://unoui-preview.netlify.app/",
+      }),
+    },
+  },
 
   redirects: {
     "/docs/": {
@@ -30,15 +48,15 @@ export default defineConfig({
       status: 302,
       destination: "/components/accordion",
     },
-    '/blocks':{
-      status:302,
-      destination:"/blocks/hero-sections"
-    }
+    "/blocks": {
+      status: 302,
+      destination: "/blocks/hero-sections",
+    },
   },
 
   markdown: {
     shikiConfig: {
-      theme: "css-variables",
+      theme: "aurora-x",
       transformers: [transformerNotationDiff()],
     },
   },

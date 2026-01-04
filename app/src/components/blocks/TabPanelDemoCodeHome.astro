@@ -1,0 +1,44 @@
+---
+import { demo_home_code } from "@/data/demo_home_codes";
+import CustomCodeBlock from "@components/vuejs/CustomCodeBlock.vue";
+
+type Props = {
+  lang: "vue" | "svelte" | "html";
+};
+
+const res = {
+  vue: {
+    code: demo_home_code.vue,
+    lang: "vue",
+    label: "VueJS demo code snippet",
+  },
+  html: {
+    code: demo_home_code.html,
+    lang: "html",
+    label: "html demo code snippet",
+  },
+  svelte: {
+    code: demo_home_code.svelte,
+    lang: "html",
+    label: "html demo code snippet",
+  },
+};
+const { lang } = Astro.props;
+
+const val = res[lang];
+---
+
+<section
+  data-tab-panel
+  id={lang}
+  aria-labelledby={val.label}
+  class="hidden fx-active-flex size-full overflow-hidden"
+>
+  <div class="overflow-auto size-full p4">
+    <CustomCodeBlock
+      code={val.code}
+      lang={val.lang as "html" | "vue"}
+      client:load
+    />
+  </div>
+</section>

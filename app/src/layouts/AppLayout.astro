@@ -1,0 +1,40 @@
+---
+import Base from "./Base.astro";
+import type { SeoType } from "../types";
+import { defaultOgImage, defaultOgAlt, keywordsDef } from "../const";
+import Navbar from "@components/molecules/Navbar.astro";
+import Footer from "@components/molecules/Footer.astro";
+import PopPaletteTheme from "@components/blocks/PopPaletteTheme.astro";
+
+type Props = {
+  description?: string;
+  keywords?: string;
+  title: string;
+  ogImage?: {
+    src: string;
+    alt: string;
+  };
+};
+
+const { title, keywords, ogImage, description } = Astro.props;
+
+const seo: SeoType = {
+  ogImage: {
+    src: ogImage?.src || defaultOgImage,
+    alt: ogImage?.alt || defaultOgAlt,
+  },
+  keywords: `${keywordsDef} ${keywords ? `, ${keywords}` : ""}`,
+  title: `UnoUI - ${title}`,
+  description: description
+    ? description
+    : "Easily add interactive Components to your App.",
+};
+---
+
+<Base bodyClasses="bg-bg min-hvh flex flex-col" seo={seo}>
+  <Navbar />
+  <slot />
+  <Footer />
+  <PopPaletteTheme />
+  <slot name="modalZone" />
+</Base>

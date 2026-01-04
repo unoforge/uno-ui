@@ -1,0 +1,14 @@
+---
+type Props = {
+    icon: string;
+    text: string;
+};
+const { icon, text } = Astro.props;
+---
+
+<div
+    class="flex items-center text-sm text-fg-muted bg-bg rd-global-radius shadow-sm px2 py0.5 b b-border-strong/40"
+>
+    <span aria-hidden="true" class={`flex ${icon} mr1`}></span>
+    <span>{text}</span>
+</div>

@@ -1,0 +1,134 @@
+---
+import { getIconVal, isFile } from "@helper/index";
+import CardPricingDemo from "@components/blocks/CardPricingDemo.astro";
+import SectionBlockTitle from "@components/blocks/SectionBlockTitle.astro";
+import TabPanelDemoCodeHome from "@components/blocks/TabPanelDemoCodeHome.astro";
+import AppCard from "@components/atoms/AppCard.astro";
+
+const stacks = [
+  {
+    id: "html",
+    text: "HTML",
+    classActive: "fx-active-text-danger",
+    softbg: "group-fx-active-ui-subtle group-fx-active-ui-subtle-danger",
+  },
+  {
+    id: "vue",
+    text: "VueJs",
+    classActive: "fx-active-text-success",
+    softbg: "group-fx-active-ui-subtle group-fx-active-ui-subtle-success",
+  },
+  {
+    id: "svelte",
+    text: "svelteJS",
+    classActive: "fx-active-text-warning",
+    softbg: "group-fx-active-ui-subtle group-fx-active-ui-subtle-warning",
+  },
+];
+---
+
+<section class="mt24 md-mt32 overflow-hidden">
+  <SectionBlockTitle
+    headtext="Framework agnostic"
+    title="Built with your favorite tool"
+    description="Copy and paste components you want with your favorite tool/framework"
+    link={{
+      text: "Start now",
+      href: "/docs/framework-guide",
+      icon: "i-ph-caret-right",
+    }}
+  />
+  <div class="px1 sm-px2 lg-px8 lg-max-w-7xl mxa wfull mt16 relative">
+    <span
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -top-10 w3/5 aspect-video rd-full bg-gradient-to-tr from-primary via-accent to-secondary rounded-full blur-3xl op40 dark-op20 pointer-events-none"
+    ></span>
+    <AppCard
+      class=" grid min-[860px]:grid-cols-2"
+    >
+      <div data-fx-tabs data-demo-tab-prev-code data-tabs class="p1">
+        <ul
+          data-tab-list
+          role="tablist"
+          class="flex items-center gap4 px6 pb2 pt6"
+        >
+          {
+            stacks.map((tab) => (
+              <li role="presentation">
+                <a
+                  href={`#${tab.id}`}
+                  data-tabs-trigger
+                  data-target={tab.id}
+                  aria-controls={tab.id}
+                  tabindex="0"
+                  class={`flex text-fg-muted  group flex-col items-center ${tab.classActive}`}
+                >
+                  <span
+                    class={`size-14 b-2 b-border-strong/60 overflow-hidden group-fx-actfive-b-current rd-full d-flex-place-center ${tab.softbg}`}
+                  >
+                    {isFile(getIconVal(tab.id)) ? (
+                      <img
+                        src={`/icons/${getIconVal(tab.id)}`}
+                        alt={`icon ${tab.id}`}
+                        width="20"
+                        class="h6 wauto grayscale-100 group-fx-active-grayscale-0"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        class={`flex text-xl ${getIconVal(tab.id)}`}
+                      />
+                    )}
+                  </span>
+                  <span class="text-sm mt0.5">{tab.text}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <div
+          data-panels-container
+          class="wfull grid overflow-hidden bg-[--astro-code-color-background] b b-border-strong/40 inner-radius b b-border h400px sm-h600px"
+        >
+          <TabPanelDemoCodeHome lang="html" />
+          <TabPanelDemoCodeHome lang="vue" />
+          <TabPanelDemoCodeHome lang="svelte" />
+        </div>
+      </div>
+      <div
+        data-preview-demo-box
+        class="min-[860px]:pl1 relative overflow-hidden"
+      >
+        <span
+          class="absolute left-1/2 -translate-x-1/2 bottom-10 w3/5 aspect-video rd-full bg-gradient-to-tr from-primary via-accent to-secondary rounded-full blur-3xl op40 dark-op20 pointer-events-none"
+        ></span>
+        <div
+          class="flex justify-center hfull bg-bg-muted/30 inner-radius max-[859px]:rd-t-none min-[860px]:rd-l-none items-center px2 py8 sm-px10 sm-py10"
+        >
+          <CardPricingDemo />
+        </div>
+      </div>
+    </AppCard>
+  </div>
+</section>
+
+<script>
+  import { $ } from "@flexilla/utilities";
+
+  const demoBox = $("[data-demo-tab-prev-code]");
+  const boxDemoView = $("[data-preview-demo-box]");
+  const palettes = {
+    html: "default",
+    vue: "earth",
+    svelte: "air",
+  };
+  if (demoBox && boxDemoView) {
+    demoBox.addEventListener("change-tab", (e) => {
+      const currentTrigger = (e as CustomEvent).detail.currentTrigger;
+      const target = currentTrigger.dataset.target;
+      if (target && target in palettes) {
+        boxDemoView.dataset.palette = palettes[target as keyof typeof palettes];
+      }
+    });
+  }
+</script>

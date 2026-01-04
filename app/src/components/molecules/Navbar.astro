@@ -1,0 +1,90 @@
+---
+import AppNavItems from "./AppNavItems.astro";
+import GlobalToggleTheme from "@components/atoms/GlobalToggleTheme.astro";
+import AppSearchTrigger from "@components/atoms/AppSearchTrigger.astro";
+import LinkToGithubBtn from "@components/atoms/LinkToGithubBtn.astro";
+import TriggerUiTheme from "@components/atoms/TriggerUiTheme.astro";
+---
+
+<header data-pagefind-ignore class="pt-3 z-60 px2 sm-px8 relative z5">
+  <nav
+    class="wfull max-w6xl mxa justify-between flex items-center gap-10 px3 bg-white dark-bg-bg-subtle b b-gray200 dark-b-gray800 shadow-xk shadow-bg-surface dark-shadow-transparent h16 rd-xl"
+  >
+    <div class="flex items-center relative z10">
+      <div class="flex lg-hidden mr3 lg-mr0 b-r pr3 b-border">
+        <button
+          data-toggle-navbar
+          aria-label="Toggle Navbar"
+          class="flex flex-col space-y-2 rd-lg hover-bg-bg-surface ease-linear duration-200 py3 lg-hidden group"
+        >
+          <span
+            aria-hidden="true"
+            class="group-fx-open-rotate-45 group-fx-open-translate-y-1.5 w6 h0.5 rd-full bg-current text-fg-muted"
+          ></span>
+          <span
+            aria-hidden="true"
+            class="group-fx-open--rotate-45 group-fx-open--translate-y-1 w6 h0.5 rd-full bg-current text-fg-muted"
+          ></span>
+        </button>
+      </div>
+      <a href="/" aria-label="Home Page" class="">
+        <svg
+          aria-hidden="true"
+          width="488"
+          height="488"
+          class="size-8"
+          viewBox="0 0 488 488"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_13_164)">
+            <path
+              d="M71.5342 71L416.602 416.068V416.068C321.314 511.356 166.822 511.356 71.5342 416.068V416.068C-23.7537 320.78 -23.7537 166.288 71.5342 71V71Z"
+              fill="currentColor"
+              class="text-fg-title"></path>
+            <path
+              d="M483.659 249.5C483.659 274.629 436.788 344.5 411.659 344.5C386.53 344.5 392.659 274.629 392.659 249.5C392.659 224.371 413.03 204 438.159 204C463.288 204 483.659 224.371 483.659 249.5Z"
+              fill="currentColor"
+              class="text-fg-title"></path>
+            <circle
+              cx="243.429"
+              cy="243.759"
+              r="110"
+              transform="rotate(48.3973 243.429 243.759)"
+              fill="black"
+              stroke="white"
+              stroke-width="80"
+              class="fill-fg-title stroke-bg"></circle>
+            <path
+              d="M309 71C309 96.129 212.629 101 187.5 101C162.371 101 142 80.629 142 55.5C142 30.371 162.371 10 187.5 10C212.629 10 309 45.871 309 71Z"
+              fill="currentColor"
+              class="text-fg-title"></path>
+            <path
+              d="M417 101.5C417 126.629 415.129 215.5 390 215.5C364.871 215.5 326 126.629 326 101.5C326 76.371 346.371 56 371.5 56C396.629 56 417 76.371 417 101.5Z"
+              fill="currentColor"
+              class="text-fg-title"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_13_164">
+              <rect width="488" height="488" fill="currentColor" class="text-bg"
+              ></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+    </div>
+    <div
+      data-navbar
+      class="fixed bg-bg-surface pt25 pb3 rd-global-radius px4 lg-px0 lg-pt0 lg-pb0 b b-border inset-0.5 lg-bg-transparent lg-b-transparent
+        invisible lg-visible lg-static flex lg-flex-1 fx-open-visible fx-open-op100 lg-op100"
+    >
+      <AppNavItems />
+    </div>
+    <div class="flex justify-end gap-0.5">
+      <AppSearchTrigger />
+      <GlobalToggleTheme />
+      <LinkToGithubBtn />
+      <TriggerUiTheme />
+    </div>
+  </nav>
+</header>

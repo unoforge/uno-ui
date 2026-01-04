@@ -1,0 +1,175 @@
+---
+import AppLogoLink from "@components/atoms/AppLogoLink.astro";
+import SocialLinks from "@components/atoms/SocialLinks.astro";
+import UiLink from "@components/atoms/UiLink.astro";
+
+const footerNav = [
+  {
+    title: "Resources",
+    items: [
+      {
+        href: "/blocks/hero-sections",
+        text: "Blocks",
+        label: "Browse UnoUI blocks",
+      },
+      {
+        href: "/components/accordion",
+        text: "Components",
+        label: "Discover all UnoUI components",
+      },
+      {
+        href: "/docs/introduction",
+        text: "Docs",
+        label: "UnoUI documentation",
+      },
+    ],
+  },
+  {
+    title: "Preset",
+    items: [
+      {
+        href: "/preset/introduction",
+        text: "Preset UI",
+        label: "Browse UnoUI preset-ui",
+      },
+      {
+        href: "/preset/customization/configuration",
+        text: "Configuration",
+        label: "Discover how to configure UnoUI preset-ui",
+      },
+      {
+        href: "/preset/customization/preset-helper",
+        text: "Preset Helper",
+        label: "Simplify customization",
+      },
+      {
+        href: "/preset/customization/theme",
+        text: "Theming",
+        label: "Ready to use themes",
+      },
+    ],
+  },
+  {
+    title: "Starters",
+    items: [
+      {
+        href: "#",
+        text: "AstroJS Starter",
+        label: "AstroJS + UnoCSS starter template",
+      },
+      {
+        href: "#",
+        text: "Laravel",
+        label: "Laravel + Livewire + UnoCSS boilerplate",
+      },
+      {
+        href: "#",
+        text: "Svelte",
+        label: "Svelte + UnoCSS + MeltUI template",
+      },
+      {
+        href: "/preset/customization/theme",
+        text: "ViteJS",
+        label: "ViteJS + UnoCSS starter",
+      },
+    ],
+  },
+  {
+    title: "Uno forge",
+    items: [
+      {
+        href: "/docs/introduction",
+        text: "UnoUI",
+        label: "Free and open-source UnoCSS blocks and components",
+      },
+      {
+        href: "https://github.com/unoforge/laravel-ui",
+        text: "Flexiwind Laravel",
+        label:
+          "Freemium Laravel + TailwindCSS v4 : blocks, Components, templates",
+      },
+      {
+        href: "https://github.com/unoforge/flexilla",
+        text: "Flexilla",
+        label: "Interactive components library for VanillaJS/TS and AlpineJS",
+      },
+      {
+        href: "#",
+        text: "About us",
+        label: "Discover who's behind this project",
+      },
+    ],
+  },
+];
+---
+
+<footer class="relative text-fg-muted mta">
+  <span
+    aria-hidden="true"
+    class="absolute left-1/2 -translate-x-1/2 -top-10 w60 h20 rd-full bg-gradient-to-tr from-primary via-accent to-secondary rounded-full blur-3xl op40 pointer-events-none"
+  ></span>
+  <div
+    class="relative bg-bg grid lg-grid-cols-6 gap4 gap-y8 mxa max-w7xl px4 sm-px8 lg-px4 wfull pt14 b-t b-t-border"
+  >
+    <div class="lg-col-span-2">
+      <AppLogoLink withText="all" />
+    </div>
+    <div class="lg-col-span-4 grid gap24">
+      <div
+        class="grid grid-cols-2 md-grid-cols-3 lg-grid-cols-4 gap-x10 gap-y8 text-fg-muted"
+      >
+        {
+          footerNav.map(({ title, items }) => (
+            <nav class="flex flex-col">
+              <h3 class="text-fg font-semibold text-sm">{title}</h3>
+              <ul class="mt4 space-y-2 flex flex-col">
+                {items.map((item) => (
+                  <li>
+                    <UiLink
+                      externalWithIcon
+                      class={
+                        "flex items-center hover-text-fg-title ease-linear text-sm"
+                      }
+                      href={item.href}
+                      aria-label={item.label}
+                    >
+                      {item.text}
+                    </UiLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="mxa max-w7xl px4 sm-px8 lg-px4 pb3 wfull mt10 lg-mt16">
+    <div class="b-t b-border-strong/40 pt2.5 flex flex-col gap-3">
+      <div
+        class="w-full flex flex-col md-flex-row gap-6 md-justify-between items-center text-sm"
+      >
+        <div class="text-sm">
+          Published under <UiLink
+            href="https://github.com/unoforge/unify-ui"
+            aria-label="MIT License"
+            class={"text-fg-subtitle"}>MIT License</UiLink
+          >
+        </div>
+
+        <div class="flex">
+          <SocialLinks />
+        </div>
+      </div>
+      <div
+        class="text-sm b b-border bg-bg-surface !bg-op50 px4 py2 rd-lg text-center"
+      >
+        &COPY; unoForge {new Date().getFullYear()}. By <UiLink
+          href="https://x.com/johnkat_Mj"
+          class={"underline underline-offset-2 text-fg-title"}
+          >UnoForge</UiLink
+        >.
+      </div>
+    </div>
+  </div>
+</footer>

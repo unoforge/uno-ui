@@ -4,33 +4,49 @@ type Props = {
   colors: string[];
   id: string;
   isDefault?: boolean;
+  inPreview?: boolean;
 };
-const { label, colors, id, isDefault } = Astro.props;
+const { label, colors, id, isDefault, inPreview } = Astro.props;
 ---
 
-<button
-  data-palette={id}
-  data-palette-color
-  id={id}
-  aria-checked={isDefault ? "true" : "false"}
-  role="radio"
-  tabindex={isDefault ? "0" : "-1"}
-  style={`--palette-main-color:hsl(${colors[0]})`}
-  class="btn-palette group pb0.5 text-fg-muted"
->
-  <div
-    class="grid grid-cols-3 h10 rd-md overflow-hidden bg-bg-surface p0.5 wfull"
-  >
-    {
-      colors.map((color) => (
-        <span
-          style={`--palette-token: hsl(${color});`}
-          class={`palette-token first-rd-l last-rd-r`}
-        />
-      ))
-    }
-  </div>
-  <span data-text class="text-sm">
-    {label}
-  </span>
-</button>
+{
+  inPreview ? (
+    <button
+      data-palette={id}
+      data-palette-color
+      id={id}
+      aria-checked={isDefault ? "true" : "false"}
+      role="radio"
+      tabindex={isDefault ? "0" : "-1"}
+      style={`--palette-main-color:hsl(${colors[0]})`}
+      class="group col-span-1 aspect-video bg-[--palette-main-color] hover-op80 ease-linear duration-200 op70 aria-checked-op100 scale-y-90 aria-checked-scale-y-100"
+    >
+      <span aria-hidden="true" class="sr-only">
+        {label}
+      </span>
+    </button>
+  ) : (
+    <button
+      data-palette={id}
+      data-palette-color
+      id={id}
+      aria-checked={isDefault ? "true" : "false"}
+      role="radio"
+      tabindex={isDefault ? "0" : "-1"}
+      style={`--palette-main-color:hsl(${colors[0]})`}
+      class="btn-palette group pb0.5 text-fg-muted"
+    >
+      <div class="grid grid-cols-3 h10 rd-md overflow-hidden bg-bg-surface p0.5 wfull">
+        {colors.map((color) => (
+          <span
+            style={`--palette-token: hsl(${color});`}
+            class={`palette-token first-rd-l last-rd-r`}
+          />
+        ))}
+      </div>
+      <span data-text class="text-sm">
+        {label}
+      </span>
+    </button>
+  )
+}

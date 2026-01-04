@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { SupportedLanguage } from '@/types/index';
 import { codeToHtml } from 'shiki';
-import { cssVariables } from 'src/config/shikiconfig';
 import { onMounted, ref } from 'vue';
 
 const codeHtml = ref()
@@ -15,7 +14,7 @@ onMounted(async () => {
     try {
         codeHtml.value = await codeToHtml(props.code, {
             lang: props.lang,
-            theme: cssVariables
+            theme: "aurora-x"
         })
     } catch (error) {
         console.error(error)

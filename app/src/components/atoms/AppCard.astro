@@ -1,0 +1,14 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"div">;
+
+const { class: className = "", ...rest } = Astro.props;
+---
+
+<div
+  class={`bg-bg b b-border-strong/40 shadow-lg shadow-bg-subtle/50 relative *-relative !before-absolute before-content-empty before-inset-1 before-bg-bg-surface/40 before-inner-radius ui-card cp-1 [--card-radius:--global-main-radius] ${className}`}
+  {...rest}
+>
+  <slot />
+</div>

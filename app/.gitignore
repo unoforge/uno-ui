@@ -3,6 +3,7 @@ dist/
 
 # generated types
 .astro/
+.vercel/
 
 # dependencies
 node_modules/
@@ -25,3 +26,6 @@ pnpm-debug.log*
 
 /removed-components
 removed-components/
+# Local Netlify folder
+.netlify
+.vercel

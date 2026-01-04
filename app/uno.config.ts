@@ -1,11 +1,10 @@
 import {
   defineConfig,
   presetIcons,
-  presetMini,
   presetWind3,
 } from "unocss";
 
-import { presetUI} from "@unifydev/preset-ui"
+import { presetUI } from "@unifydev/preset-ui"
 import { flexillaPreset } from "@unifydev/flexilla"
 
 
@@ -29,17 +28,23 @@ export default defineConfig({
       'tab-content-ui': 'fixed top-25 right-4 sm-right-8 xl-sticky xl-top-16 flex flex-col wfull overflow-hidden overflow-y-auto',
       'tab-content-ui-states': 'invisible fx-open-visible op0 translate-y-4 fx-open-translate-y-0 fx-open-op100 xl-op100 xl-visible xl-translate-y-0',
       'tab-content-ui-bg': 'b b-border b-op90 dark-b-op60 bg-bg-surface !bg-op70 backdrop-blur-xl !lg-bg-transparent !lg-b-transparent',
-      'mdx-tbody': '[&>tr>td]-px2.5 [&>tr>td]-py1.5 divide-y divide-gray200 dark-divide-gray800 [&>tr]-!b-dashed',
+      'mdx-tbody': '[&>tr>td]-px2.5 [&>tr>td]-py1.5 divide-y divide-border00 dark-divide-gray800 [&>tr]-!b-dashed',
       'mdx-thead': 'relative text-sm before-absolute before-inset-0 before-content-empty before-bg-bg-surface before-!bg-op60 before-rd-t-md text-left [&>tr]-relative [&>tr>th]-px2.5 [&>tr>th]-py3 text-fg-subtitle [&>tr>th]-font-medium',
       'box-tab-content': 'rd-lg xl-p0 z40 hmax max-h90 xl-max-h-none xl-h[calc(100dvh-4rem)] w60 xl-wfull',
       'tab-content-animation': "ease-linear duration-20",
-      'default-preview-box': 'h32 sm-h56 p1.5 md-p10'
-
+      'default-preview-box': 'h32 sm-h56 p1.5 md-p10',
+      "box-resize-controls": "fixed top-6 left-1/2 -translate-1/2 z140",
+      "ui-preview-card": "group-data-[size=tablet]-b group-data-[size=tablet]-b-border group-data-[size=tablet]-shadow-sm group-data-[size=tablet]-scale-95 group-data-[size=mobile]-scale-90 group-data-[size=mobile]-b group-data-[size=mobile]-b-border"
     }
   ],
+  theme: {
+    borderRadius: {
+      'global-radius': "var(--global-main-radius)"
+    }
+  },
   presets: [
     presetWind3({
-      dark: "class",
+      dark: "class"
     }),
     flexillaPreset(),
     presetUI(),
@@ -51,8 +56,11 @@ export default defineConfig({
           'adobe': '<svg viewBox="0 0 30 26" fill="#E1251B" aria-label="Adobe" height="22"><polygon points="19,0 30,0 30,26"></polygon><polygon points="11.1,0 0,0 0,26"></polygon><polygon points="15,9.6 22.1,26 17.5,26 15.4,20.8 10.2,20.8"></polygon></svg>',
         },
         //@ts-ignore
-        carbon: () =>
+        ph: () =>
           import("@iconify-json/ph/icons.json").then((i) => i.default),
+        //@ts-ignore
+        'simple-icons': () =>
+          import("@iconify-json/simple-icons/icons.json").then((i) => i.default),
       },
       extraProperties: {
         display: 'inline-block',

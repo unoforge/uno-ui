@@ -1,0 +1,121 @@
+---
+export const prerender = false;
+
+import { allBlocks } from "@/data/all-blocks";
+import UiLink from "@components/atoms/UiLink.astro";
+import PreviewSetting from "@components/PreviewSetting.astro";
+import PreviewBlock from "@components/vuejs/PreviewBlock.vue";
+import PreviewLayout from "@layouts/PreviewLayout.astro";
+import { PREVIEW_BASE_URL } from "astro:env/client";
+
+const sizeTriggers = [
+  {
+    isActive: true,
+    target: "desktop",
+    icon: "i-ph-laptop",
+  },
+  {
+    target: "tablet",
+    icon: "i-ph-device-tablet-camera",
+  },
+  {
+    target: "mobile",
+    icon: "i-ph-device-mobile-camera",
+  },
+];
+
+const { searchParams } = Astro.url;
+
+const blockKey = searchParams.get("block");
+
+const findItem = blockKey
+  ? allBlocks
+      .flatMap((block) => block.items || [])
+      .find((item) => item.id === blockKey)
+  : undefined;
+
+const baseUrl = PREVIEW_BASE_URL
+---
+
+<PreviewLayout>
+  <main data-pagefind-ignore class="bg-bg-surface p2.5 h-svh">
+    {
+      blockKey ? (
+        findItem ? (
+          <>
+            <div class="relative bg-bg rd-global-radius ring-2 ring-bg-muted h-full p1">
+              <PreviewBlock url={`${baseUrl}${findItem.previewurl}`} client:only="vue" />
+              <div
+                data-box-preview-settings
+                class="fixed inset-x-0 bottom-0 flex justify-center pb2 text-white dark ease-[cubic-bezier(.48,1.55,.28,1)] transform duration-300 translate-y-10 data-[hovered=true]:translate-y-0 z40"
+              >
+                <div class="relative z40 flex bg-gray950/80 backdrop-blur-sm backdrop-saturate-150 ui-card cp-1 c-rd-3xl">
+                  <div class="hidden lg-flex items-center">
+                    {sizeTriggers.map((trigger) => (
+                      <button
+                        data-preview-size-trigger
+                        data-state={trigger.isActive ? "active" : "inactive"}
+                        data-target={trigger.target}
+                        class="btn btn-icon-md lg-btn-icon-lg flex text-sm fx-active-bg-bg inner-radius ease-linear duration-200 font-300 fx-active-text-fg-title"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class={`"flex ${trigger.icon} text-base`}
+                        />
+                      </button>
+                    ))}
+                    <span
+                      class="hidden lg-flex lg-ml2.5 lg-mr1.5 wpx bg-gray3 h3"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <UiLink
+                    href={`${baseUrl}${findItem.previewurl}`}
+                    aria-label="View in full screen"
+                    class="btn-icon-md lg-btn-icon-lg btn btn-soft btn-soft-gray gap2 items-center text-sm inner-radius ease-linear duration-200 font-300"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="flex i-ph-arrow-square-out text-base"
+                    />
+                  </UiLink>
+                  <div class="flex items-center">
+                    <span class="mx1.5 wpx bg-gray3 h3" aria-hidden="true" />
+                    <UiLink
+                      href="#"
+                      class={
+                        "btn btn-icon-md lg-btn-icon-lg btn-soft btn-soft-gray inner-radius"
+                      }
+                    >
+                      <span aria-hidden="true" class="i-ph-code" />
+                    </UiLink>
+                    <span class="m1.5 wpx bg-gray3 h3" aria-hidden="true" />
+                    <button
+                      data-theme-setting-preview
+                      aria-label="toggle theme panel"
+                      class="btn-icon-md lg-btn-icon-lg btn inner-radius text-fg btn btn-solid btn-solid-primary text-white"
+                    >
+                      <span class="i-ph-paint-brush" />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  data-box-setting-preview
+                  class="dark fixed left-1/2 -translate-x-1/2 bottom-8 p4 b b-border rd-global-radius w5/6 sm-wsm z10 flex flex-col ease-[cubic-bezier(.48,1.55,.28,1)] bg-gray950/90 backdrop-blur-xl backdrdop-saturate-150 overflow-hidden overflow-y-auto pb10 max-h60 invisible op0 scale-x-90 scale-y-95 fx-open-visible fx-open-scale-x-100 fx-open-scale-y-100 fx-open-op100 transform ease-linear duration-300 transition-all origin-bottom"
+                >
+                  <PreviewSetting />
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div class="relative bg-bg rd-global-radius ring-2 ring-bg-muted h-full p1" />
+        )
+      ) : (
+        <div class="relative bg-bg rd-global-radius ring-2 ring-bg-muted h-full p1">
+          but
+        </div>
+      )
+    }
+  </main>
+</PreviewLayout>

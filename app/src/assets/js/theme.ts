@@ -1,4 +1,6 @@
-import { $, $$ } from "@flexilla/utilities";
+import { $, $$, dispatchCustomEvent } from "@flexilla/utilities";
+import { disableTransitionsTemporarily } from "./utils";
+
 
 
 export const initScriptTheme = () => {
@@ -26,15 +28,24 @@ export const initScriptTheme = () => {
     if (switchTheme instanceof HTMLElement) {
         switchTheme.addEventListener("click", (e) => {
             e.preventDefault();
-            const isDarkTheme_ = getThemePreference() === "dark";
-            docElement.classList[isDarkTheme_ ? "remove" : "add"]("dark");
-            localStorage.setItem("theme", isDarkTheme_ ? "light" : "dark");
 
-            const activeTheme = $("[data-toggle-theme][data-state=active]")
-            if (activeTheme) activeTheme.setAttribute("data-state", 'inactive')
+            disableTransitionsTemporarily(() => {
+                const isDarkTheme_ = getThemePreference() === "dark";
+                docElement.classList[isDarkTheme_ ? "remove" : "add"]("dark");
+                localStorage.setItem("theme", isDarkTheme_ ? "light" : "dark");
 
-            const activeToggle_ = $(`[data-toggle-theme][data-theme=${isDarkTheme ? "dark" : "light"}]`)
-            if (activeToggle_) activeToggle_.setAttribute("data-state", 'active')
+                const activeTheme = $("[data-toggle-theme][data-state=active]")
+                if (activeTheme) activeTheme.setAttribute("data-state", 'inactive')
+                const theme_ = isDarkTheme_ ? "dark" : "light"
+
+                const activeToggle_ = $(`[data-toggle-theme][data-theme=${theme_}]`)
+                if (activeToggle_) activeToggle_.setAttribute("data-state", 'active')
+
+                dispatchCustomEvent(document.documentElement, "theme-changed", {
+                    theme: isDarkTheme_ ? "light" : "dark"
+                })
+            })
+
         });
     }
 
@@ -47,9 +58,10 @@ export const initScriptTheme = () => {
             docElement.classList[isDarkTheme_ ? "add" : "remove"]("dark")
             localStorage.setItem("theme", `${theme}`);
             toggleTheme.setAttribute("data-state", 'active')
+            dispatchCustomEvent(document.documentElement, "theme-changed", {
+                theme: isDarkTheme_ ? "dark" : "light"
+            })
         })
     }
 }
 
-
-// document.addEventListener("astro:after-swap", applyTheme);
