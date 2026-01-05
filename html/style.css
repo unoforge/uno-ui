@@ -2,8 +2,32 @@
 @import url(./colors.css);
 
 
+* {
+    text-rendering: optimizeLegibility;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border-strong)) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--border-strong));
+    border-radius: 4px;
+}
+
 
 html {
+    font-variation-settings: normal;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
     min-width: 100vw;
     max-width: 100vw;
     scroll-behavior: smooth;

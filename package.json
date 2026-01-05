@@ -4,7 +4,8 @@
   "private": true,
   "description": "UNO UI - A modern UI component library",
   "scripts": {
-    "setup": "node setup.js"
+    "setup": "node setup.js",
+    "build:blocks":"node build-block-json.js"
   },
   "keywords": [
     "ui",

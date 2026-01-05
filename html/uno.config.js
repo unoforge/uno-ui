@@ -6,8 +6,13 @@ import { presetUI } from "@unifydev/preset-ui";
 export default defineConfig({
   content: {
     pipeline: {
-      include: ["./html-components/**/*.html", "index.html", "js/**/*.js","./js/script-swiper.js"],
+      include: ["./blocks/**/*.html","./pages/**/*.html", "index.html", "js/**/*.js","./js/script-swiper.js"],
     },
+  },
+  theme:{
+    borderRadius: {
+      'ui': "var(--radius-ui)"
+    }
   },
   presets: [
     presetWind3({ dark: "class" }),
