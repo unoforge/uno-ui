@@ -1,4 +1,4 @@
-import { $, $$ } from "@flexilla/utilities"
+import { $, $$, dispatchCustomEvent } from "@flexilla/utilities"
 
 
 export const initSwitchPalette = () => {
@@ -7,7 +7,7 @@ export const initSwitchPalette = () => {
     if (paletteContainer instanceof HTMLElement) {
         const palettes = $$("[data-palette-color]", paletteContainer)
 
-        
+
         const initPalette = () => {
             const activeItem = $('[aria-checked="true"]', paletteContainer)
             if (activeItem instanceof HTMLElement) {
@@ -21,6 +21,7 @@ export const initSwitchPalette = () => {
                 current.setAttribute('aria-checked', 'true');
                 current.setAttribute('tabindex', '0');
             }
+
         }
 
 
@@ -39,6 +40,11 @@ export const initSwitchPalette = () => {
                 paletteBtn.setAttribute('aria-checked', 'true');
                 paletteBtn.setAttribute('tabindex', '0');
                 localStorage.setItem("palette", `${name}`);
+
+                dispatchCustomEvent(document.documentElement, "palette-changed", {
+                    palette: name
+                })
+
             })
         }
 

@@ -1,0 +1,25 @@
+---
+import AppCard from "@components/atoms/AppCard.astro";
+
+type Props = {
+  class?: string;
+  title: string;
+  description: string;
+  illustrationClass?:string
+};
+const { class: className = "", illustrationClass='', title, description } = Astro.props;
+---
+
+<AppCard class={`${className} overflow-hidden`}>
+  <div class={`h52 relative overflow-hidden select-none ${illustrationClass}`}>
+    <slot />
+  </div>
+  <div class="p4 lg-p5 flex flex-col gap2">
+    <h3 class="font-semibold text-fg-title">
+      {title}
+    </h3>
+    <p class="text-fg-muted text-sm">
+      {description}
+    </p>
+  </div>
+</AppCard>

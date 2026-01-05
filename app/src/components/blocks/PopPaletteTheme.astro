@@ -1,0 +1,76 @@
+---
+import PaletteCard from "@components/atoms/PaletteCard.astro";
+
+const palettes = [
+  {
+    label: "Water",
+    colors: ["210 55% 40%", "175 84% 32%", "209 88% 39%"],
+    id: "water",
+  },
+  {
+    label: "Earth",
+    colors: ["149 54% 30%", "37 67% 40%", "2 85% 47%"],
+    id: "earth",
+  },
+  {
+    label: "Fire",
+    colors: ["2 85% 47%", "15 100% 48%", "209 92% 36%"],
+    id: "fire",
+  },
+  {
+    label: "Air",
+    colors: ["15 100% 48%", "2 85% 47%", "37 67% 40%"],
+    id: "air",
+  },
+  {
+    label: "Default",
+    colors: ["243 75% 59%", "187 92% 36%", "209 92% 36%"],
+    id: "default",
+    isDefault: true,
+  },
+];
+---
+
+<div
+  aria-labelledby="popper"
+  data-app-popover
+  data-setting-palette
+  id="popover-theme-setting"
+  aria-hidden="true"
+  data-offset-distance="10"
+  data-prevent-close-inside
+  class="u-fx-popper invisible op0 fx-open-visible fx-open-op100 w68 sm-w80 p5 bg-bg b b-border shadow-sm rd-global-radius z70"
+>
+  <div class="flex items-center justify-between">
+    <span class="text-sm text-fg-muted"> Theme </span>
+    <div class="grid grid-cols-2 rd-md b b-border bg-bg-surface text-fg-muted">
+      <button
+        data-toggle-theme
+        data-theme="light"
+        data-state="active"
+        class="btn btn-xs gap-x-1.5 fx-active-bg-bg fx-active-text-fg-title rd-l-md"
+      >
+        <span aria-hidden="true" class="flex i-ph-sun"></span>
+        Light
+      </button>
+      <button
+        data-toggle-theme
+        data-theme="dark"
+        class="btn btn-xs gap-x-1.5 fx-active-bg-bg fx-active-text-fg-title rd-l-md"
+      >
+        <span aria-hidden="true" class="flex i-ph-moon-stars"></span>
+        Dark
+      </button>
+    </div>
+  </div>
+  <div class="mt4">
+    <span class="text-fg-muted text-sm mb0.5"> Palette </span>
+    <div
+      data-palette-container
+      role="radiogroup"
+      class="grid grid-cols-2 gap-2.5"
+    >
+      {palettes.map((palette) => <PaletteCard {...palette} />)}
+    </div>
+  </div>
+</div>

@@ -7,79 +7,81 @@
 @import url(./ui.css);
 
 :root {
-    --bg: var(--c-white);
-    --bg-subtle: var(--c-gray-50);
-    --bg-surface: var(--c-gray-100);
-    --bg-muted: var(--c-gray-200);
-    --bg-surface-elevated: var(--c-gray-300);
+  --radius-ui: 8px;
 
-    --fg: var(--c-gray-700);
-    --fg-muted: var(--c-gray-600);
-    --fg-title: var(--c-gray-900);
-    --fg-subtitle: var(--c-gray-800);
-    --border: var(--c-gray-200);
+  --bg: var(--c-white);
+  --bg-subtle: var(--c-gray-50);
+  --bg-surface: var(--c-gray-100);
+  --bg-muted: var(--c-gray-200);
+  --bg-surface-elevated: var(--c-gray-300);
 
-    --border-subtle: var(--c-gray-50);
-    --border-light: var(--c-gray-200);
-    --border-strong: var(--c-gray-300);
-    --border-emphasis: var(--c-gray-400);
+  --fg: var(--c-gray-700);
+  --fg-muted: var(--c-gray-600);
+  --fg-title: var(--c-gray-900);
+  --fg-subtitle: var(--c-gray-800);
+  --border: var(--c-gray-200);
 
-    --ui-checkbox-bg: var(--bg);
-    --ui-checkbox-border: var(--border-strong);
-    --ui-radio-bg: var(--bg);
-    --ui-radio-border: var(--border-strong);
+  --border-subtle: var(--c-gray-50);
+  --border-light: var(--c-gray-200);
+  --border-strong: var(--c-gray-300);
+  --border-emphasis: var(--c-gray-400);
 
-    --switch-checked-thumb-primary: var(--primary-600);
+  --ui-checkbox-bg: var(--bg);
+  --ui-checkbox-border: var(--border-strong);
+  --ui-radio-bg: var(--bg);
+  --ui-radio-border: var(--border-strong);
 
-    --ui-input-focus-outline: var(--c-primary-600);
-    --ui-input-invalid-outline: var(--c-danger-600);
-    --ui-input-place-holder: var(--c-gray-500);
-    --switch-thumb-primary: var(--c-primary-600);
-    --switch-checked-thumb-primary: var(--c-primary-500);
-  
-  
-    --switch-checked-thumb-primary: var(--primary-600);
+  --switch-checked-thumb-primary: var(--primary-600);
 
-    --c-primary-DEFAULT:var(--c-primary-600);
-    --c-secondary-DEFAULT:var(--c-secondary-600);
-    --c-danger-DEFAULT:var(--c-danger-600);
-    --c-success-DEFAULT:var(--c-success-600);
-    --c-accent-DEFAULT:var(--c-accent-600);
-    --c-warning-DEFAULT:var(--c-warning-600);
-  }
-  
+  --ui-input-focus-outline: var(--c-primary-600);
+  --ui-input-invalid-outline: var(--c-danger-600);
+  --ui-input-place-holder: var(--c-gray-500);
+  --switch-thumb-primary: var(--c-primary-600);
+  --switch-checked-thumb-primary: var(--c-primary-500);
+
+
+  --switch-checked-thumb-primary: var(--primary-600);
+
+  --c-primary-DEFAULT: var(--c-primary-600);
+  --c-secondary-DEFAULT: var(--c-secondary-600);
+  --c-danger-DEFAULT: var(--c-danger-600);
+  --c-success-DEFAULT: var(--c-success-600);
+  --c-accent-DEFAULT: var(--c-accent-600);
+  --c-warning-DEFAULT: var(--c-warning-600);
+}
+
 
 .dark {
-    /* Background colors */
-    --bg:var(--c-gray-950);
-    --bg-subtle: var(--c-gray-950);
-    --bg-surface: var(--c-gray-900);
-    --bg-muted: var(--c-gray-800);
-    --bg-surface-elevated: var(--c-gray-700);
+  /* Background colors */
+  --bg: var(--c-gray-950);
+  --bg-subtle: var(--c-gray-950);
+  --bg-surface: var(--c-gray-900);
+  --bg-muted: var(--c-gray-800);
+  --bg-surface-elevated: var(--c-gray-700);
 
-    /* Foreground colors */
-    --fg: var(--c-gray-300);
-    --fg-title: var(--c-white);
-    --fg-subtitle: var(--c-gray-200);
-    --fg-muted: var(--c-gray-300);
-    --fg-light: var(--c-gray-400);
+  /* Foreground colors */
+  --fg: var(--c-gray-300);
+  --fg-title: var(--c-white);
+  --fg-subtitle: var(--c-gray-200);
+  --fg-muted: var(--c-gray-300);
+  --fg-light: var(--c-gray-400);
 
-    /* Border colors */
-    --border: var(--c-gray-900);
-    --border-light: var(--c-gray-800);
-    --border-subtle: var(--c-gray-900);
-    --border-strong: var(--c-gray-700);
-    --border-emphasis: var(--c-gray-600);
+  /* Border colors */
+  --border: var(--c-gray-900);
+  --border-light: var(--c-gray-800);
+  --border-subtle: var(--c-gray-900);
+  --border-strong: var(--c-gray-700);
+  --border-emphasis: var(--c-gray-600);
 
-    --ui-checkbox-border: var(--border-light);
+  --ui-checkbox-border: var(--border-light);
 
 
 
-    --c-primary-DEFAULT:var(--c-primary-500);
-    --c-secondary-DEFAULT:var(--c-secondary-500);
-    --c-danger-DEFAULT:var(--c-danger-500);
-    --c-success-DEFAULT:var(--c-success-500);
-    --c-accent-DEFAULT:var(--c-accent-500);
-    --c-warning-DEFAULT:var(--c-warning-500);
+  --c-primary-DEFAULT: var(--c-primary-500);
+  --c-secondary-DEFAULT: var(--c-secondary-500);
+  --c-danger-DEFAULT: var(--c-danger-500);
+  --c-success-DEFAULT: var(--c-success-500);
+  --c-accent-DEFAULT: var(--c-accent-500);
+  --c-warning-DEFAULT: var(--c-warning-500);
 
 }

@@ -46,15 +46,15 @@ const getSidebarItems = (val: string) =>
 const settledActiveGroup = activeGroup === "components" ? 'getting-started' : activeGroup;
 const activeItems = getSidebarItems(settledActiveGroup);
 ---
-
+<div aria-hidden="true" data-sidebar-overlay class="ui-overlay bg-gray8/20 backdrop-blur-md z100 lg-hidden invisible fx-visible-visible fx-open-visible"></div>
 <aside
-  data-ui-offcanvas data-pagefind-ignore
+  data-app-sidebar
+  data-pagefind-ignore
   id="doc_sidebar"
-  data-offcanvas-backdrop="ui-overlay bg-gray8/20 backdrop-blur-md z100 lg-hidden invisible fx-visible-visible fx-open-visible"
   class="sidebar-size sidebar-states sidebar-position sidebar-bg z120 lg-z0  pt4 b-r b-border"
 >
   <button
-    data-offcanvas-close
+    data-close-sidebar
     aria-label="Close Sidebar"
     class="w5 h8 text-fg b b-border bg-bg-surface ease-linear absolute top-1/2 -translate-y-1/2 -right-2.5 flex items-center justify-center lg-hidden rd-lg z10"
   >

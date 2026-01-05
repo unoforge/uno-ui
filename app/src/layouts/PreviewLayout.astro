@@ -1,0 +1,34 @@
+---
+import Base from "./Base.astro";
+import type { SeoType } from "../types";
+import { defaultOgImage, defaultOgAlt, keywordsDef } from "../const";
+
+const seo: SeoType = {
+  ogImage: {
+    src: defaultOgImage,
+    alt: defaultOgAlt,
+  },
+  keywords: `keywordsDef`,
+  title: `UnoUI - Preview`,
+  description: "Easily add interactive Components to your App.",
+};
+---
+
+<Base bodyClasses="bg-bg min-hvh flex flex-col" seo={seo}>
+  <slot />
+
+  <script>
+    import { uiPreviewer } from "@assets/js/previewer";
+
+    const initScriptSetting = () => {
+      uiPreviewer();
+    };
+    initScriptSetting();
+    document.addEventListener("astro:after-swap", initScriptSetting);
+  </script>
+</Base>
+<style is:global>
+  [data-box-preview-settings][data-hovered="true"] {
+    transform: translateY(0px);
+  }
+</style>

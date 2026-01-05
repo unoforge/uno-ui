@@ -1,0 +1,41 @@
+---
+import UiLink from "@components/atoms/UiLink.astro";
+
+type Props = {
+  headtext: string;
+  title: string;
+  description: string;
+  link?: {
+    text: string;
+    icon?: string;
+    href: string;
+  };
+};
+
+const { headtext, title, description, link } = Astro.props;
+---
+
+<div
+  class="px4 sm-px8 md-px16 lg-px8 xl-px0 mxa wfull max-w3xl lg-max-w5xl flex flex-col"
+>
+  <span class="ui-subtle ui-subtle-primary rd-global-radius wmax px2 text-sm">
+    {headtext}
+  </span>
+  <h2 class="font-semibold text-fg-title text-3xl sm-text-4xl max-wxl mt2">
+    {title}
+  </h2>
+  <p class="text-sm text-fg-muted mt2.5 max-w-md">
+    {description}
+  </p>
+  {
+    link ? (
+      <UiLink
+        href={link.href}
+        class={`btn btn-outline btn-outline-gray btn-md wmax rd-global-radius mt3 ${link.icon ? "pr2" : ""}`}
+      >
+        {link.text}
+        {link.icon ? <span class={`flex ${link.icon} ml2`} /> : null}
+      </UiLink>
+    ) : null
+  }
+</div>

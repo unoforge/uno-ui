@@ -1,14 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-
-
-const docs = await getCollection("documentation");
-
+import AppLayout from "../layouts/AppLayout.astro";
+import HeroSection from "@components/site/home/HeroSection.astro";
+import BentoFeatures from "@components/site/home/BentoFeatures.astro";
+import BuildWithYourStack from "@components/site/home/BuildWithYourStack.astro";
+import UiCta from "@components/site/UiCta.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="bg-white">
-		{JSON.stringify(docs)}
-	</main>
-</Layout>
+<AppLayout
+  title="Modern UI Components & Templates for UnoCSS"
+  description="Accelerate your development with UnoUI. Access a comprehensive library of free, responsive UI blocks, components, and templates built with UnoCSS and TailwindCSS."
+  keywords="unocss, tailwindcss, ui library, astro components, free templates, web development, responsive design, open source"
+>
+  <main data-pagefind-ignore>
+    <HeroSection />
+    <BentoFeatures />
+    <BuildWithYourStack />
+    <UiCta />
+  </main>
+</AppLayout>

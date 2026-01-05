@@ -1,4 +1,5 @@
 ---
+import { twitterLink } from "@/const/index";
 import SocialLinks from "@components/atoms/SocialLinks.astro";
 import UiLink from "@components/atoms/UiLink.astro";
 
@@ -50,7 +51,7 @@ const links = [
       </div>
     </div>
     <div class="text-sm b b-border bg-bg-surface !bg-op50 px4 py2 rd-lg text-center">
-      &COPY; unoForge 2023 - Present. By <UiLink href="#linkUnifyDev" class={"underline underline-offset-2 text-fg-title"}>Unoforge Team</UiLink> in DRC.
+      &COPY; unoForge 2023 - Present. By <UiLink href={twitterLink} class={"underline underline-offset-2 text-fg-title"}>Unoforge Team</UiLink>.
     </div>
   </div>
 </footer>

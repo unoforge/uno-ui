@@ -1,0 +1,98 @@
+---
+import UiLink from "@components/atoms/UiLink.astro";
+
+const navlinks = [
+  {
+    text: "Docs",
+    path: "/docs/introduction",
+  },
+  {
+    text: "Blocks",
+    path: "/blocks/hero-sections",
+  },
+  {
+    text: "Templates",
+    path: "/templates/",
+  },
+  {
+    text: "Resources",
+    isDropdown: true,
+    path: "",
+    items: [
+      {
+        text: "Flexilla",
+        description: "Seamless and Interactive UIs Components",
+        href: "https://flexilla-docs.vercel.app/",
+        icon: "i-simple-icons-javascript",
+      },
+      {
+        text: "Flexiwind Laravel",
+        description: "Laravel UI Components, kit with Flexiwind",
+        href: "https://github.com/unoforge/laravel-ui",
+        icon: "i-simple-icons-laravel",
+      },
+      {
+        text: "Unify Preset",
+        description: "UnoCSS CSS preset for consistent design systems",
+        href: "https://github.com/unoforge/unify-preset",
+        icon: "i-simple-icons-unocss",
+      },
+    ],
+  },
+];
+---
+
+<ul class="flex lg-items-center flex flex-col lg-flex-row gap3 md-gap4">
+  {
+    navlinks.map((navLink) => (
+      <li class="relative group font-300">
+        {!navLink.isDropdown ? (
+          <>
+            <a
+              href={navLink.path}
+              class="text-fg-muted  hover-text-fg-title ease-linear duration-200"
+              aria-label={navLink.text}
+            >
+              {navLink.text}
+            </a>
+          </>
+        ) : (
+          <>
+            <span class="flex items-center cursor-pointer text-fg-muted">
+              {navLink.text}
+              <span
+                aria-hidden="true"
+                class="hidden lg-flex i-ph-caret-down lg-group-hover-rotate-180 ease-linear duration-200"
+              />
+            </span>
+            <ul
+              class="p1 lg-z60 lg-absolute lg-left-1/2 lg--translate-x-1/2 lg-top-[calc(100%+10px)] 
+            lg-invisible lg-op0 lg-group-hover-visible lg-group-hover-op100 lg-group-hover-translate-y-0 
+            lg-translate-y-3 ease-linear duration-200 bg-bg shadow-lg shadow-bg-surface
+             dark-shadow-transparent b b-border/50 rd-lg lg-w78 flex flex-col"
+            >
+              {navLink.items.map((item) => (
+                <li class="flex wfull">
+                  <UiLink
+                    href={item.href}
+                    class="flex wfull rd-md p2 items-start gap-3 text-fg hover-text-fg-title ease-linear duration-200 hover-bg-bg-surface"
+                  >
+                    <div class="size-10 min-w-10 bg-bg-muted rd d-flex-place-center">
+                      <span class={`flex ${item.icon}`} />
+                    </div>
+                    <div class="flex flex-col flex-1">
+                      <span>{item.text}</span>
+                      <span class="line-clamp-1 text-xs text-gray500">
+                        {item.description}
+                      </span>
+                    </div>
+                  </UiLink>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </li>
+    ))
+  }
+</ul>

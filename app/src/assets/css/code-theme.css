@@ -1,21 +1,14 @@
 :root {
     --astro-code-color-background: hsl(var(--c-gray-900));
     --astro-code-background: transparent;
-    --astro-code-token-constant: #C678DD;
-    --astro-code-token-string: #98C379;
-    --astro-code-token-comment: #ABB2BF;
-    --astro-code-token-keyword: #E06C75;
-    --astro-code-token-parameter: #E5C07B;
-    --astro-code-token-function: #61AFEF;
-    --astro-code-token-string-expression: #98C379;
-    --astro-code-token-punctuation: #ABB2BF;
-    --astro-code-token-link: #80cbc4;
-    --astro-code-foreground: hsl(var(--c-gray-400));
-    --astro-code-color-text: hsl(var(--c-gray-400));
 }
 
 html.dark {
     --astro-code-color-background: hsl(var(--c-gray-900)/.5);
+}
+
+.aurora-x.shiki{
+    background-color: var(--astro-code-color-background) !important;
 }
 
 .line.diff {

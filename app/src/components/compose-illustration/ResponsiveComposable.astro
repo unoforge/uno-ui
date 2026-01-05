@@ -1,0 +1,75 @@
+<div
+  class="absolute size-4/5 left-1/2 top-1/2 -translate-1/2 text-primary
+            ui-grid-dotted ui-grid-square-lg ui-striped-mask-oval"
+>
+</div>
+
+<span
+  class="absolute right-20 top-3 btn btn-sm btn-solid btn-solid-primary text-white rd-global-radius"
+>
+  <span class="mr1 i-ph-sun-horizon"></span>
+  Let it shine
+</span>
+<span
+  class="flex i-ph-hand-tap-fill absolute right-40 top-9 animate-pulse text-fg"
+></span>
+<div
+  aria-hidden="true"
+  class="absolute inset-0 pt4 overflow-hidden flex justify-center gap4"
+>
+  <div
+    class="bg-bg/40 backdrop-blur-sm backdrop-saturate-70 relative b b-border-strong/40 rd-global-radius w60 hmax p4 flex flex-col"
+  >
+    <span
+      class="absolute text-xs -right-3 top-3 bg-bg-surface b b-border rd-global-radius size-6 d-flex-place-center text-fg"
+    >
+      <span class="flex i-ph-door-open"></span>
+    </span>
+    <div class="flex gap4 items-center pr4">
+      <span class="size-8 bg-bg-muted rd-full"></span>
+      <span class="h4 flex flex-1 bg-bg-muted rd-full"></span>
+    </div>
+    <div class="mt8 flex flex-col gap3">
+      {
+        [0, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+          <div class="pl3 flex items-center gap4">
+            <div class="size-4 bg-bg-muted rd-md" />
+            <div class="h2 flex flex-1 bg-bg-muted rd-full" />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    class="w80 min-hmax mt12 bg-bg/40 backdrop-blur-sm backdrop-saturate-70 relative b b-border-strong/40 [--card-radius:--global-main-radius] ui-card cp-1 flex flex-col"
+  >
+    <div class="inner-radius p3 b b-border">
+      <div class="wfull flex justify-between items-center">
+        <div class="flex gap3">
+          <div class="flex items-center gap-px">
+            {
+              [0, 1, 2].map(() => (
+                <span class="flex size-2 rd-full bg-bg-muted" />
+              ))
+            }
+          </div>
+          <div class="w40 h3 bg-bg-muted rd-full"></div>
+        </div>
+        <span class="size-3 rd-full bg-bg-muted flex"></span>
+      </div>
+      <div class="mt6 bg-bg-muted/60 inner-radius h20"></div>
+      <div class="mt5 grid grid-cols-3 gap2">
+        {
+          [0, 1, 2].map(() => (
+            <span class="flex inner-radius h14 bg-bg-muted" />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+<span
+  aria-hidden="true"
+  class="absolute w2/5 left-4 bottom-0 h0.5 flex bg-gradient-to-l from-bg-surface via-bg-muted to-bg-surface"
+>
+</span>

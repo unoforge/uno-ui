@@ -1,0 +1,159 @@
+---
+import type { AllBlocksItem } from "@/types/index";
+import BlockMoreInfo from "@components/vuejs/BlockMoreInfo.vue";
+import CopyBlock from "@components/vuejs/CopyBlock.vue";
+import CustomCodeBlock from "@components/vuejs/CustomCodeBlock.vue";
+import PreviewBlock from "@components/vuejs/PreviewBlock.vue";
+import { PREVIEW_BASE_URL } from "astro:env/client";
+
+type Props = {
+  block: AllBlocksItem;
+};
+
+const { block } = Astro.props;
+
+const sizeTriggers = [
+  {
+    isActive: true,
+    target: "desktop",
+    icon: "i-ph-laptop",
+  },
+  {
+    target: "tablet",
+    icon: "i-ph-device-tablet-camera",
+  },
+  {
+    target: "mobile",
+    icon: "i-ph-device-mobile-camera",
+  },
+];
+---
+
+<div
+  data-ui-preview-block
+  class="bg-bg-surface/80 p0.5 rd-lg shadow dark-shadow-transparent b b-border-light/40"
+>
+  <div
+    data-tab-list-wrapper
+    class="wfull flex justify-between items-center h12 px3.5"
+  >
+    <ul
+      class="bg-bg-surface shadow b b-border/50 p0.5 rd-md flex items-center"
+      data-tab-list
+    >
+      <li role="presentation">
+        <a
+          href="#link"
+          data-state="active"
+          data-tabs-trigger
+          data-target="previewbox"
+          tabindex="0"
+          class="px3 py1 flex gap2 items-center text-sm fx-active-bg-bg rd-5px ease-linear duration-200 font-300 text-fg fx-active-text-fg-title"
+        >
+          <span aria-hidden="true" class="flex i-ph-eye text-base"></span>
+          <span class="hidden md-flex"> Preview </span>
+        </a>
+      </li>
+      <li role="presentation">
+        <a
+          href="#link"
+          data-tabs-trigger
+          data-target="codebox"
+          tabindex="0"
+          class="px3 py1 flex gap2 items-center text-sm fx-active-bg-bg rd-5px ease-linear duration-200 font-300 text-fg fx-active-text-fg-title"
+        >
+          <span aria-hidden="true" class="flex i-ph-code text-base"></span>
+          <span class="hidden md-flex"> Code </span>
+        </a>
+      </li>
+    </ul>
+    <span class="mx-2.5 flex relative wpx bg-bg-muted h6" aria-hidden="true"
+    ></span>
+    <div class="flex items-center flex-1">
+      <span
+        class="px3 py1 bg-bg-surface shadow b b-border/50 flex gap2 items-center text-sm rd-5px ease-linear duration-200 font-300 text-fg"
+        >{block.name}</span
+      >
+    </div>
+    <div class="flex items-center min-wmax text-fg">
+      <div
+        data-box-resize-box
+        class="bg-bg-surface shadow b b-border/50 p0.5 rd-md flex items-center data-[position=fixed]:box-resize-controls"
+      >
+        <div
+          data-responsive-toggler
+          class="hidden lg-flex lg-fx-hidden-hidden items-center"
+        >
+          {
+            sizeTriggers.map((trigger) => (
+              <button
+                data-preview-size-trigger
+                data-state={trigger.isActive ? "active" : "inactive"}
+                data-target={trigger.target}
+                class="px2 py1 flex text-sm fx-active-bg-bg rd-5px ease-linear duration-200 font-300 text-fg fx-active-text-fg-title"
+              >
+                <span
+                  aria-hidden="true"
+                  class={`"flex ${trigger.icon} text-base"`}
+                />
+              </button>
+            ))
+          }
+          <span
+            class="hidden lg-flex lg-ml2.5 lg-mr1.5 wpx bg-bg-muted h3"
+            aria-hidden="true"></span>
+        </div>
+        <a
+          href={`/previewer?block=${block.id}`}
+          aria-label="View in full screen"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px2 py1 flex fx-hidden-hidden gap2 items-center text-sm fx-active-bg-bg rd-5px ease-linear duration-200 font-300 text-fg fx-active-text-fg-title"
+        >
+          <span aria-hidden="true" class="flex i-ph-corners-out text-base"
+          ></span>
+        </a>
+      </div>
+      <div class="flex items-center justify-center">
+        <span class="mx-2.5 flex relative wpx bg-bg-muted h6" aria-hidden="true"
+        ></span>
+        <BlockMoreInfo block={block} client:load />
+      </div>
+      <span
+        class="mx-2.5 hidden sm-flex relative wpx bg-bg-muted h6"
+        aria-hidden="true"></span>
+      <div class="hidden sm-flex">
+        <CopyBlock client:load />
+      </div>
+    </div>
+  </div>
+  <div
+    data-panels-container
+    class="bg-bg rd-md h-[calc(100vh-8rem)] max-h-[65rem] overflow-hidden flex b b-gray50 dark-b-gray900 wfull"
+  >
+    <div
+      data-tab-panel
+      id="previewbox"
+      data-state="active"
+      aria-labelledby="previewbox"
+      class="hidden wfull group fx-active-flex ring-offset-bg bg-bg focus-visible-outline-none focus-visible-ring-2 focus-visible-ring-primary focus-visible-ring-offset-2 data-[screen=maximized]-fixed data-[screen=maximized]-b-0 data-[screen=maximized]-h-full data-[screen=maximized]-w-full data-[screen=maximized]-left-0 data-[screen=maximized]-top-0 data-[screen=maximized]-z120"
+    >
+      <PreviewBlock
+        url={`${PREVIEW_BASE_URL}${block.previewurl}`}
+        client:only="vue"
+      />
+    </div>
+    <div
+      data-tab-panel
+      id="codebox"
+      aria-labelledby="codebox"
+      class="hidden hfull wfull overflow-hidden fx-active-flex ring-offset-bg focus-visible:outline-none focus-visible:ring-2 focus-visible-ring-primary focus-visible:ring-offset-2"
+    >
+      <div data-code-block class="size-full overflow-hidden bg-black">
+        <div class="flex size-full overflow-auto">
+          <CustomCodeBlock code={block.code} lang={"html"} client:only="vue" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
