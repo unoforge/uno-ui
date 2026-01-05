@@ -1,6 +1,4 @@
 ---
-import "@assets/css/scrollbar.css";
-import "@assets/css/doc-styles.css";
 import Sidebar from "@components/docs/base/Sidebar.astro";
 import Base from "./Base.astro";
 import DocNavbar from "@components/docs/ui/DocsNavbar.astro";
@@ -34,7 +32,7 @@ const seo: SeoType = {
     alt: ogImage?.alt || defaultOgAlt,
   },
   keywords: `${keywordsDef} ${keywords ? `, ${keywords}` : ""}`,
-  title: title,
+  title: `UnoUI | Docs - ${title}`,
   description: description
     ? description
     : "Easily add interactive Components to your App.",
@@ -42,10 +40,13 @@ const seo: SeoType = {
 ---
 
 <Base seo={seo}>
-  <span aria-hidden="true" class="flex absolute -top-10 left-1/2 -translate-x-1/2 h-50 w-20 rd-full flex bg-gradient-to-r from-primary op70 blur-3xl"></span>
+  <span
+    aria-hidden="true"
+    class="flex absolute -top-10 left-1/2 -translate-x-1/2 h-50 w-20 rd-full flex bg-gradient-to-r from-primary op70 blur-3xl"
+  ></span>
   <DocNavbar />
   <div
-    class="grid mxa lg-grid-cols-[15rem_minmax(0,1fr)] xl-grid-cols-[16rem_minmax(0,1fr)] 
+    class="grid mxa lg-grid-cols-[15rem_minmax(0,1fr)] xl-grid-cols-[16rem_minmax(0,1fr)]
     lg-pl8 xl-pr8 lg-max-w84rem xl-max-w88rem"
   >
     <Sidebar activeGroup={activeGroup} activeItem={activeItem} />
@@ -61,11 +62,9 @@ const seo: SeoType = {
   <slot name="modalZone" />
   <script>
     import { initdDocsScript } from "@assets/js/doc-script";
-    import { initScrollbar } from "@assets/js/scrollbar";
     import { initTabOfContent } from "@assets/js/tab-content-menu";
 
     const initMainScript = () => {
-      initScrollbar();
       initdDocsScript();
       initTabOfContent();
     };

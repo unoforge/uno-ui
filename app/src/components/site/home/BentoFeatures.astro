@@ -1,0 +1,67 @@
+---
+import AppCard from "@components/atoms/AppCard.astro";
+import BentoCard from "@components/blocks/BentoCard.astro";
+import SectionBlockTitle from "@components/blocks/SectionBlockTitle.astro";
+import BeautifullModern from "@components/compose-illustration/BeautifullModern.astro";
+import OpenSourceFree from "@components/compose-illustration/OpenSourceFree.astro";
+import PresetUiMagic from "@components/compose-illustration/PresetUiMagic.astro";
+import ResponsiveComposable from "@components/compose-illustration/ResponsiveComposable.astro";
+import WithAnyStack from "@components/compose-illustration/WithAnyStack.astro";
+---
+
+<section class="mt24 pb8 lg-pb14 md-mt32 relative">
+  <div class="absolute pointer-events-none inset-x-0 -top-16 bottom-0">
+    <div class="relative size-full mxa max-w7xl">
+      <span class="absolute inset-x-2 lg-inset-x-20 top-2 flex bg-gradient-to-l h0.5 from-bg-surface via-bg-muted to-bg-surface op50"></span>
+      <span class="absolute inset-x-2 lg-inset-x-20 bottom-2 flex bg-gradient-to-l h0.5 from-bg-surface via-bg-muted to-bg-surface op50"></span>
+      <span class="absolute inset-y-2 lg-inset-y-20 left-2 xl-left-0 flex bg-gradient-to-b w0.5 from-bg-surface via-bg-muted to-bg-surface op50"></span>
+      <span class="absolute inset-y-2 lg-inset-y-20 right-2 xl-right-0 flex bg-gradient-to-b w0.5 from-bg-surface via-bg-muted to-bg-surface op50"></span>
+    </div>
+  </div>
+  <SectionBlockTitle
+    headtext="Much easier than ever"
+    title="Everything you need to build modern UIs"
+    description="Our components, utilities, and blocks provide all the tools you need to create beautiful, functional interfaces quickly."
+    link={{
+      text: "Browse blocks",
+      href: "/docs/framework-guide",
+      icon: "i-ph-caret-right",
+    }}
+  />
+  <div class="px0.5 sm-px3 lg-px8 lg-max-w7xl mxa mt16 wfull">
+    <div class="grid md-grid-cols-2 lg-grid-cols-12 gap3 px4 sm-px10">
+      <BentoCard
+        class="md-col-span-2 lg-col-span-7"
+        title="Build Faster"
+        description="Create stunning UIs in minutes with our responsive and flexible components - from landing pages to dashboards"
+      >
+        <ResponsiveComposable />
+      </BentoCard>
+      <BentoCard
+        class="md-col-span-2 lg-col-span-5"
+        title="Modern Design"
+        description="Meticulously crafted components that bring elegance and sophistication to your projects"
+      >
+        <BeautifullModern />
+      </BentoCard>
+      <BentoCard
+        class="lg-col-span-5"
+        illustrationClass="pt6"
+        title="Magic Presets"
+        description="Everything works together seamlessly - from utilities to themes. Build complex UIs with minimal effort"
+      >
+        <PresetUiMagic />
+      </BentoCard>
+      <BentoCard
+        class="lg-col-span-4"
+        title="Universal"
+        description="Works perfectly with your favorite tools and frameworks to supercharge your development"
+      >
+        <WithAnyStack />
+      </BentoCard>
+      <AppCard class="lg-col-span-3 overflow-hidden relative">
+        <OpenSourceFree />
+      </AppCard>
+    </div>
+  </div>
+</section>

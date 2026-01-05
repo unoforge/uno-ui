@@ -27,7 +27,7 @@ export default defineConfig({
 
       input: {
         ...getHtmlInputs('blocks'),
-        ...getHtmlInputs('pages'),
+        // ...getHtmlInputs('pages'),
       },
     },
     outDir: 'dist',

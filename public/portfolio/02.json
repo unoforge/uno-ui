@@ -1,0 +1,6 @@
+{
+  "id": "portfolio02",
+  "name": "Portfolio 02",
+  "code": "<section class=\"py20 lg-py28\">\n      <div class=\"px5 sm-px10 md-px12 lg-px5 lg-max-w-6xl mxa w-full\">\n        <div\n          class=\"flex flex-col justify-center text-center mxa md-max-w-2xl space-y-4\"\n        >\n          <h2\n            class=\"text-3xl md-text-4xl text-balance text-fg-title font-semibold leading-tight\"\n          >\n            Showcasing Digital Brillance\n          </h2>\n          <p class=\"max-w-lg mxa text-fg\">\n            Explore a showcase of my works and creations\n          </p>\n        </div>\n        <div class=\"grid md-grid-cols-2 lg-grid-cols-3 gap10 mt-16\">\n          \n        </div>\n      </div>\n    </section>",
+  "previewurl": "blocks/portfolio/02.html"
+}

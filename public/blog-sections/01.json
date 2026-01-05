@@ -1,0 +1,6 @@
+{
+  "id": "blog-sections01",
+  "name": "Blog 01",
+  "code": "<section class=\"py20 lg-py28\">\n      <div\n        class=\"px5 sm-px10 md-px12 lg-px5 lg-max-w-7xl mxa w-full flex flex-col md-flex-row gap16\"\n      >\n        \n      </div>\n    </section>",
+  "previewurl": "blocks/blog-sections/01.html"
+}

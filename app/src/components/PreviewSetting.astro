@@ -1,0 +1,86 @@
+---
+import PaletteCard from "@components/atoms/PaletteCard.astro";
+
+const palettes = [
+  {
+    label: "Water",
+    colors: ["210 55% 40%", "175 84% 32%", "209 88% 39%"],
+    id: "water",
+  },
+  {
+    label: "Earth",
+    colors: ["149 54% 30%", "37 67% 40%", "2 85% 47%"],
+    id: "earth",
+  },
+  {
+    label: "Fire",
+    colors: ["2 85% 47%", "15 100% 48%", "209 92% 36%"],
+    id: "fire",
+  },
+  {
+    label: "Air",
+    colors: ["15 100% 48%", "2 85% 47%", "37 67% 40%"],
+    id: "air",
+  },
+  {
+    label: "Default",
+    colors: ["243 75% 59%", "187 92% 36%", "209 92% 36%"],
+    id: "default",
+    isDefault: true,
+  },
+];
+---
+
+<div class="flex flex-col pb2">
+  <div class="flex items-center justify-between">
+    <span class="text-sm text-fg-muted"> Theme </span>
+    <div class="grid grid-cols-2 rd-md b b-border bg-bg-surface text-fg-muted">
+      <button
+        data-toggle-theme
+        data-theme="light"
+        data-state="active"
+        class="btn btn-xs gap-x-1.5 fx-active-bg-bg fx-active-text-fg-title rd-l-md"
+      >
+        <span aria-hidden="true" class="flex i-ph-sun"></span>
+        Light
+      </button>
+      <button
+        data-toggle-theme
+        data-theme="dark"
+        class="btn btn-xs gap-x-1.5 fx-active-bg-bg fx-active-text-fg-title rd-l-md"
+      >
+        <span aria-hidden="true" class="flex i-ph-moon-stars"></span>
+        Dark
+      </button>
+    </div>
+  </div>
+  <div class="mt4 p2 rd-global-radius b b-border bg-bg-surface">
+    <span class="text-fg-muted text-sm mb0.5"> Palette </span>
+    <div
+      data-palette-container
+      role="radiogroup"
+      class="grid grid-cols-5 first-*-rd-l-global-radius last-*-rd-r-global-radius"
+    >
+      {palettes.map((palette) => <PaletteCard inPreview {...palette} />)}
+    </div>
+  </div>
+  <div class="mt4 p2 rd-global-radius b b-border bg-bg-surface">
+    <span class="text-fg-muted text-sm mb0.5"> Corner radius </span>
+    <div
+      data-palette-container
+      role="radiogroup"
+      class="grid grid-cols-5 first-*-rd-l-global-radius last-*-rd-r-global-radius"
+    >
+
+    </div>
+  </div>
+  <div class="mt4 p2 rd-global-radius b b-border bg-bg-surface">
+    <span class="text-fg-muted text-sm mb0.5"> Font </span>
+    <div
+      data-palette-container
+      role="radiogroup"
+      class="grid grid-cols-5 first-*-rd-l-global-radius last-*-rd-r-global-radius"
+    >
+    </div>
+  </div>
+</div>

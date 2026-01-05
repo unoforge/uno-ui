@@ -1,0 +1,38 @@
+---
+import KeyUnoUi from "@components/atoms/KeyUnoUi.astro";
+---
+
+<section
+  class="mt24 md-mt32 relative before-absolute before-inset-x-0 before-content-empty before-bottom-0 before-h40 before-bg-gradient-to-t before-from-bg-surface/40"
+>
+  <div
+    class="px4 sm-px8 lg-px8 lg-max-w-7xl mxa wfull pb16 pt24 relative before-absolute before-inset-x-10 md-before-inset-x-44 before-top-0 before-content-empty before-flex before-hpx before-bg-gradient-to-l before-from-bg-muted before-bg-gradient-via-border-strong before-to-bg-muted before-rd-full"
+  >
+    <div class="max-w2xl mxa text-center flex flex-col items-center">
+      <h1
+        class="font-semibold capitalize text-3xl sm-text-4xl leading-tight md-leading-snug text-transparent bg-clip-text bg-gradient-to-br from-20% from-fg-title to-gray-300 dark-to-gray600"
+      >
+        Ready to build your next project?
+      </h1>
+      <div class="flex items-center flex-wrap justify-center gap-4 mt9">
+        <a
+          href="/blocks/hero-sections"
+          class="btn btn-lg rd-global-radius btn-solid btn-solid-primary text-white"
+        >
+          Explore blocks
+        </a>
+        <a
+          href="/templates"
+          class="btn btn-lg rd-global-radius btn-outline btn-outline-gray"
+        >
+          Browse templates
+        </a>
+      </div>
+      <div class="mt9 flex items-center justify-center flex-wrap gap2">
+        <KeyUnoUi icon="i-ph-git-branch" text="MIT License" />
+        <KeyUnoUi icon="i-ph-puzzle-piece" text="Free Components" />
+        <KeyUnoUi icon="i-ph-diamonds-four" text="+ 30 blocks" />
+      </div>
+    </div>
+  </div>
+</section>

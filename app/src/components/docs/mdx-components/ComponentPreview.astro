@@ -1,70 +1,43 @@
 ---
-import dynamic from "astro:import";
-
-import { allComponentCode } from "@components/ui/allCode";
-import TabsViewCode from "../ui/TabsViewCode.astro";
 import CodeViewBox from "../ui/CodeViewBox.astro";
 import DocsTab from "./DocsTab.astro";
 import TabPanel from "./TabPanel.astro";
+import { componentManifest } from "@lib/ComponentManifest.astro";
 
 type Props = {
-    name: string | string[];
-    notInTabs?: boolean;
-    props?: any;
+  name: string;
+  notInTabs?: boolean;
 };
 
-const { name, notInTabs, props = {} } = Astro.props;
+const { name, notInTabs } = Astro.props;
 
-const getValue = (name_: string) => allComponentCode[name_];
-
-const getTabValues = (name_: string[]) =>
-    name_.map((name) => allComponentCode[name]);
-
-const correctName = typeof name === "string" ? name : name[0];
-const toImport = `components/ui/${correctName}.astro`;
-const Component = await dynamic(toImport);
+const getValue = (name_: string) => componentManifest[name_];
+const { code, component: Component, lang } = getValue(name);
 ---
 
 {
-    typeof name === "string" ? (
-        notInTabs ? (
-            <>
-                <div
-                    data-pagefind-ignore
-                    class="b b-border-strong/60 rd-lg p4 md-p10 bg-bg justify-center min-h-max my5 first-mt0"
-                >
-                    <Component {...props} />
-                </div>
-                <CodeViewBox
-                    code={getValue(name).code}
-                    lang={getValue(name).lang}
-                />
-            </>
-        ) : (
-            <DocsTab values={["Preview", "Code"]} data-pagefind-ignore>
-                <TabPanel
-                    value="Preview"
-                    class="b b-border-strong/60 rd-lg p4 md-p10 bg-bg items-center justify-center min-h60 lg-min-h80"
-                    active
-                >
-                    <Component {...props} />
-                </TabPanel>
-                <TabPanel value="Code">
-                    <CodeViewBox
-                        code={getValue(name).code}
-                        lang={getValue(name).lang}
-                    />
-                </TabPanel>
-            </DocsTab>
-        )
-    ) : (
-        <TabsViewCode data={getTabValues(name)}>
-            <div
-                data-pagefind-ignore
-                class="b b-border-strong rd-lg p4 md-p10 bg-bg items-center justify-center min-h-max my5 first-mt0"
-            >
-                <Component {...props} />
-            </div>
-        </TabsViewCode>
-    )
+  notInTabs ? (
+    <>
+      <div
+        data-pagefind-ignore
+        class="b b-border-strong/60 rd-lg p4 md-p10 bg-bg justify-center min-h-max my5 first-mt0"
+      >
+        <Component />
+      </div>
+      <CodeViewBox code={code} lang={lang} />
+    </>
+  ) : (
+    <DocsTab values={["Preview", "Code"]} data-pagefind-ignore>
+      <TabPanel
+        value="Preview"
+        class="b b-border-strong/60 rd-lg p4 md-p10 bg-bg items-center justify-center min-h60 lg-min-h80"
+        active
+      >
+        <Component />
+      </TabPanel>
+      <TabPanel value="Code">
+        <CodeViewBox code={code} lang={lang} />
+      </TabPanel>
+    </DocsTab>
+  )
 }

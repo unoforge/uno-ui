@@ -26,10 +26,4 @@ const components = defineCollection({
 })
 
 
-// export const collections = {
-//     docs: docsCollection,
-//     components:docsCollection,
-//     preset:docsCollection
-// };
-
 export const collections = { documentation, components, preset: preset };

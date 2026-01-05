@@ -1,0 +1,133 @@
+---
+import { allBlocks as all_blocks } from "@/data/all-blocks";
+import type { AllBlocksGroup } from "@/types/index";
+import UiLink from "@components/atoms/UiLink.astro";
+import BlockCard from "@components/blocks/BlockCard.astro";
+import AppLayout from "@layouts/AppLayout.astro";
+
+export async function getStaticPaths() {
+  const blocks = all_blocks.sort(
+    (a: AllBlocksGroup, b: AllBlocksGroup) => (a.order ?? 0) - (b.order ?? 0)
+  );
+  return blocks.map((block) => ({
+    params: { slug: block.name },
+    props: { block, blocks },
+  }));
+}
+
+const { block, blocks: allBlocks } = Astro.props;
+---
+
+<AppLayout
+  title={`Block - ${block.title}`}
+  description={block.description}
+  keywords=""
+>
+  <main>
+    <nav
+      data-scrollable-container
+      class="sticky top-3 lg-max-w84rem xl-max-w88rem mxa wfull h12 flex items-center
+		  before-absolute before-inset-x-0 before-bottom-0 before-h0.5 before-bg-gradient-to-l before-from-bg-muted/20
+		  before-via-bg-muted before-to-bg-muted/20 before-content-empty bg-bg/60 backdrop-blur-sm rd-xl"
+    >
+      <ul
+        data-scrollable
+        class="flex items-center gap0.5 h12 px6 sm-px8 overflow-hidden overflow-x-auto scrollbar-hidden text-sm relative"
+      >
+        {
+          allBlocks.map((item) => (
+            <li
+              data-state={item.name === block.name ? "active" : "inactive"}
+              class="b-b-2 b-transparent fx-active-b-primary hfull flex items-center group"
+            >
+              <a
+                href={`/blocks/${item.name}`}
+                class="px3 py1 inline-flex text-nowrap text-fg-muted group-fx-active-text-fg-subtitle hover-bg-bg-muted group-fx-active-bg-bg group-fx-active-b-border/60 border border-transparent rd-lg ease-linear duration-200 relative"
+              >
+                {item.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="absolute left-0 inset-y-0 flex items-center">
+        <button
+          data-scroll-to-left
+          class="flex items-center p1.5 bg-gradient-to-r from-bg-surface fx-visible-hover-bg-bg-surface cursor-not-allowed fx-visible-cursor-pointer text-fg rd-md op40 fx-visible-op100 ease-linear backdrop-blur-sm"
+        >
+          <span aria-hidden="true" class="i-ph-caret-left text-xl"></span>
+        </button>
+      </div>
+      <div class="absolute right-0 inset-y-0 flex items-center">
+        <button
+          data-scroll-to-right
+          class="flex items-center p1.5 bg-gradient-to-l from-bg-surface fx-visible-hover-bg-bg-surface cursor-not-allowed fx-visible-cursor-pointer text-fg rd-md op40 fx-visible-op100 ease-linear backdrop-blur-sm"
+        >
+          <span aria-hidden="true" class="i-ph-caret-right text-xl"></span>
+        </button>
+      </div>
+    </nav>
+
+    <section
+      class="wfull lg-max-w84rem xl-max-w88rem mxa pt20 px2 sm-px4 xl-px8"
+    >
+      <ol
+        class="flex items-center gap-2.5 whitespace-nowrap text-fg capitalize text-sm md:text-base"
+      >
+        <li class="flex items-center gap-2">
+          <a class="flex items-center gap-2.5" href="/blocks">
+            Blocks
+            <span aria-hidden="true" class="flex i-ph-caret-right"></span>
+          </a>
+        </li>
+        <li class="text-sm truncate text-fg-muted" aria-current="page">
+          {block.title}
+        </li>
+      </ol>
+      <h2 class="text-fg-title mt-5 font-semibold text-lg md-text-xl max-w-xl">
+        {block.title}
+      </h2>
+      <p class="max-w-lg text-sm md-text-base text-fg font-300 mt3">
+        {block.description}
+      </p>
+    </section>
+    <section
+      class="mt24 space-y-16 lg-max-w84rem xl-max-w88rem mxa pb16 px2 sm-px4 xl-px8"
+    >
+      {block.items.map((blockItem) => <BlockCard block={blockItem} />)}
+      {
+        block.items.length === 0 ? (
+          <div class="bg-bg-surface p5 sm-p10 rd-xl flex flex-col text-center items-center space-y-8">
+            <h2 class="text-fg-title font-semibold text-3xl ">
+              No Block found here
+            </h2>
+            <p class="mxa max-wlg text-fg">
+              We're working on this, we'll release it soon
+            </p>
+            <div class="">
+              <UiLink
+                href={"https://github.com/unoforge/unify-ui"}
+                class={
+                  "btn btn-md rd-lg btn-solid btn-solid-primary text-white wmax"
+                }
+              >
+                Bring my contributing
+              </UiLink>
+            </div>
+          </div>
+        ) : null
+      }
+    </section>
+  </main>
+  <script>
+    import { initBlockCode } from "@assets/js/card-block-init";
+    import { initializeScrollableContainers } from "@assets/js/scrollable";
+
+    const initScrollable = () => {
+      initializeScrollableContainers("[data-scrollable-container]");
+      initBlockCode();
+    };
+    initScrollable();
+    document.addEventListener("astro:after-swap", initScrollable);
+  </script>
+</AppLayout>

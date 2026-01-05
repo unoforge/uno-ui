@@ -1,0 +1,47 @@
+---
+import Header from "@components/site/templates/Header.astro";
+import UiCta from "@components/site/UiCta.astro";
+import AppLayout from "@layouts/AppLayout.astro";
+import { allTemplates } from "@/data/templates";
+import CardTemplate from "@components/site/templates/CardTemplate.astro";
+---
+
+<AppLayout
+  title="Templates"
+  description=""
+  keywords="UnoCSS Templates, Templates, UnoUI Templates"
+>
+  <main data-pagefind-ignore>
+    <Header />
+    <section class="relative">
+      <div
+        aria-hidden="true"
+        class="absolute pointer-events-none inset-x-0 -top-16 bottom-0"
+      >
+        <div class="relative size-full mxa max-w7xl">
+          <span
+            class="absolute inset-x-2 lg-inset-x-20 top-2 flex bg-gradient-to-l h0.5 from-bg-surface via-bg-muted to-bg-surface op50"
+          ></span>
+
+          <span
+            class="absolute inset-y-2 lg-inset-y-20 left-2 xl-left-0 flex bg-gradient-to-b w0.5 from-bg-surface via-bg-muted to-bg-surface op50"
+          ></span>
+          <span
+            class="absolute inset-y-2 lg-inset-y-20 right-2 xl-right-0 flex bg-gradient-to-b w0.5 from-bg-surface via-bg-muted to-bg-surface op50"
+          ></span>
+        </div>
+      </div>
+
+      <div
+        class="px0.5 sm-px3 lg-px8 lg-max-w7xl mxa wfull"
+      >
+        <div class="px4 sm-px10 grid divide-y divide-border-strong/60 *-py-6 first-*-pt0 last-*-pb0">
+          {allTemplates.map((template) => <CardTemplate data={template} />)}
+        </div>
+      </div>
+
+
+    </section>
+    <UiCta />
+  </main>
+</AppLayout>

@@ -1,0 +1,135 @@
+---
+import type { SingleTemplate } from "@/data/templates";
+import UiLink from "@components/atoms/UiLink.astro";
+import { Image } from "astro:assets";
+
+type Props = {
+  data: SingleTemplate;
+};
+
+const {
+  data: {
+    coverImage,
+    title,
+    description,
+    features,
+    previewLink,
+    source,
+    tech,
+    status,
+  },
+} = Astro.props;
+
+const icons = {
+  astro: "i-simple-icons-astro",
+  vue: "/icons/vue.svg",
+  html: "/icons/html.svg",
+  laravel: "/icons/laravel.svg",
+  svelte: "/icons/svelte.svg",
+  rasengan: "/icons/rasengan.svg",
+  nuxt: "i-simple-icons-nuxt",
+};
+
+const status_ = {
+  ready: {
+    icon: "",
+    class: "ui-subtle-success",
+    text: "Ready",
+  },
+  wip: {
+    icon: "",
+    class: "ui-subtle-warning",
+    text: "Coming soon",
+  },
+  "active-maintenance": {
+    icon: "",
+    class: "ui-subtle-success",
+    text: "Active maintenance",
+  },
+};
+
+const u_status = status_[status];
+---
+
+<div class="grid md-grid-cols-2 gap-8 lg-gap12">
+  <div class="aspect-3/2 bg-bg-surface rd-global-radius overflow-hidden">
+    {
+      coverImage !== "" ? (
+        <Image
+          src={coverImage}
+          alt={`Cover template ${title}`}
+          width={1440}
+          height={1024}
+          class={"size-full object-cover object-top"}
+        />
+      ) : null
+    }
+  </div>
+  <div class="flex flex-col lg-py4">
+    <span
+      class={`ui-subtle ${u_status.class} badge-sm rd-global-radius flex items-center wmax`}
+    >
+      <span></span>
+      <span class="ml1">{u_status.text}</span>
+    </span>
+    <h3 class="font-semibold text-fg-title text-lg mt2">
+      {title}
+    </h3>
+    <p class="md-line-clamp-2 lg-line-cmapl-3 text-fg-muted text-sm mt3">
+      {description}
+    </p>
+    <ul
+      class="grid grid-cols-2 md-grid-cols-1 lg-grid-cols-3 gap-x4 gap-y1 mt3 mb5 list-disc list-outside pl4 text-sm text-fg-muted"
+    >
+      {features.map((item) => <li>{item}</li>)}
+    </ul>
+    <div class="flex items-center flex-wrap gap2 mt3 mb4">
+      {
+        tech.map((item) => {
+          const icon = icons[item];
+          return (
+            <span class="size-8 d-flex-place-center bg-bg rd-global-radius b b-border-strong/50 shadow pointer-events-none select-none text-fg">
+              {icon.startsWith("/") ? (
+                <img
+                  src={icon}
+                  alt={`icon ${item}`}
+                  width="20"
+                  class="h4 wauto"
+                />
+              ) : (
+                <span aria-hidden="true" class={`${icon}`} />
+              )}
+            </span>
+          );
+        })
+      }
+    </div>
+
+    <div class="flex items-center gap2 mt-a">
+      {
+        source && source !== "" ? (
+          <UiLink
+            href={source}
+            class="btn btn-sm btn-solid btn-solid-primary rd-global-radius text-white"
+          >
+            Get template
+          </UiLink>
+        ) : <span
+            class="pointer-events-none op60 btn btn-sm btn-solid btn-solid-primary rd-global-radius text-white"
+          >
+            Get template
+          </span>
+      }
+      {
+        previewLink && previewLink !== "" && previewLink !== "#" ? (
+          <UiLink
+            href="#"
+            class="btn btn-sm btn-outline btn-outline-gray rd-global-radius"
+          >
+            Live Preview
+          </UiLink>
+        ) : null
+      }
+    </div>
+  </div>
+</div>
