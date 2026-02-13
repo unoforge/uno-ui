@@ -2,6 +2,11 @@
 
 A modern UI library and documentation site built with [UnoCSS](https://unocss.dev/) and [Flexilla](https://github.com/unifydev/flexilla).
 
+> [!IMPORTANT]
+> **Maintenance Status**: This project is not actively maintained. As a solo developer, I'll be updating it only when I find some free time. My current focus is on:
+> - **[Flexiwind](https://github.com/unoforge/flexiwind)** - Main project under UnoForge
+> - **[RK-PAGE](https://github.com/Johnkat-Mj/rk-page)** - Side project
+
 ## Project Structure
 
 This repository is organized into the following directories:

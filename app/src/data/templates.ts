@@ -24,9 +24,9 @@ export const allTemplates: SingleTemplate[] = [
     title: "Agency Landing Page",
     description: `A simple and clean landing page for your agency.`,
     features: ["Modern", "Light and dark mode", "Responsive"],
-    previewLink: "",
-    source: "",
+    previewLink: "https://inno-agency-rasengan-iota.vercel.app/",
+    source: "https://github.com/uno-forge-hub/agency-lading-page-rasengan",
     tech: ["astro", "html", "rasengan"],
-    status: "wip"
+    status: "ready"
   }
 ]
